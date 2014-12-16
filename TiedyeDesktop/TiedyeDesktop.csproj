@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFE58E76-7ACC-4260-80E6-75DFB45D5274}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TiedyeDesktop</RootNamespace>
+    <AssemblyName>TiedyeDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TiedyeDesktop.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Debuggers\ColorLcdDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\ColorLcdDebug.Designer.cs">
+      <DependentUpon>ColorLcdDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\Breakpoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\Breakpoints.Designer.cs">
+      <DependentUpon>Breakpoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\CpuDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\CpuDebug.Designer.cs">
+      <DependentUpon>CpuDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\HexEditorPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Debuggers\HexEditorPanel.Designer.cs">
+      <DependentUpon>HexEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keypad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Keypad.Designer.cs">
+      <DependentUpon>Keypad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\KeypadDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\KeypadDebug.Designer.cs">
+      <DependentUpon>KeypadDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\MemoryEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debuggers\MemoryEditor.Designer.cs">
+      <DependentUpon>MemoryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\MemoryDebugSe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\MemoryDebugSe.Designer.cs">
+      <DependentUpon>MemoryDebugSe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debuggers\MemoryEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Debuggers\MemoryEditorPanel.Designer.cs">
+      <DependentUpon>MemoryEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Debuggers\SchedulerDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\SchedulerDebug.Designer.cs">
+      <DependentUpon>SchedulerDebug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ti8xCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ti8xCalculator.Designer.cs">
+      <DependentUpon>Ti8xCalculator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Debuggers\Breakpoints.resx">
+      <DependentUpon>Breakpoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\ColorLcdDebug.resx">
+      <DependentUpon>ColorLcdDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\CpuDebug.resx">
+      <DependentUpon>CpuDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\KeypadDebug.resx">
+      <DependentUpon>KeypadDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\MemoryEditorPanel.resx">
+      <DependentUpon>MemoryEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\MemoryEditor.resx">
+      <DependentUpon>MemoryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\MemoryDebugSe.resx">
+      <DependentUpon>MemoryDebugSe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Debuggers\SchedulerDebug.resx">
+      <DependentUpon>SchedulerDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ti8xCalculator.resx">
+      <DependentUpon>Ti8xCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tiedye\Tiedye.csproj">
+      <Project>{a4899387-b25b-4dd5-bfde-51223fb4e95d}</Project>
+      <Name>Tiedye</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout-myriad-trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout-myriad-trans-keys.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
