@@ -1,0 +1,3868 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="320"
+   height="384"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="layout-myriad.svg"
+   inkscape:export-filename="N:\dev\cs\Tiedye\layout-myriad-trans-keys.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3917"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917"
+       id="linearGradient3921"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111677"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0100754,0,0,1.1567581,-22.468276,-177.68506)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-8"
+       id="linearGradient3921-8"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-9.9348454)" />
+    <linearGradient
+       id="linearGradient3917-8"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.002326,42.465551,-63.631161)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937"
+       xlink:href="#linearGradient3917-8"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-5"
+       id="linearGradient3921-5"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-9.9348454)" />
+    <linearGradient
+       id="linearGradient3917-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.002326,107.46527,-63.63119)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7"
+       xlink:href="#linearGradient3917-5"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-52"
+       id="linearGradient3921-1"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-9.9348454)" />
+    <linearGradient
+       id="linearGradient3917-52"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.002326,172.46502,-63.631139)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6"
+       xlink:href="#linearGradient3917-52"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-3"
+       id="linearGradient3921-2"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-9.9348454)" />
+    <linearGradient
+       id="linearGradient3917-3"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.002326,237.46473,-63.63119)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1"
+       xlink:href="#linearGradient3917-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-7" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3917-52-1"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-8" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3917-5-2"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-7" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3917-8-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-4" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-1"
+       id="linearGradient3921-3"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-10.36377)" />
+    <linearGradient
+       id="linearGradient3917-1"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-23" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-4"
+       id="linearGradient3921-87"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.479087,-10.36377)" />
+    <linearGradient
+       id="linearGradient3917-4"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534189,-25.641147)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092"
+       xlink:href="#linearGradient3917-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-9"
+       xlink:href="#linearGradient3917-4-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-3"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-1" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.53419,12.358869)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123"
+       xlink:href="#linearGradient3917-4-3"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-8"
+       xlink:href="#linearGradient3917-4-6"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-6"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-5" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534188,50.358879)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-0"
+       xlink:href="#linearGradient3917-4-6"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-86"
+       xlink:href="#linearGradient3917-4-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-0"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-2" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534188,88.358898)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-4"
+       xlink:href="#linearGradient3917-4-0"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-6"
+       xlink:href="#linearGradient3917-4-5"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-0" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534189,126.35889)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-9"
+       xlink:href="#linearGradient3917-4-5"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-0"
+       xlink:href="#linearGradient3917-4-61"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-61"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-3" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534188,164.35886)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-8"
+       xlink:href="#linearGradient3917-4-61"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-4"
+       xlink:href="#linearGradient3917-4-4"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-4"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-6" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534189,202.35891)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-06"
+       xlink:href="#linearGradient3917-4-4"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-1"
+       xlink:href="#linearGradient3917-4-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-8"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-4" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.029112,240.35878)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-96"
+       xlink:href="#linearGradient3917-4-8"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.631375,-25.061721)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4092-7"
+       xlink:href="#linearGradient3917-4-88"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-4-88"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-27-29" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,-22.534188,278.35866)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4123-1"
+       xlink:href="#linearGradient3917-4-88"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,-25.641177)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-6"
+       xlink:href="#linearGradient3917-3-1"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-1"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-5" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,-25.641127)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-4"
+       xlink:href="#linearGradient3917-52-2"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-2"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-0" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46527,-25.641177)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-97"
+       xlink:href="#linearGradient3917-5-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-3"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-72" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-60"
+       xlink:href="#linearGradient3917-8-1"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-1"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-6" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465531,-25.641147)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302"
+       xlink:href="#linearGradient3917-8-1"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,12.358803)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-1"
+       xlink:href="#linearGradient3917-3-2"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-2"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-0" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,12.358853)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-0"
+       xlink:href="#linearGradient3917-52-14"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-14"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-6" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46527,12.358803)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-0"
+       xlink:href="#linearGradient3917-5-7"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-1" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-77"
+       xlink:href="#linearGradient3917-8-7"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-7" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465538,12.358833)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-3"
+       xlink:href="#linearGradient3917-8-7"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,50.358813)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-81"
+       xlink:href="#linearGradient3917-3-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-8"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-2" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,50.358863)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-66"
+       xlink:href="#linearGradient3917-52-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-0"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-3" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46526,50.358813)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-8"
+       xlink:href="#linearGradient3917-5-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-0"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-12" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-5"
+       xlink:href="#linearGradient3917-8-0"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-0"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-9" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465545,50.358843)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-4"
+       xlink:href="#linearGradient3917-8-0"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46473,88.358809)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-3"
+       xlink:href="#linearGradient3917-3-83"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-83"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-71" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46501,88.358859)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-07"
+       xlink:href="#linearGradient3917-52-3"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-3"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-4" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46526,88.358809)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-96"
+       xlink:href="#linearGradient3917-5-5"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-10" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-99"
+       xlink:href="#linearGradient3917-8-6"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-6"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-8" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465548,88.358839)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-34"
+       xlink:href="#linearGradient3917-8-6"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46475,126.35877)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-5"
+       xlink:href="#linearGradient3917-3-53"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-53"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-3" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46501,126.35882)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-3"
+       xlink:href="#linearGradient3917-52-7"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-43" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46526,126.35877)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-80"
+       xlink:href="#linearGradient3917-5-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-8"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-8" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-0"
+       xlink:href="#linearGradient3917-8-68"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-68"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-1" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465554,126.3588)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-9"
+       xlink:href="#linearGradient3917-8-68"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,164.35878)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-2"
+       xlink:href="#linearGradient3917-3-89"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-89"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-07" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,164.35883)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-8"
+       xlink:href="#linearGradient3917-52-15"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-15"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-86" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46527,164.35878)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-1"
+       xlink:href="#linearGradient3917-5-24"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-24"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-2" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-58"
+       xlink:href="#linearGradient3917-8-62"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-62"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-65" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465542,164.35881)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-39"
+       xlink:href="#linearGradient3917-8-62"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,202.35881)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-11"
+       xlink:href="#linearGradient3917-3-9"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-9"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-76" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,202.35886)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-2"
+       xlink:href="#linearGradient3917-52-9"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-9"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-5" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46526,202.35881)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-2"
+       xlink:href="#linearGradient3917-5-00"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-00"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-3" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-91"
+       xlink:href="#linearGradient3917-8-8"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-8"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-19" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.46555,202.35884)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-5"
+       xlink:href="#linearGradient3917-8-8"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,240.35877)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-7"
+       xlink:href="#linearGradient3917-3-7"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-7"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-22" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,240.35882)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-9"
+       xlink:href="#linearGradient3917-52-4"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-4"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-1" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46527,240.35877)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-969"
+       xlink:href="#linearGradient3917-5-82"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-82"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-5" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-54"
+       xlink:href="#linearGradient3917-8-9"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-9"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-12" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465542,240.3588)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-50"
+       xlink:href="#linearGradient3917-8-9"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,237.46474,278.35875)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-1-9"
+       xlink:href="#linearGradient3917-3-97"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-3-97"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-22-6" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,172.46502,278.3588)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-6-93"
+       xlink:href="#linearGradient3917-52-5"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-52-5"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-7-7" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,107.46527,278.35875)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-7-6"
+       xlink:href="#linearGradient3917-5-6"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-5-6"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-1-58" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,42.465073,-61.749548)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient3937-2"
+       xlink:href="#linearGradient3917-8-54"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient3917-8-54"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-2-41" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113442,0,0,1.0023396,42.465544,278.35878)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4302-6"
+       xlink:href="#linearGradient3917-8-54"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-82"
+       id="linearGradient3921-32"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-22.534925,-61.749543)" />
+    <linearGradient
+       id="linearGradient3917-82"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-5" />
+    </linearGradient>
+    <linearGradient
+       y2="751.27844"
+       x2="81.111679"
+       y1="751.27844"
+       x1="22.779196"
+       gradientTransform="matrix(1.0113483,0,0,0.99977813,-172.53493,-61.749495)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient4712"
+       xlink:href="#linearGradient3917-82"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3917-40"
+       id="linearGradient3921-17"
+       x1="22.779196"
+       y1="751.27844"
+       x2="81.111679"
+       y2="751.27844"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0100754,0,0,1.1567581,-22.468276,-177.68506)" />
+    <linearGradient
+       id="linearGradient3917-40"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="0"
+         id="stop3919-9" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="126.46546"
+     inkscape:cy="138.91451"
+     inkscape:document-units="px"
+     inkscape:current-layer="g5932"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="2048"
+     inkscape:window-height="1129"
+     inkscape:window-x="3592"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2985"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-668.36218)"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <rect
+       id="rect3145-3"
+       width="58.994453"
+       height="28.919077"
+       x="-149.49722"
+       y="676.86493"
+       style="fill:url(#linearGradient4712);fill-opacity:1;stroke:#000000;stroke-width:1.00554657;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="-275"
+       y="757.36218"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="757.36218"
+         style="font-size:22px"
+         id="tspan3013">Y= WINDW ZOOM TRACE GRAPH</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="784.86218"
+         style="font-size:22px"
+         id="tspan3084">2ND MODE DEL</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="812.36218"
+         style="font-size:22px"
+         id="tspan3086">ALPHA XTOn STAT</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="839.86218"
+         style="font-size:22px"
+         id="tspan3088">MATH APPS PRGM VARS CLEAR</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="867.36218"
+         style="font-size:22px"
+         id="tspan3090">x-1 SIN COS TAN ^</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="894.86218"
+         style="font-size:22px"
+         id="tspan3092">x2 , ( ) /</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="922.36218"
+         style="font-size:22px"
+         id="tspan3094">LOG 7 8 9 *</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="949.86218"
+         style="font-size:22px"
+         id="tspan3096">LN 4 5 6 -</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="977.36218"
+         style="font-size:22px"
+         id="tspan3098">STO-&gt; 1 2 3 +</tspan><tspan
+         sodipodi:role="line"
+         x="-275"
+         y="1004.8622"
+         style="font-size:22px"
+         id="tspan3100">ON 0 . (-) ENTER</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="-147.92004"
+       y="704.36218"
+       id="text4694"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4696"
+         x="-147.92004"
+         y="704.36218"
+         style="font-size:20px">Y=</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="-148.70787"
+       y="687.19409"
+       id="text4738"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-148.70787"
+         y="687.19409"
+         style="font-size:12px"
+         id="tspan4746">STAT PLOT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="-90.387573"
+       y="704.36218"
+       id="text4742"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4744"
+         x="-90.387573"
+         y="704.36218"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn">F1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.99989736;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.50196078;stroke-dasharray:none"
+       d="m -147.98296,688.86218 c 56.000203,0 0,0 56.000203,0"
+       id="path3540"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Squares"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       id="rect3145"
+       width="58.9202"
+       height="28.918951"
+       x="0.54042792"
+       y="676.90271"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       transform="translate(0,-668.36218)" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4"
+       width="58.994213"
+       height="28.992773"
+       x="65.503159"
+       y="676.86554"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1"
+       width="58.994213"
+       height="28.992773"
+       x="130.5029"
+       y="676.86554"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14"
+       width="58.994213"
+       height="28.992773"
+       x="195.50264"
+       y="676.86554"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6"
+       width="58.994213"
+       height="28.992773"
+       x="260.50238"
+       y="676.86554"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="714.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-9"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="752.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-2"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="790.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-8"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="828.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-0"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="866.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-93"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="904.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-6"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="942.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       id="rect3145-7-3"
+       width="58.994217"
+       height="28.993168"
+       x="0.50300002"
+       y="312.50342"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-7-35"
+       width="58.994217"
+       height="28.993168"
+       x="0.50341594"
+       y="1018.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-5"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="714.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-7"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="714.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       id="rect3145-14-5"
+       width="29.000317"
+       height="29.000317"
+       x="201.49985"
+       y="65.49984"
+       style="fill:none;stroke:#000000;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-3"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="752.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-5"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="752.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-7"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="790.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-8"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="790.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-3"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="790.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-5"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="790.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-8"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="828.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-4"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="828.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-99"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="828.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-2"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="828.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-89"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="866.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-72"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="866.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-2"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="866.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-8"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="866.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-2"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="904.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-46"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="904.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-1"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="904.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-82"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="904.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-32"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="942.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-52"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="942.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-58"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="942.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-6"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="942.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-83"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="980.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-9"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="980.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-39"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="980.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-67"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="980.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-4-1"
+       width="58.994217"
+       height="28.993168"
+       x="65.503159"
+       y="1018.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-1-6"
+       width="58.994217"
+       height="28.993168"
+       x="130.5029"
+       y="1018.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-14-33"
+       width="58.994217"
+       height="28.993168"
+       x="195.50264"
+       y="1018.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       transform="translate(0,-668.36218)"
+       id="rect3145-6-55"
+       width="58.994217"
+       height="28.993168"
+       x="260.50238"
+       y="1018.8656"
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <rect
+       id="rect3145-14-5-5"
+       width="29.000317"
+       height="29.000317"
+       x="242.49985"
+       y="46.49984"
+       style="fill:none;stroke:#000000;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <rect
+       id="rect3145-14-5-0"
+       width="29.000317"
+       height="29.000317"
+       x="242.49985"
+       y="84.49984"
+       style="fill:none;stroke:#000000;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <rect
+       id="rect3145-14-5-9"
+       width="29.000317"
+       height="29.000317"
+       x="283.49985"
+       y="65.49984"
+       style="fill:none;stroke:#000000;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="Key Codes"
+     id="g5932"
+     inkscape:groupmode="layer">
+    <rect
+       transform="translate(0,-668.36218)"
+       style="fill:#10c080;fill-opacity:1;stroke:#10c080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="676.90271"
+       x="0.54042792"
+       height="28.918951"
+       width="58.9202"
+       id="rect5934" />
+    <rect
+       style="fill:#10c060;fill-opacity:1;stroke:#10c060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="676.86554"
+       x="65.503159"
+       height="28.992773"
+       width="58.994213"
+       id="rect5936"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c040;fill-opacity:1;stroke:#10c040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="676.86554"
+       x="130.5029"
+       height="28.992773"
+       width="58.994213"
+       id="rect5938"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c020;fill-opacity:1;stroke:#10c020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="676.86554"
+       x="195.50264"
+       height="28.992773"
+       width="58.994213"
+       id="rect5940"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c000;fill-opacity:1;stroke:#10c000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="676.86554"
+       x="260.50238"
+       height="28.992773"
+       width="58.994213"
+       id="rect5942"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c0a0;fill-opacity:1;stroke:#10c0a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="714.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5944"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a0e0;fill-opacity:1;stroke:#10a0e0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="752.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5946"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a0c0;fill-opacity:1;stroke:#10a0c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="790.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5948"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a0a0;fill-opacity:1;stroke:#10a0a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="828.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5950"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a080;fill-opacity:1;stroke:#10a080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="866.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5952"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a060;fill-opacity:1;stroke:#10a060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="904.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5954"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a040;fill-opacity:1;stroke:#10a040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="942.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5956"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10a020;fill-opacity:1;stroke:#10a020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="312.50342"
+       x="0.50300002"
+       height="28.993168"
+       width="58.994217"
+       id="rect5958" />
+    <rect
+       style="fill:#201010;fill-opacity:1;stroke:#201010;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="1018.8656"
+       x="0.50341594"
+       height="28.993168"
+       width="58.994217"
+       id="rect5960"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c0c0;fill-opacity:1;stroke:#10c0c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="714.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5962"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#10c0e0;fill-opacity:1;stroke:#10c0e0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="714.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5964"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#100020;fill-opacity:1;stroke:#100020;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="65.49984"
+       x="201.49985"
+       height="29.000317"
+       width="29.000317"
+       id="rect5966" />
+    <rect
+       style="fill:#1080e0;fill-opacity:1;stroke:#1080e0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="752.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5968"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1060e0;fill-opacity:1;stroke:#1060e0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="752.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5970"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1080c0;fill-opacity:1;stroke:#1080c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="790.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5972"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1060c0;fill-opacity:1;stroke:#1060c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="790.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5974"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1040c0;fill-opacity:1;stroke:#1040c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="790.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect5976"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1020c0;fill-opacity:1;stroke:#1010c0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="790.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect5978"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1080a0;fill-opacity:1;stroke:#1080a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="828.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5980"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1060a0;fill-opacity:1;stroke:#1060a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="828.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5982"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1040a0;fill-opacity:1;stroke:#1040a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="828.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect5984"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#1020a0;fill-opacity:1;stroke:#1010a0;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="828.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect5986"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#108080;fill-opacity:1;stroke:#108080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="866.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5988"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#106080;fill-opacity:1;stroke:#106080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="866.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5990"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#104080;fill-opacity:1;stroke:#104080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="866.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect5992"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#102080;fill-opacity:1;stroke:#101080;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="866.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect5994"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#108060;fill-opacity:1;stroke:#108060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="904.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect5996"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#106060;fill-opacity:1;stroke:#106060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="904.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect5998"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#104060;fill-opacity:1;stroke:#104060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="904.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect6000"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#102060;fill-opacity:1;stroke:#101060;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="904.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect6002"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#108040;fill-opacity:1;stroke:#108040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="942.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect6004"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#106040;fill-opacity:1;stroke:#106040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="942.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect6006"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#104040;fill-opacity:1;stroke:#104040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="942.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect6008"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#102040;fill-opacity:1;stroke:#101040;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="942.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect6010"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#108020;fill-opacity:1;stroke:#108020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="980.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect6012"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#106020;fill-opacity:1;stroke:#106020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="980.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect6014"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#104020;fill-opacity:1;stroke:#104020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="980.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect6016"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#102020;fill-opacity:1;stroke:#101020;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="980.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect6018"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#108000;fill-opacity:1;stroke:#108000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="1018.8656"
+       x="65.503159"
+       height="28.993168"
+       width="58.994217"
+       id="rect6020"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#106000;fill-opacity:1;stroke:#106000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="1018.8656"
+       x="130.5029"
+       height="28.993168"
+       width="58.994217"
+       id="rect6022"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#104000;fill-opacity:1;stroke:#104000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="1018.8656"
+       x="195.50264"
+       height="28.993168"
+       width="58.994217"
+       id="rect6024"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#102000;fill-opacity:1;stroke:#101000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       y="1018.8656"
+       x="260.50238"
+       height="28.993168"
+       width="58.994217"
+       id="rect6026"
+       transform="translate(0,-668.36218)" />
+    <rect
+       style="fill:#100060;fill-opacity:1;stroke:#100060;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       y="46.49984"
+       x="242.49985"
+       height="29.000317"
+       width="29.000317"
+       id="rect6028" />
+    <rect
+       style="fill:#100040;fill-opacity:1;stroke:#100040;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       y="84.49984"
+       x="242.49985"
+       height="29.000317"
+       width="29.000317"
+       id="rect6030" />
+    <rect
+       style="fill:#100000;fill-opacity:1;stroke:#100000;stroke-width:0.99968421;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       y="65.49984"
+       x="283.49985"
+       height="29.000317"
+       width="29.000317"
+       id="rect6032" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Main Text"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="2.1800537"
+       y="36"
+       id="text4311"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313"
+         x="2.1800537"
+         y="36"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">Y=</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="67.180054"
+       y="36"
+       id="text4311-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2"
+         x="67.180054"
+         y="36"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">WIND</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="36"
+       id="text4311-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5"
+         x="132.18005"
+         y="36"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ZOOM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="36"
+       id="text4311-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1"
+         x="197.18005"
+         y="36"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TRACE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="36"
+       id="text4311-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11"
+         x="262.18005"
+         y="36"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">GRAPH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="74"
+       id="text4311-52"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-7"
+         x="2.1800537"
+         y="74"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">2ND</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="74"
+       id="text4311-8-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-1"
+         x="67.180054"
+         y="74"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">MODE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="74"
+       id="text4311-4-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-2"
+         x="132.18005"
+         y="74"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">DEL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="112"
+       id="text4311-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-8"
+         x="2.1800537"
+         y="112"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ALPHA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="110.90003"
+       id="text4311-8-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-7"
+         x="67.180054"
+         y="110.90003"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">X,T,θ,<tspan
+   style="font-size:20px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+   id="tspan4185">n</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="112"
+       id="text4311-4-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-1"
+         x="132.18005"
+         y="112"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">STAT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="150"
+       id="text4311-54"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-3"
+         x="2.1800537"
+         y="150"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">MATH</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="150"
+       id="text4311-8-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-2"
+         x="67.180054"
+         y="150"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">APPS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="150"
+       id="text4311-4-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-3"
+         x="132.18005"
+         y="150"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">PRGM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="150"
+       id="text4311-5-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-1"
+         x="197.18005"
+         y="150"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">VARS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="150"
+       id="text4311-7-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-3"
+         x="262.18005"
+         y="150"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">CLEAR</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="2.1800537"
+       y="188"
+       id="text4311-87"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-4"
+         x="2.1800537"
+         y="188"
+         style="font-size:20px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="188"
+       id="text4311-8-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-77"
+         x="67.180054"
+         y="188"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">SIN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="188"
+       id="text4311-4-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-31"
+         x="132.18005"
+         y="188"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">COS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="188"
+       id="text4311-5-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-8"
+         x="197.18005"
+         y="188"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TAN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="188"
+       id="text4311-7-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-5"
+         x="262.18005"
+         y="188"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">^</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="2.1800537"
+       y="226"
+       id="text4311-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-28"
+         x="2.1800537"
+         y="226"
+         style="font-size:20px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="222.00018"
+       id="text4311-8-60"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-24"
+         x="67.180054"
+         y="222.00018"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">,</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="223.00003"
+       id="text4311-4-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-6"
+         x="132.18005"
+         y="223.00003"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">(</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="223.00003"
+       id="text4311-5-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-0"
+         x="197.18005"
+         y="223.00003"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="226"
+       id="text4311-7-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-0"
+         x="262.18005"
+         y="226"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">÷</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="264"
+       id="text4311-06"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-13"
+         x="2.1800537"
+         y="264"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">LOG</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="264"
+       id="text4311-8-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-9"
+         x="67.180054"
+         y="264"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="264"
+       id="text4311-4-34"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-4"
+         x="132.18005"
+         y="264"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="264"
+       id="text4311-5-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-06"
+         x="197.18005"
+         y="264"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="264"
+       id="text4311-7-61"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-8"
+         x="262.18005"
+         y="264"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">×</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="302"
+       id="text4311-49"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-6"
+         x="2.1800537"
+         y="302"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">LN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="302"
+       id="text4311-8-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-78"
+         x="67.180054"
+         y="302"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="302"
+       id="text4311-4-82"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-9"
+         x="132.18005"
+         y="302"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="302"
+       id="text4311-5-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-3"
+         x="197.18005"
+         y="302"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="302"
+       id="text4311-7-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-98"
+         x="262.18005"
+         y="302"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">–</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="340"
+       id="text4311-40"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-76"
+         x="2.1800537"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">STO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="340"
+       id="text4311-8-36"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-15"
+         x="67.180054"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="340"
+       id="text4311-4-42"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-0"
+         x="132.18005"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="340"
+       id="text4311-5-97"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-37"
+         x="197.18005"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="340"
+       id="text4311-7-26"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-01"
+         x="262.18005"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">+</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1800537"
+       y="378"
+       id="text4311-77"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-33"
+         x="2.1800537"
+         y="378"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="67.180054"
+       y="378"
+       id="text4311-8-59"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-2-98"
+         x="67.180054"
+         y="378"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132.18005"
+       y="378"
+       id="text4311-4-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-5-8"
+         x="132.18005"
+         y="378"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="197.18005"
+       y="375.50403"
+       id="text4311-5-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-6"
+         x="197.18005"
+         y="375.50403"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">(-)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.18005"
+       y="378"
+       id="text4311-7-60"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-11-38"
+         x="262.18005"
+         y="378"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ENTER</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="30"
+       y="340"
+       id="text4785"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4787"
+         x="30"
+         y="340"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Helvetica World;-inkscape-font-specification:Helvetica World Bold">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="11.550004"
+       y="180"
+       id="text4810"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4812"
+         x="11.550004"
+         y="180"
+         style="font-size:10px">-1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="11.550003"
+       y="218"
+       id="text4810-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4812-1"
+         x="11.550003"
+         y="218"
+         style="font-size:10px">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="86.160156"
+       y="111.69727"
+       id="text4835"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4837"
+         x="86.160156"
+         y="111.69727"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="208.01172"
+       y="86.875"
+       id="text4311-5-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-2"
+         x="208.01172"
+         y="86.875"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Helvetica World;-inkscape-font-specification:Helvetica World Bold">←</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="290.98828"
+       y="86.875"
+       id="text4311-5-3-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-2-1"
+         x="290.98828"
+         y="86.875"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Helvetica World;-inkscape-font-specification:Helvetica World Bold">→</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="251.14063"
+       y="68.011719"
+       id="text4311-5-3-5-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-2-1-0"
+         x="251.14063"
+         y="68.011719"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Helvetica World;-inkscape-font-specification:Helvetica World Bold">↑</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="251.14063"
+       y="105.73828"
+       id="text4311-5-3-5-2-1-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4313-1-2-1-0-6-0"
+         x="251.14063"
+         y="105.73828"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;font-family:Helvetica World;-inkscape-font-specification:Helvetica World Bold">↓</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Secondary Text"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="1.604126"
+       y="18.831909"
+       id="text5014"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016"
+         x="1.604126"
+         y="18.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">STAT PLOT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.927856"
+       y="18.831909"
+       id="text5014-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-1"
+         x="66.927856"
+         y="18.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TBLSET</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.29211"
+       y="18.831909"
+       id="text5014-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-9"
+         x="131.29211"
+         y="18.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">FORMAT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.60413"
+       y="18.831909"
+       id="text5014-84"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-14"
+         x="196.60413"
+         y="18.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">CALC</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="261.92786"
+       y="19"
+       id="text5014-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-98"
+         x="261.92786"
+         y="19"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TABLE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="2.1080322"
+       y="95"
+       id="text5014-80"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8"
+         x="2.1080322"
+         y="95"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">A-LOCK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.496094"
+       y="56.831909"
+       id="text5014-80-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7"
+         x="66.496094"
+         y="56.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">QUIT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="132"
+       y="56.831909"
+       id="text5014-80-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-3"
+         x="132"
+         y="56.831909"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">INS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="95"
+       id="text5014-80-7-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3"
+         x="66.44812"
+         y="95"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">LINK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="95"
+       id="text5014-80-7-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="131.44812"
+         y="95"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+         id="tspan5158">LIST</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="133"
+       id="text5014-80-7-8-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7"
+         x="1.4481201"
+         y="133"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TEST</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="133"
+       id="text5014-80-7-8-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4"
+         x="66.44812"
+         y="133"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ANGLE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="133"
+       id="text5014-80-7-8-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6"
+         x="131.44812"
+         y="133"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">DRAW</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="132"
+       id="text5014-80-7-8-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="196.44812"
+         y="132"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+         id="tspan5427">DISTR</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="171"
+       id="text5014-80-7-8-0-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-9"
+         x="1.4481201"
+         y="171"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">MATRIX</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="171"
+       id="text5014-80-7-8-3-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-5"
+         x="66.44812"
+         y="171"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">SIN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="171"
+       id="text5014-80-7-8-9-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-3"
+         x="131.44812"
+         y="171"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">COS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="170"
+       id="text5014-80-7-8-6-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-3"
+         x="196.44812"
+         y="170"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">TAN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="261.44812"
+       y="169.86523"
+       id="text5014-80-7-8-34-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-4"
+         x="261.44812"
+         y="169.86523"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">π</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="209"
+       id="text5014-80-7-8-0-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-8"
+         x="1.4481201"
+         y="209"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">SQRT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="209"
+       id="text5014-80-7-8-3-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-8"
+         x="66.44812"
+         y="209"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">EE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="209"
+       id="text5014-80-7-8-9-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-0"
+         x="131.44812"
+         y="209"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">   {</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="208"
+       id="text5014-80-7-8-6-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-8"
+         x="196.44812"
+         y="208"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">   }</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="261.44812"
+       y="209"
+       id="text5014-80-7-8-34-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-9"
+         x="261.44812"
+         y="209"
+         style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">e</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="247"
+       id="text5014-80-7-8-0-3-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-8-9"
+         x="1.4481201"
+         y="247"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="247"
+       id="text5014-80-7-8-3-0-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-8-2"
+         x="66.44812"
+         y="247"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">u</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="247"
+       id="text5014-80-7-8-9-8-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-0-8"
+         x="131.44812"
+         y="247"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">v</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="246"
+       id="text5014-80-7-8-6-6-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-8-8"
+         x="196.44812"
+         y="246"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">w</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="261.44812"
+       y="247"
+       id="text5014-80-7-8-34-1-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-9-0"
+         x="261.44812"
+         y="247"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">[</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="1.4481201"
+       y="285"
+       id="text5014-80-7-8-0-3-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-8-8"
+         x="1.4481201"
+         y="285"
+         style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">e</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="285"
+       id="text5014-80-7-8-3-0-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-8-5"
+         x="66.44812"
+         y="285"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="285"
+       id="text5014-80-7-8-9-8-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-0-6"
+         x="131.44812"
+         y="285"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="284"
+       id="text5014-80-7-8-6-6-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-8-2"
+         x="196.44812"
+         y="284"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="262.02417"
+       y="285"
+       id="text5014-80-7-8-34-1-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-9-2"
+         x="262.02417"
+         y="285"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="323"
+       id="text5014-80-7-8-0-3-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-8-86"
+         x="1.4481201"
+         y="323"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">RCL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="323"
+       id="text5014-80-7-8-3-0-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-8-6"
+         x="66.44812"
+         y="323"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="131.44812"
+       y="323"
+       id="text5014-80-7-8-9-8-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-0-3"
+         x="131.44812"
+         y="323"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="322"
+       id="text5014-80-7-8-6-6-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-8-24"
+         x="196.44812"
+         y="322"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">L3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="261.44812"
+       y="323"
+       id="text5014-80-7-8-34-1-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-9-1"
+         x="261.44812"
+         y="323"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">MEM</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="1.4481201"
+       y="361"
+       id="text5014-80-7-8-0-3-82"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-7-8-1"
+         x="1.4481201"
+         y="361"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">OFF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="66.44812"
+       y="361"
+       id="text5014-80-7-8-3-0-19"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-4-8-7"
+         x="66.44812"
+         y="361"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">CATALOG</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="131.44812"
+       y="361"
+       id="text5014-80-7-8-9-8-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-6-0-2"
+         x="131.44812"
+         y="361"
+         style="font-size:12px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">i</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="196.44812"
+       y="360"
+       id="text5014-80-7-8-6-6-95"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-8-8-20"
+         x="196.44812"
+         y="360"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ANS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="261.44812"
+       y="361"
+       id="text5014-80-7-8-34-1-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5016-8-7-3-84-9-3"
+         x="261.44812"
+         y="361"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">ENTRY</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="11.982"
+       y="242"
+       id="text5429"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5431"
+         x="11.982"
+         y="242"
+         style="font-size:8px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique"
+       x="6.9820008"
+       y="280"
+       id="text5429-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5431-1"
+         x="6.9820008"
+         y="280"
+         style="font-size:8px;font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold Oblique">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="80.639999"
+       y="167"
+       id="text5456"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5458"
+         x="80.639999"
+         y="167"
+         style="font-size:8px">-1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="147.64"
+       y="167"
+       id="text5456-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5458-1"
+         x="147.64"
+         y="167">-1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:8px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="212.64"
+       y="167"
+       id="text5456-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5458-5"
+         x="212.64"
+         y="167">-1</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Tertiary Text"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="133"
+       id="text5490"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492"
+         x="58.32774"
+         y="133">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32774"
+       y="133"
+       id="text5490-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2"
+         x="123.32774"
+         y="133">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32774"
+       y="133"
+       id="text5490-3-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2"
+         x="188.32774"
+         y="133">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="171"
+       id="text5490-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-7"
+         x="58.32774"
+         y="171">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32774"
+       y="171"
+       id="text5490-3-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29"
+         x="123.32774"
+         y="171">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32773"
+       y="171"
+       id="text5490-3-5-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1"
+         x="188.32773"
+         y="171">F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253.32773"
+       y="170.83191"
+       id="text5490-3-58-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6"
+         x="253.32773"
+         y="170.83191">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32773"
+       y="171"
+       id="text5490-3-58-9-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8"
+         x="318.32773"
+         y="171">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="209"
+       id="text5490-7-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-7-5"
+         x="58.32774"
+         y="209">I</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32774"
+       y="209"
+       id="text5490-3-2-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-6"
+         x="123.32774"
+         y="209">J</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32773"
+       y="209"
+       id="text5490-3-5-4-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1-5"
+         x="188.32773"
+         y="209">K</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253.32773"
+       y="209"
+       id="text5490-3-58-9-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-2"
+         x="253.32773"
+         y="209">L</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32773"
+       y="209"
+       id="text5490-3-58-9-9-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8-4"
+         x="318.32773"
+         y="209">M</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="247"
+       id="text5490-7-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-7-1"
+         x="58.32774"
+         y="247">N</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32774"
+       y="247"
+       id="text5490-3-2-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-1"
+         x="123.32774"
+         y="247">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32774"
+       y="247"
+       id="text5490-3-5-4-63"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1-3"
+         x="188.32774"
+         y="247">P</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253.32774"
+       y="247"
+       id="text5490-3-58-9-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-5"
+         x="253.32774"
+         y="247">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32773"
+       y="247"
+       id="text5490-3-58-9-9-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8-2"
+         x="318.32773"
+         y="247">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="285"
+       id="text5490-7-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-7-2"
+         x="58.32774"
+         y="285">S</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32774"
+       y="285"
+       id="text5490-3-2-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-3"
+         x="123.32774"
+         y="285">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32773"
+       y="285"
+       id="text5490-3-5-4-61"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1-8"
+         x="188.32773"
+         y="285">U</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253.32773"
+       y="285"
+       id="text5490-3-58-9-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-21"
+         x="253.32773"
+         y="285">V</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32776"
+       y="285"
+       id="text5490-3-58-9-9-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8-6"
+         x="318.32776"
+         y="285">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="58.32774"
+       y="323"
+       id="text5490-7-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-7-9"
+         x="58.32774"
+         y="323">X</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32773"
+       y="323"
+       id="text5490-3-2-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-5"
+         x="123.32773"
+         y="323">Y</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32773"
+       y="323"
+       id="text5490-3-5-4-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1-36"
+         x="188.32773"
+         y="323">Z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32773"
+       y="323"
+       id="text5490-3-58-9-9-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8-9"
+         x="318.32773"
+         y="323">&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="123.32771"
+       y="361"
+       id="text5490-3-2-1-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-5-0"
+         x="123.32771"
+         y="361">spc</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188.32773"
+       y="361"
+       id="text5490-3-5-4-0-5"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-2-1-36-9"
+         x="188.32773"
+         y="361">:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253.32773"
+       y="361"
+       id="text5490-3-58-9-4-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-9-3"
+         x="253.32773"
+         y="361">?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318.32773"
+       y="361"
+       id="text5490-3-58-9-9-2-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-6-6-8-9-2"
+         x="318.32773"
+         y="361">SOLVE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253"
+       y="323"
+       id="text4835-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4837-8"
+         x="253"
+         y="323"
+         style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;stroke:#000000;stroke-width:0.25;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">θ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="58"
+       y="19"
+       id="text5490-3-2-12"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-57"
+         x="58"
+         y="19"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">F1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:HelveticaNeueLT Com 67 MdCn;-inkscape-font-specification:HelveticaNeueLT Com 67 MdCn"
+       x="123"
+       y="19"
+       id="text5490-3-2-12-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="123"
+         y="19"
+         id="tspan5897"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;writing-mode:lr-tb;text-anchor:end;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold">F2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="188"
+       y="19"
+       id="text5490-3-2-12-44"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="188"
+         y="19"
+         id="tspan5928">F3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="253"
+       y="19"
+       id="text5490-3-2-12-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-57-9"
+         x="253"
+         y="19">F4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12.20571423px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Myriad Pro Cond;-inkscape-font-specification:Myriad Pro Cond Bold"
+       x="318"
+       y="19"
+       id="text5490-3-2-12-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5492-2-29-57-0"
+         x="318"
+         y="19">F5</tspan></text>
+  </g>
+</svg>
