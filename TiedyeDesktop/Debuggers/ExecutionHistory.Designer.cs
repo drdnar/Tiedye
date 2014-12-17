@@ -39,6 +39,7 @@
             // disassemblyTextBox
             // 
             this.disassemblyTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.disassemblyTextBox.Font = new System.Drawing.Font("Courier New", 8.25F);
             this.disassemblyTextBox.Location = new System.Drawing.Point(3, 31);
             this.disassemblyTextBox.Multiline = true;
             this.disassemblyTextBox.Name = "disassemblyTextBox";
@@ -79,6 +80,7 @@
             this.traceEnableCheckBox.TabIndex = 0;
             this.traceEnableCheckBox.Text = "Trace Execution";
             this.traceEnableCheckBox.UseVisualStyleBackColor = true;
+            this.traceEnableCheckBox.CheckedChanged += new System.EventHandler(this.traceEnableCheckBox_CheckedChanged);
             // 
             // ExecutionHistory
             // 

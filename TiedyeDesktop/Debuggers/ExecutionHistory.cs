@@ -34,6 +34,7 @@ namespace TiedyeDesktop
         {
             unchecked
             {
+                traceEnableCheckBox.Checked = Cpu.TraceLastExec;
                 Z80Disassembler.DisassembledInstruction disasm;
                 byte[] instr = new byte[4];
                 StringBuilder str = new StringBuilder();
@@ -62,6 +63,11 @@ namespace TiedyeDesktop
                 }
                 disassemblyTextBox.Text = str.ToString();
             }
+        }
+
+        private void traceEnableCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Cpu.TraceLastExec = traceEnableCheckBox.Checked;
         }
     }
 }
