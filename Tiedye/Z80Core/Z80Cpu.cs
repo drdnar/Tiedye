@@ -1024,13 +1024,16 @@ namespace Tiedye.Z80Core
 
 
 
-        public const int LastExecSize = 256;
+        public const int LastExecSize = 65536;//4096;//256;
 
-        public const int LastExecMask = 0xFF;
+        public const int LastExecMask = 0xFFFF;//0xFFF;//0xFF;
 
+        /*
         public readonly ushort[] LastExecAddress = new ushort[LastExecSize];
 
         public readonly byte[,] LastExecOpcode = new byte[LastExecSize, 4];
+        */
+        public readonly ushort[,] LastExecData = new ushort[LastExecSize, 16];
 
         public int LastExecPtr = 0;
 
@@ -1079,12 +1082,30 @@ namespace Tiedye.Z80Core
                     return;
                 if (TraceLastExec)
                 {
-                    LastExecOpcode[LastExecPtr, 0] = MemoryRead(null, PC);
+                    /*LastExecOpcode[LastExecPtr, 0] = MemoryRead(null, PC);
                     LastExecOpcode[LastExecPtr, 1] = MemoryRead(null, (ushort)(PC + 1));
                     LastExecOpcode[LastExecPtr, 2] = MemoryRead(null, (ushort)(PC + 2));
                     LastExecOpcode[LastExecPtr, 3] = MemoryRead(null, (ushort)(PC + 3));
                     LastExecAddress[LastExecPtr] = PC;
+                    */
+                    LastExecData[LastExecPtr, 0] = (ushort)(MemoryRead(null, PC) | (MemoryRead(null, (ushort)(PC + 1)) << 8));
+                    LastExecData[LastExecPtr, 1] = (ushort)(MemoryRead(null, (ushort)(PC + 2)) | (MemoryRead(null, (ushort)(PC + 3)) << 8));
+                    LastExecData[LastExecPtr, 2] = PC;
+                    LastExecData[LastExecPtr, 3] = SP;
+                    LastExecData[LastExecPtr, 4] = AF;
+                    LastExecData[LastExecPtr, 5] = BC;
+                    LastExecData[LastExecPtr, 6] = DE;
+                    LastExecData[LastExecPtr, 7] = HL;
+                    LastExecData[LastExecPtr, 8] = ShadowAF;
+                    LastExecData[LastExecPtr, 9] = ShadowBC;
+                    LastExecData[LastExecPtr, 10] = ShadowDE;
+                    LastExecData[LastExecPtr, 11] = ShadowHL;
+                    LastExecData[LastExecPtr, 12] = IX;
+                    LastExecData[LastExecPtr, 13] = IY;
+                    LastExecData[LastExecPtr, 14] = IR;
+                    LastExecData[LastExecPtr, 15] = IFF;
                     LastExecPtr = (LastExecPtr + 1) & LastExecMask;
+                    
                 }
                 AssertM1();
                 temp = RAM_pp(ref PC);
