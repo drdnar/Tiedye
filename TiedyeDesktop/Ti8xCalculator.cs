@@ -151,5 +151,156 @@ namespace TiedyeDesktop
             UpdateScreen();
         }
 
+
+        #region Associated windows
+        
+        KeypadDebug keypadDebug;
+        public KeypadDebug KeypadDebug
+        {
+            get
+            {
+                return keypadDebug;
+            }
+            set
+            {
+                keypadDebug = value;
+                if (value != null)
+                    keypadDebug.FormClosed += keypadDebug_FormClosed;
+            }
+        }
+
+        void keypadDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            keypadDebug.FormClosed -= keypadDebug_FormClosed;
+            keypadDebug = null;
+        }
+
+        ColorLcdDebug colorLcdDebug;
+        public ColorLcdDebug ColorLcdDebug
+        {
+            get
+            {
+                return colorLcdDebug;
+            }
+            set
+            {
+                colorLcdDebug = value;
+                if (value != null)
+                    colorLcdDebug.FormClosed += colorLcdDebug_FormClosed;
+            }
+        }
+
+        void colorLcdDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            colorLcdDebug.FormClosed -= colorLcdDebug_FormClosed;
+            colorLcdDebug = null;
+        }
+
+        SchedulerDebug schedulerDebug;
+        public SchedulerDebug SchedulerDebug
+        {
+            get
+            {
+                return schedulerDebug;
+            }
+            set
+            {
+                schedulerDebug = value;
+                if (value != null)
+                    schedulerDebug.FormClosed += schedulerDebug_FormClosed;
+            }
+        }
+
+        void schedulerDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            schedulerDebug.FormClosed -= schedulerDebug_FormClosed;
+            schedulerDebug = null;
+        }
+
+        Breakpoints breakpoints;
+        public Breakpoints Breakpoints
+        {
+            get
+            {
+                return breakpoints;
+            }
+            set
+            {
+                breakpoints = value;
+                if (value != null)
+                    breakpoints.FormClosed += breakpoints_FormClosed;
+            }
+        }
+
+        void breakpoints_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            breakpoints.FormClosed -= breakpoints_FormClosed;
+            breakpoints = null;
+        }
+
+        MemoryDebugSe memoryDebugSe;
+        public MemoryDebugSe MemoryDebugSe
+        {
+            get
+            {
+                return memoryDebugSe;
+            }
+            set
+            {
+                memoryDebugSe = value;
+                if (value != null)
+                    memoryDebugSe.FormClosed += memoryDebugSe_FormClosed;
+            }
+        }
+
+        void memoryDebugSe_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            memoryDebugSe.FormClosed -= memoryDebugSe_FormClosed;
+            memoryDebugSe = null;
+        }
+
+        CpuDebug cpuDebug;
+        public CpuDebug CpuDebug
+        {
+            get
+            {
+                return cpuDebug;
+            }
+            set
+            {
+                cpuDebug = value;
+                if (value != null)
+                    cpuDebug.FormClosed += cpuDebug_FormClosed;
+            }
+        }
+
+        void cpuDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            cpuDebug.FormClosed -= cpuDebug_FormClosed;
+            cpuDebug = null;
+        }
+
+        ExecutionHistory executionHistory;
+        public ExecutionHistory ExecutionHistory
+        {
+            get
+            {
+                return executionHistory;
+            }
+            set
+            {
+                executionHistory = value;
+                if (value != null)
+                    executionHistory.FormClosed += executionHistory_FormClosed;
+            }
+        }
+
+        void executionHistory_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            executionHistory.FormClosed -= executionHistory_FormClosed;
+            executionHistory = null;
+        }
+        #endregion
+
     }
 }

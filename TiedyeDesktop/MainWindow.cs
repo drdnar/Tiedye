@@ -53,9 +53,13 @@ namespace TiedyeDesktop
         {
             if (SelectedCalculator == null)
                 return;
-            CpuDebug blah = new CpuDebug(SelectedCalculator);
-            blah.MdiParent = this;
-            blah.Show();
+            if (SelectedCalculator.CpuDebug == null)
+            {
+                SelectedCalculator.CpuDebug = new CpuDebug(SelectedCalculator);
+                SelectedCalculator.CpuDebug.MdiParent = this;
+                SelectedCalculator.CpuDebug.Show();
+            }
+            SelectedCalculator.CpuDebug.Focus();
         }
 
         private void memoryDebugToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,9 +68,13 @@ namespace TiedyeDesktop
                 return;
             if (SelectedCalculator.Calculator is Ti84PlusCSe)
             {
-                MemoryDebugSe blah = new MemoryDebugSe(SelectedCalculator);
-                blah.MdiParent = this;
-                blah.Show();
+                if (SelectedCalculator.MemoryDebugSe == null)
+                {
+                    SelectedCalculator.MemoryDebugSe = new MemoryDebugSe(SelectedCalculator);
+                    SelectedCalculator.MemoryDebugSe.MdiParent = this;
+                    SelectedCalculator.MemoryDebugSe.Show();
+                }
+                SelectedCalculator.MemoryDebugSe.Focus();
             }
         }
 
@@ -84,18 +92,26 @@ namespace TiedyeDesktop
         {
             if (SelectedCalculator == null)
                 return;
-            Breakpoints blah = new Breakpoints(SelectedCalculator.Calculator.Cpu);
-            blah.MdiParent = this;
-            blah.Show();
+            if (SelectedCalculator.Breakpoints == null)
+            {
+                SelectedCalculator.Breakpoints = new Breakpoints(SelectedCalculator.Calculator.Cpu);
+                SelectedCalculator.Breakpoints.MdiParent = this;
+                SelectedCalculator.Breakpoints.Show();
+            }
+            SelectedCalculator.Breakpoints.Focus();
         }
 
         private void hWSchedulerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (SelectedCalculator == null)
                 return;
-            SchedulerDebug blah = new SchedulerDebug(SelectedCalculator.Calculator);
-            blah.MdiParent = this;
-            blah.Show();
+            if (SelectedCalculator.SchedulerDebug == null)
+            {
+                SelectedCalculator.SchedulerDebug = new SchedulerDebug(SelectedCalculator.Calculator);
+                SelectedCalculator.SchedulerDebug.MdiParent = this;
+                SelectedCalculator.SchedulerDebug.Show();
+            }
+            SelectedCalculator.SchedulerDebug.Focus();
         }
 
         private void lCDDebugToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,18 +120,39 @@ namespace TiedyeDesktop
                 return;
             if (!(SelectedCalculator.Calculator is Ti84PlusCSe))
                 return;
-            ColorLcdDebug blah = new ColorLcdDebug(SelectedCalculator.Calculator as Ti84PlusCSe);
-            blah.MdiParent = this;
-            blah.Show();
+            if (SelectedCalculator.ColorLcdDebug == null)
+            {
+                SelectedCalculator.ColorLcdDebug = new ColorLcdDebug(SelectedCalculator.Calculator as Ti84PlusCSe);
+                SelectedCalculator.ColorLcdDebug.MdiParent = this;
+                SelectedCalculator.ColorLcdDebug.Show();
+            }
+            SelectedCalculator.ColorLcdDebug.Focus();
         }
 
         private void keyboardDebugToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (SelectedCalculator == null)
                 return;
-            KeypadDebug blah = new KeypadDebug(SelectedCalculator);
-            blah.MdiParent = this;
-            blah.Show();
+            if (SelectedCalculator.KeypadDebug == null)
+            {
+                SelectedCalculator.KeypadDebug = new KeypadDebug(SelectedCalculator);
+                SelectedCalculator.KeypadDebug.MdiParent = this;
+                SelectedCalculator.KeypadDebug.Show();
+            }
+            SelectedCalculator.KeypadDebug.Focus();
+        }
+
+        private void executionHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedCalculator == null)
+                return;
+            if (SelectedCalculator.ExecutionHistory == null)
+            {
+                SelectedCalculator.ExecutionHistory = new ExecutionHistory(SelectedCalculator);
+                SelectedCalculator.ExecutionHistory.MdiParent = this;
+                SelectedCalculator.ExecutionHistory.Show();
+            }
+            SelectedCalculator.ExecutionHistory.Focus();
         }
     }
 }
