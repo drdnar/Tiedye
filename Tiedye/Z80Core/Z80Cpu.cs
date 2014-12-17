@@ -2450,7 +2450,7 @@ namespace Tiedye.Z80Core
                             Break = true;
                         break;
                     case 0xCA:			/* JP Z,nnnn */
-                        if (TSTFLAG(FLAG_Z))
+                        /*if (TSTFLAG(FLAG_Z))
                         {
                             temp = GetWORD(PC);
                             PUSH((ushort)(PC + 2));
@@ -2458,7 +2458,9 @@ namespace Tiedye.Z80Core
                         }
                         else
                             PC += 2;
-                        Clock.IncTime(10);
+                        Clock.IncTime(10);*/
+                        PC = (ushort)(TSTFLAG(FLAG_Z) ? GetWORD(PC) : PC + 2);
+                        Clock.IncTime(10);    
                         break;
                     case 0xCB:			/* CB prefix */
                         adr = HL;
