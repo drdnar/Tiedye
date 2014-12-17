@@ -79,7 +79,7 @@ namespace TiedyeDesktop
                     }
                     str.Append(((ushort)(baseAddress + i)).ToString("X4"));
                     str.Append(": ");
-                    disasm = Z80Disassembler.DisassembleInstruction(instr, Cpu.PC);
+                    disasm = Z80Disassembler.DisassembleInstruction(instr, (ushort)(baseAddress + i));
                     for (int j = 0; j < 4; j++)
                     {
                         if (j < disasm.Length)
