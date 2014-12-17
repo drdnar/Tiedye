@@ -1005,15 +1005,36 @@ namespace Tiedye.Z80Core
             
         }
 
+        /// <summary>
+        /// Called when the CPU is reset.
+        /// </summary>
+        public EventHandler ResetEvent;
+
         public void Reset()
         {
+            // TODO: I think AF or SP gets set to FF/FF, not 0.
             AF = BC = DE = HL = 0;
             ShadowAF = ShadowBC = ShadowDE = ShadowHL = 0;
             IX = IY = SP = PC = 0;
             IM = IFF = 0;
+            if (ResetEvent != null)
+                ResetEvent(this, null);
         }
 
 
+
+        public const int LastExecSize = 256;
+
+        public const int LastExecMask = 0xFF;
+
+        public readonly ushort[] LastExecAddress = new ushort[LastExecSize];
+
+        public readonly byte[,] LastExecOpcode = new byte[LastExecSize, 4];
+
+        public int LastExecPtr = 0;
+
+        public bool TraceLastExec = true;
+        
         public void Step()
         {
             unchecked
@@ -1062,6 +1083,15 @@ namespace Tiedye.Z80Core
                 {
                     Reset();
                     return;
+                }
+                if (TraceLastExec)
+                {
+                    LastExecOpcode[LastExecPtr, 0] = MemoryRead(null, PC);
+                    LastExecOpcode[LastExecPtr, 1] = MemoryRead(null, (ushort)(PC + 1));
+                    LastExecOpcode[LastExecPtr, 2] = MemoryRead(null, (ushort)(PC + 2));
+                    LastExecOpcode[LastExecPtr, 3] = MemoryRead(null, (ushort)(PC + 3));
+                    LastExecAddress[LastExecPtr] = PC;
+                    LastExecPtr = (LastExecPtr + 1) & LastExecMask;
                 }
                 thisIsATerribleHack:
                 switch (temp)

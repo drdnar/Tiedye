@@ -53,7 +53,17 @@ namespace TiedyeDesktop
             Calculator = calculator;
             Calculator.Flash.Data = System.IO.File.ReadAllBytes("84PCSE.rom");
             Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            Calculator.Cpu.ResetEvent += Calculator_Reset;
             screen.Image = ScreenImage;
+        }
+
+        void Calculator_Reset(object sender, EventArgs e)
+        {
+            Calculator.Cpu.Break = true;
+            Pause();
+            Calculator.Cpu.ForceReset = false;
+            UpdateScreen();
+            MessageBox.Show("Calculator reset!", "Calculator Reset", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)

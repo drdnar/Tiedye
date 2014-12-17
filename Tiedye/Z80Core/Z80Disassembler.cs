@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tiedye.Z80Core
 {
-    public class Z80Disassembler
+    public static class Z80Disassembler
     {
         // This is based on http://www.z80.info/decoding.htm
         public struct DisassembledInstruction
@@ -14,8 +14,17 @@ namespace Tiedye.Z80Core
             public string Disassembly;
             public int Length;
         }
+        public static DisassembledInstruction DisassembleInstruction(byte[] instr)
+        {
+            return DisassembleInstruction(instr, 0, false);
+        }
+        
+        public static DisassembledInstruction DisassembleInstruction(byte[] instr, ushort baseAddress)
+        {
+            return DisassembleInstruction(instr, baseAddress, true);
+        }
 
-        public DisassembledInstruction DisassembleInstruction(byte[] instr)
+        public static DisassembledInstruction DisassembleInstruction(byte[] instr, ushort baseAddress, bool hasBaseAddress)
         {
             unchecked {
                 DisassembledInstruction disasm = default(DisassembledInstruction);
@@ -41,18 +50,27 @@ namespace Tiedye.Z80Core
                                         break;
                                     case 2:
                                         disasm.Length = 2;
-                                        disasm.Disassembly = "DJNZ " + ((sbyte)instr[1]).ToString("X2");
+                                        if (hasBaseAddress)
+                                            disasm.Disassembly = "DJNZ " + ((sbyte)instr[1] + (baseAddress + 2)).ToString("X4");
+                                        else
+                                            disasm.Disassembly = "DJNZ " + ((sbyte)instr[1]).ToString("X2");
                                         break;
                                     case 3:
                                         disasm.Length = 2;
-                                        disasm.Disassembly = "JR " + ((sbyte)instr[1]).ToString("X2");
+                                        if (hasBaseAddress)
+                                            disasm.Disassembly = "JR " + ((sbyte)instr[1] + (baseAddress + 2)).ToString("X4");
+                                        else
+                                            disasm.Disassembly = "JR " + ((sbyte)instr[1]).ToString("X2");
                                         break;
                                     case 4:
                                     case 5:
                                     case 6:
                                     case 7:
                                         disasm.Length = 2;
-                                        disasm.Disassembly = "JR " + TableCC[GetField(Field.qq, b)] + ", " + ((sbyte)instr[1]).ToString("X2");
+                                        if (hasBaseAddress)
+                                            disasm.Disassembly = "JR " + TableCC[GetField(Field.qq, b)] + ", " + ((sbyte)instr[1] + (baseAddress + 2)).ToString("X4");
+                                        else
+                                            disasm.Disassembly = "JR " + TableCC[GetField(Field.qq, b)] + ", " + ((sbyte)instr[1]).ToString("X2");
                                         break;
                                 }
                                 break;
@@ -292,7 +310,7 @@ namespace Tiedye.Z80Core
             }
         }
 
-        private void DoCBPrefix(ref byte[] instr, ref DisassembledInstruction disasm)
+        private static void DoCBPrefix(ref byte[] instr, ref DisassembledInstruction disasm)
         {
             byte b = instr[1];
             disasm.Length = 2;
@@ -313,8 +331,8 @@ namespace Tiedye.Z80Core
             }
         }
 
-        
-        private void DoEDPrefix(ref byte[] instr, ref DisassembledInstruction disasm)
+
+        private static void DoEDPrefix(ref byte[] instr, ref DisassembledInstruction disasm)
         {
             byte b = instr[1];
             switch (GetField(Field.x, b))
@@ -458,7 +476,7 @@ namespace Tiedye.Z80Core
                     break;
             }
         }
-        private void DoIndexPrefix(ref byte[] instr, ref DisassembledInstruction disasm, string indexRegister)
+        private static void DoIndexPrefix(ref byte[] instr, ref DisassembledInstruction disasm, string indexRegister)
         {
             unchecked
             {
@@ -652,9 +670,9 @@ namespace Tiedye.Z80Core
             }
         }
 
-        
 
-        private string[] TableR = new string[]
+
+        private static readonly string[] TableR = new string[]
         {
             "B",
             "C",
@@ -666,7 +684,7 @@ namespace Tiedye.Z80Core
             "A",
         };
 
-        private string[] TableRP = new string[]
+        private static readonly string[] TableRP = new string[]
         {
             "BC",
             "DE",
@@ -674,7 +692,7 @@ namespace Tiedye.Z80Core
             "SP",
         };
 
-        private string[] TableRP2 = new string[]
+        private static readonly string[] TableRP2 = new string[]
         {
             "BC",
             "DE",
@@ -682,7 +700,7 @@ namespace Tiedye.Z80Core
             "AF",
         };
 
-        private string[] TableCC = new string[]
+        private static readonly string[] TableCC = new string[]
         {
             "NZ",
             "Z",
@@ -694,7 +712,7 @@ namespace Tiedye.Z80Core
             "M",
         };
 
-        private string[] TableAlu = new string[]
+        private static readonly string[] TableAlu = new string[]
         {
             "ADD A, ",
             "ADC A, ",
@@ -706,7 +724,7 @@ namespace Tiedye.Z80Core
             "CP ",
         };
 
-        private string[] TableRot = new string[]
+        private static readonly string[] TableRot = new string[]
         {
             "RLC ",
             "RRC ",
@@ -717,8 +735,8 @@ namespace Tiedye.Z80Core
             "SLL ",
             "SRL ",
         };
-        
-        private string[] TableIM = new string[]
+
+        private static readonly string[] TableIM = new string[]
         {
             "0",
             "?",
@@ -743,7 +761,7 @@ namespace Tiedye.Z80Core
             qq,
         };
 
-        private int GetField(Field f, int b)
+        private static int GetField(Field f, int b)
         {
             switch (f)
             {

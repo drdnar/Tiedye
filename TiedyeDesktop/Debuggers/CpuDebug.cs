@@ -67,7 +67,6 @@ namespace TiedyeDesktop
         {
             unchecked
             {
-                Z80Disassembler dis = new Z80Disassembler();
                 Z80Disassembler.DisassembledInstruction disasm;
                 byte[] instr = new byte[4];
                 StringBuilder str = new StringBuilder();
@@ -78,8 +77,9 @@ namespace TiedyeDesktop
                     {
                         instr[j] = Cpu.MemoryRead(this, (ushort)(baseAddress + i + j));
                     }
-                    str.Append(((ushort)(baseAddress + i)).ToString("X4") + ": ");
-                    disasm = dis.DisassembleInstruction(instr);
+                    str.Append(((ushort)(baseAddress + i)).ToString("X4"));
+                    str.Append(": ");
+                    disasm = Z80Disassembler.DisassembleInstruction(instr, Cpu.PC);
                     for (int j = 0; j < 4; j++)
                     {
                         if (j < disasm.Length)

@@ -66,6 +66,12 @@
     <Compile Include="Debuggers\CpuDebug.Designer.cs">
       <DependentUpon>CpuDebug.cs</DependentUpon>
     </Compile>
+    <Compile Include="Debuggers\ExecutionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\ExecutionHistory.Designer.cs">
+      <DependentUpon>ExecutionHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Debuggers\HexEditorPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Debuggers\CpuDebug.resx">
       <DependentUpon>CpuDebug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\ExecutionHistory.resx">
+      <DependentUpon>ExecutionHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Debuggers\KeypadDebug.resx">
       <DependentUpon>KeypadDebug.cs</DependentUpon>
