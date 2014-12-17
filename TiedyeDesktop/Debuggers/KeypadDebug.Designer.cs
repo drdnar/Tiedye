@@ -39,15 +39,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskTextBox = new System.Windows.Forms.TextBox();
-            this.group0TextBox = new System.Windows.Forms.TextBox();
             this.group1TextBox = new System.Windows.Forms.TextBox();
             this.group2TextBox = new System.Windows.Forms.TextBox();
+            this.group0TextBox = new System.Windows.Forms.TextBox();
+            this.maskTextBox = new System.Windows.Forms.TextBox();
             this.group3TextBox = new System.Windows.Forms.TextBox();
             this.group4TextBox = new System.Windows.Forms.TextBox();
             this.group5TextBox = new System.Windows.Forms.TextBox();
             this.group6TextBox = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.onKeyCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +74,7 @@
             this.tableLayoutPanel1.Controls.Add(this.group4TextBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.group5TextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.group6TextBox, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.onKeyCheckBox, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -193,22 +193,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = " ";
             // 
-            // maskTextBox
-            // 
-            this.maskTextBox.Location = new System.Drawing.Point(103, 3);
-            this.maskTextBox.Name = "maskTextBox";
-            this.maskTextBox.ReadOnly = true;
-            this.maskTextBox.Size = new System.Drawing.Size(100, 20);
-            this.maskTextBox.TabIndex = 10;
-            // 
-            // group0TextBox
-            // 
-            this.group0TextBox.Location = new System.Drawing.Point(103, 53);
-            this.group0TextBox.Name = "group0TextBox";
-            this.group0TextBox.ReadOnly = true;
-            this.group0TextBox.Size = new System.Drawing.Size(100, 20);
-            this.group0TextBox.TabIndex = 11;
-            // 
             // group1TextBox
             // 
             this.group1TextBox.Location = new System.Drawing.Point(103, 78);
@@ -224,6 +208,22 @@
             this.group2TextBox.ReadOnly = true;
             this.group2TextBox.Size = new System.Drawing.Size(100, 20);
             this.group2TextBox.TabIndex = 13;
+            // 
+            // group0TextBox
+            // 
+            this.group0TextBox.Location = new System.Drawing.Point(103, 53);
+            this.group0TextBox.Name = "group0TextBox";
+            this.group0TextBox.ReadOnly = true;
+            this.group0TextBox.Size = new System.Drawing.Size(100, 20);
+            this.group0TextBox.TabIndex = 11;
+            // 
+            // maskTextBox
+            // 
+            this.maskTextBox.Location = new System.Drawing.Point(103, 3);
+            this.maskTextBox.Name = "maskTextBox";
+            this.maskTextBox.ReadOnly = true;
+            this.maskTextBox.Size = new System.Drawing.Size(100, 20);
+            this.maskTextBox.TabIndex = 10;
             // 
             // group3TextBox
             // 
@@ -257,15 +257,15 @@
             this.group6TextBox.Size = new System.Drawing.Size(100, 20);
             this.group6TextBox.TabIndex = 17;
             // 
-            // checkBox1
+            // onKeyCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(103, 28);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(61, 17);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = "On Key";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.onKeyCheckBox.AutoSize = true;
+            this.onKeyCheckBox.Location = new System.Drawing.Point(103, 28);
+            this.onKeyCheckBox.Name = "onKeyCheckBox";
+            this.onKeyCheckBox.Size = new System.Drawing.Size(61, 17);
+            this.onKeyCheckBox.TabIndex = 18;
+            this.onKeyCheckBox.Text = "On Key";
+            this.onKeyCheckBox.UseVisualStyleBackColor = true;
             // 
             // KeypadDebug
             // 
@@ -303,6 +303,6 @@
         private System.Windows.Forms.TextBox group4TextBox;
         private System.Windows.Forms.TextBox group5TextBox;
         private System.Windows.Forms.TextBox group6TextBox;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox onKeyCheckBox;
     }
 }
