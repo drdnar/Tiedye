@@ -39,9 +39,9 @@ namespace Tiedye.Hardware
             Cpu.IoPortWrite = new Z80Core.Z80Cpu.BusWrite(WritePort);
             Crystal = new Quartz32768HzCrystal(this);
             DBus = new DBusDummy();
-            CrystalTimer1 = new CrystalTimer(Crystal, Scheduler);
-            CrystalTimer2 = new CrystalTimer(Crystal, Scheduler);
-            CrystalTimer3 = new CrystalTimer(Crystal, Scheduler);
+            CrystalTimer1 = new CrystalTimer(Crystal, Scheduler, 1);
+            CrystalTimer2 = new CrystalTimer(Crystal, Scheduler, 2);
+            CrystalTimer3 = new CrystalTimer(Crystal, Scheduler, 3);
         }
 
         public override void Reset()
@@ -54,8 +54,14 @@ namespace Tiedye.Hardware
         {
             base.doStep();
             // Check for additional interrupt sources.
-            Interrupt = Interrupt || CrystalTimer1.HasInterrupt || CrystalTimer2.HasInterrupt || CrystalTimer3.HasInterrupt;// || ... ;
+            //Interrupt = Interrupt || CrystalTimer1.HasInterrupt || CrystalTimer2.HasInterrupt || CrystalTimer3.HasInterrupt;// || ... ;
             Cpu.Step();
+        }
+
+        public int CpuSpeed
+        {
+            get;
+            set;
         }
 
         public override void WritePort(object sender, ushort address, byte value)
@@ -134,8 +140,8 @@ namespace Tiedye.Hardware
                 case 0x1F:
                     break;
                 case 0x20: // CPU speed
-                    // TODO: Have something that keeps track of what these speeds should be.
-                    switch (value)
+                    CpuSpeed = value & 3;
+                    switch (CpuSpeed)
                     {
                         case 0:
                             Cpu.Clock.Frequency = 6000000;
@@ -257,9 +263,7 @@ namespace Tiedye.Hardware
                 case 0x1F:
                     return 0;
                 case 0x20: // CPU speed
-                    if (Cpu.Clock.Frequency > 8000000)
-                        return 1;
-                    return 0;
+                    return (byte)CpuSpeed;
                 case 0x21: // Flash & RAM size
                     return (byte)((Mapper.FlashType) | (Mapper.RamType << 4));
                 case 0x22: // Flash execution lower limit
@@ -295,6 +299,8 @@ namespace Tiedye.Hardware
                     return 0x22;
                 case 0x4D:
                     return 0xA5;
+                case 0x55:
+                    return 0x1F;
                 case 0x56:
                     return 0x50;
                 case 0x57:
@@ -312,7 +318,6 @@ namespace Tiedye.Hardware
                 case 0x52:
                 case 0x53:
                 case 0x54:
-                case 0x55:
                 case 0x58:
                 case 0x59:
                 case 0x5A:

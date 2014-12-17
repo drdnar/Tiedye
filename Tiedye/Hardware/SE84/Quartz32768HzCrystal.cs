@@ -14,7 +14,7 @@ namespace Tiedye.Hardware
     public class Quartz32768HzCrystal
     {
         protected Z80Cpu Cpu;
-        protected Calculator Master;
+        public readonly Calculator Master;
         protected Scheduler Scheduler;
         
         protected Scheduler.WallTimeEvent NextIncrement;
@@ -37,10 +37,10 @@ namespace Tiedye.Hardware
             Cpu = master.Cpu;
             Scheduler = Master.Scheduler;
 
-            Scheduler.WallTimeEvent e = new Scheduler.WallTimeEvent();
-            e.Tag = "32768 Hz Crystal Tick";
-            e.Handler = new EventHandler<Scheduler.WallTimeEvent>(DoTick);
-            Scheduler.EnqueueRelativeEvent(e, 1.0 / 32768);
+            NextIncrement = new Scheduler.WallTimeEvent();
+            NextIncrement.Tag = "32768 Hz Crystal Tick";
+            NextIncrement.Handler = new EventHandler<Scheduler.WallTimeEvent>(DoTick);
+            Scheduler.EnqueueRelativeEvent(NextIncrement, 1.0 / 32768);
         }
 
     }

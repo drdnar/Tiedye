@@ -14,8 +14,27 @@ namespace Tiedye.Hardware
 
         protected EventHandler Oscillation;
 
-        public CrystalTimer(Quartz32768HzCrystal master, Scheduler scheduler)
+        readonly public int TimerNumber;
+
+        public readonly Calculator.InterruptId InterruptId;
+
+        public CrystalTimer(Quartz32768HzCrystal master, Scheduler scheduler, int timerNumber)
         {
+            switch (timerNumber)
+            {
+                case 1:
+                    InterruptId = Calculator.InterruptId.CrystalTimer1;
+                    break;
+                case 2:
+                    InterruptId = Calculator.InterruptId.CrystalTimer2;
+                    break;
+                case 3:
+                    InterruptId = Calculator.InterruptId.CrystalTimer3;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("timerNumber must be between 1 and 3");
+            }
+            TimerNumber = timerNumber;
             MasterTimer = master;
             Oscillation += new EventHandler(DoTick);
             Scheduler = scheduler;
@@ -53,10 +72,20 @@ namespace Tiedye.Hardware
 
         public void Reset()
         {
-
+            HasInterrupt = false;
         }
 
-        public bool HasInterrupt;
+        public bool HasInterrupt
+        {
+            get
+            {
+                return MasterTimer.Master.GetInterrupt(InterruptId);
+            }
+            set
+            {
+                MasterTimer.Master.SetInterrupt(InterruptId, value);
+            }
+        }
 
         protected void Deactivate()
         {
@@ -77,10 +106,10 @@ namespace Tiedye.Hardware
             {
                 return active;
             }
-            /*set
+            set
             {
-                // ??
-            }*/
+                active = value;
+            }
         }
 
         

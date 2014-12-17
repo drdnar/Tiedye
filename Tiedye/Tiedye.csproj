@@ -66,6 +66,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hardware\ApdTimer.cs" />
     <Compile Include="Hardware\SE84\Battery.cs" />
     <Compile Include="Hardware\Calculator.cs" />
     <Compile Include="Hardware\SE84\CrystalTimer.cs" />

@@ -80,7 +80,7 @@ namespace Tiedye.Hardware
             }
             set
             {
-                ramUpperLimit = value << 10 + 1024;
+                ramUpperLimit = (value << 10) + 1024;
             }
         }
 
