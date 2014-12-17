@@ -1017,6 +1017,7 @@ namespace Tiedye.Z80Core
             ShadowAF = ShadowBC = ShadowDE = ShadowHL = 0;
             IX = IY = SP = PC = 0;
             IM = IFF = 0;
+            Break = true;
             if (ResetEvent != null)
                 ResetEvent(this, null);
         }
@@ -2615,7 +2616,7 @@ namespace Tiedye.Z80Core
                         temp = GetBYTE_pp(ref PC);
                         temp = temp | (temp << 8);
                         IoPortWrite(this, (ushort)temp, hreg(AF));
-                        if (BpAnyIo || temp == BpIoWrite)
+                        if (BpAnyIo || (temp & 0xFF) == BpIoWrite)
                             Break = true;
                         Clock.IncTime(11);
                         break;
@@ -2677,7 +2678,7 @@ namespace Tiedye.Z80Core
                         temp = GetBYTE_pp(ref PC);
                         temp = temp | (temp << 8);
                         Sethreg(ref AF, IoPortRead(this, (ushort)temp));
-                        if (BpAnyIo || temp == BpIoRead)
+                        if (BpAnyIo || (temp & 0xFF) == BpIoRead)
                             Break = true;
                         Clock.IncTime(11);
                         break;
@@ -3505,13 +3506,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x41:			/* OUT (C),B */
                                 IoPortWrite(this, BC, hreg(BC));//lreg(BC)
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3566,13 +3567,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x49:			/* OUT (C),C */
                                 IoPortWrite(this, BC, lreg(BC));//Output(lreg(BC), BC);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3613,13 +3614,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x51:			/* OUT (C),D */
                                 IoPortWrite(this, BC, hreg(DE));//Output(lreg(BC), DE);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3658,14 +3659,14 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x59:			/* OUT (C),E */
                                 IoPortWrite(this, BC, lreg(DE));
                                 //Output(lreg(BC), DE);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3704,14 +3705,14 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x61:			/* OUT (C),H */
                                 //Output(lreg(BC), HL);
                                 IoPortWrite(this, BC, hreg(HL));
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3749,13 +3750,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x69:			/* OUT (C),L */
                                 IoPortWrite(this, BC, lreg(HL));//Output(lreg(BC), HL);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3793,13 +3794,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x71:			/* OUT (C),0 */
                                 IoPortWrite(this, BC, 0);//Output(lreg(BC), 0);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3829,13 +3830,13 @@ namespace Tiedye.Z80Core
                                     (((temp & 0xff) == 0 ? 1 : 0) << 6) |
                                     parity(temp)
                                     );
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
                             case 0x79:			/* OUT (C),A */
                                 IoPortWrite(this, BC, hreg(AF));//Output(lreg(BC), AF);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(12);
                                 break;
@@ -3886,7 +3887,7 @@ namespace Tiedye.Z80Core
                                 PutBYTE(HL, IoPortRead(this, BC)); ++HL;//PutBYTE(HL, Input(lreg(BC))); ++HL;
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_P, (--BC & 0xffff) != 0);
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(16);
                                 break;
@@ -3895,7 +3896,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 Sethreg(ref BC, hreg(BC) - 1);
                                 SETFLAG(FLAG_Z, hreg(BC) == 0);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(16);
                                 break;
@@ -3927,7 +3928,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 Sethreg(ref BC, lreg(BC) - 1);
                                 SETFLAG(FLAG_Z, lreg(BC) == 0);
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 Clock.IncTime(16);
                                 break;
@@ -3937,7 +3938,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 Sethreg(ref BC, hreg(BC) - 1);
                                 SETFLAG(FLAG_Z, hreg(BC) == 0);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 Clock.IncTime(16);
                                 break;
@@ -4012,7 +4013,7 @@ namespace Tiedye.Z80Core
                                 PutBYTE(HL, IoPortRead(this, BC)); ++HL;
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 if (B != 0)
                                 {
@@ -4033,7 +4034,7 @@ namespace Tiedye.Z80Core
                                 IoPortWrite(this, BC, GetBYTE(HL)); ++HL;
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 if (B != 0)
                                 {
@@ -4122,7 +4123,7 @@ namespace Tiedye.Z80Core
                                 PutBYTE(HL, IoPortRead(this, BC)); --HL;
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
-                                if (BpAnyIo || temp == BpIoRead)
+                                if (BpAnyIo || C == BpIoRead)
                                     Break = true;
                                 if (B != 0)
                                 {
@@ -4143,7 +4144,7 @@ namespace Tiedye.Z80Core
                                 IoPortWrite(this, BC, GetBYTE(HL)); --HL;
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
-                                if (BpAnyIo || temp == BpIoWrite)
+                                if (BpAnyIo || C == BpIoWrite)
                                     Break = true;
                                 if (B != 0)
                                 {
