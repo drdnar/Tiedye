@@ -59,6 +59,7 @@ namespace TiedyeDesktop
             nFlagBox.Checked = Cpu.FlagN;
             cFlagBox.Checked = Cpu.FlagC;
             haltBox.Checked = Cpu.Halt;
+            resetCheckBox.Checked = Cpu.ForceReset;
             RefreshDisassembly();
         }
 
@@ -276,6 +277,11 @@ namespace TiedyeDesktop
         private void haltBox_CheckedChanged(object sender, EventArgs e)
         {
             Cpu.Halt = haltBox.Checked;
+        }
+
+        private void resetCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Cpu.ForceReset = resetCheckBox.Checked;
         }
 
 

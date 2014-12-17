@@ -60,6 +60,7 @@
             this.cFlagBox = new System.Windows.Forms.CheckBox();
             this.iff1Box = new System.Windows.Forms.CheckBox();
             this.iff2Box = new System.Windows.Forms.CheckBox();
+            this.haltBox = new System.Windows.Forms.CheckBox();
             this.exAfAfButton = new System.Windows.Forms.Button();
             this.exxButton = new System.Windows.Forms.Button();
             this.aUpDown = new System.Windows.Forms.NumericUpDown();
@@ -89,7 +90,7 @@
             this.stepForButton = new System.Windows.Forms.Button();
             this.stepForUpDown = new System.Windows.Forms.NumericUpDown();
             this.disassemblyTextBox = new System.Windows.Forms.TextBox();
-            this.haltBox = new System.Windows.Forms.CheckBox();
+            this.resetCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -422,6 +423,7 @@
             this.flowLayoutPanel1.Controls.Add(this.iff1Box);
             this.flowLayoutPanel1.Controls.Add(this.iff2Box);
             this.flowLayoutPanel1.Controls.Add(this.haltBox);
+            this.flowLayoutPanel1.Controls.Add(this.resetCheckBox);
             this.flowLayoutPanel1.Controls.Add(this.exAfAfButton);
             this.flowLayoutPanel1.Controls.Add(this.exxButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -467,18 +469,18 @@
             // pvFlagBox
             // 
             this.pvFlagBox.AutoSize = true;
-            this.pvFlagBox.Location = new System.Drawing.Point(3, 26);
+            this.pvFlagBox.Location = new System.Drawing.Point(121, 3);
             this.pvFlagBox.Name = "pvFlagBox";
-            this.pvFlagBox.Size = new System.Drawing.Size(45, 17);
+            this.pvFlagBox.Size = new System.Drawing.Size(40, 17);
             this.pvFlagBox.TabIndex = 3;
-            this.pvFlagBox.Text = "P/V";
+            this.pvFlagBox.Text = "PV";
             this.pvFlagBox.UseVisualStyleBackColor = true;
             this.pvFlagBox.CheckedChanged += new System.EventHandler(this.pvFlagBox_CheckedChanged);
             // 
             // nFlagBox
             // 
             this.nFlagBox.AutoSize = true;
-            this.nFlagBox.Location = new System.Drawing.Point(54, 26);
+            this.nFlagBox.Location = new System.Drawing.Point(3, 26);
             this.nFlagBox.Name = "nFlagBox";
             this.nFlagBox.Size = new System.Drawing.Size(34, 17);
             this.nFlagBox.TabIndex = 4;
@@ -489,7 +491,7 @@
             // cFlagBox
             // 
             this.cFlagBox.AutoSize = true;
-            this.cFlagBox.Location = new System.Drawing.Point(94, 26);
+            this.cFlagBox.Location = new System.Drawing.Point(43, 26);
             this.cFlagBox.Name = "cFlagBox";
             this.cFlagBox.Size = new System.Drawing.Size(33, 17);
             this.cFlagBox.TabIndex = 5;
@@ -500,7 +502,7 @@
             // iff1Box
             // 
             this.iff1Box.AutoSize = true;
-            this.iff1Box.Location = new System.Drawing.Point(3, 49);
+            this.iff1Box.Location = new System.Drawing.Point(82, 26);
             this.iff1Box.Name = "iff1Box";
             this.iff1Box.Size = new System.Drawing.Size(47, 17);
             this.iff1Box.TabIndex = 6;
@@ -511,13 +513,24 @@
             // iff2Box
             // 
             this.iff2Box.AutoSize = true;
-            this.iff2Box.Location = new System.Drawing.Point(56, 49);
+            this.iff2Box.Location = new System.Drawing.Point(3, 49);
             this.iff2Box.Name = "iff2Box";
             this.iff2Box.Size = new System.Drawing.Size(47, 17);
             this.iff2Box.TabIndex = 7;
             this.iff2Box.Text = "IFF2";
             this.iff2Box.UseVisualStyleBackColor = true;
             this.iff2Box.CheckedChanged += new System.EventHandler(this.iff2Box_CheckedChanged);
+            // 
+            // haltBox
+            // 
+            this.haltBox.AutoSize = true;
+            this.haltBox.Location = new System.Drawing.Point(56, 49);
+            this.haltBox.Name = "haltBox";
+            this.haltBox.Size = new System.Drawing.Size(45, 17);
+            this.haltBox.TabIndex = 10;
+            this.haltBox.Text = "Halt";
+            this.haltBox.UseVisualStyleBackColor = true;
+            this.haltBox.CheckedChanged += new System.EventHandler(this.haltBox_CheckedChanged);
             // 
             // exAfAfButton
             // 
@@ -937,16 +950,16 @@
             this.disassemblyTextBox.TabIndex = 4;
             this.disassemblyTextBox.Text = "0000: 00       nop\r\n0001: 00       nop\r\nABCD: AABBCCDD SET A,7,(IX+7F)";
             // 
-            // haltBox
+            // resetCheckBox
             // 
-            this.haltBox.AutoSize = true;
-            this.haltBox.Location = new System.Drawing.Point(109, 49);
-            this.haltBox.Name = "haltBox";
-            this.haltBox.Size = new System.Drawing.Size(45, 17);
-            this.haltBox.TabIndex = 10;
-            this.haltBox.Text = "Halt";
-            this.haltBox.UseVisualStyleBackColor = true;
-            this.haltBox.CheckedChanged += new System.EventHandler(this.haltBox_CheckedChanged);
+            this.resetCheckBox.AutoSize = true;
+            this.resetCheckBox.Location = new System.Drawing.Point(107, 49);
+            this.resetCheckBox.Name = "resetCheckBox";
+            this.resetCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.resetCheckBox.TabIndex = 11;
+            this.resetCheckBox.Text = "Reset";
+            this.resetCheckBox.UseVisualStyleBackColor = true;
+            this.resetCheckBox.CheckedChanged += new System.EventHandler(this.resetCheckBox_CheckedChanged);
             // 
             // CpuDebug
             // 
@@ -1060,5 +1073,6 @@
         private System.Windows.Forms.NumericUpDown stepForUpDown;
         private System.Windows.Forms.TextBox disassemblyTextBox;
         private System.Windows.Forms.CheckBox haltBox;
+        private System.Windows.Forms.CheckBox resetCheckBox;
     }
 }
