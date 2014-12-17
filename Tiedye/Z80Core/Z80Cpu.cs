@@ -1033,7 +1033,7 @@ namespace Tiedye.Z80Core
 
         public int LastExecPtr = 0;
 
-        public bool TraceLastExec = true;
+        public bool TraceLastExec = false;
         
         public void Step()
         {
@@ -1076,14 +1076,6 @@ namespace Tiedye.Z80Core
                 }
                 if (halt)
                     return;
-                AssertM1();
-                temp = RAM_pp(ref PC);
-                ReleaseM1();
-                if (ForceReset)
-                {
-                    Reset();
-                    return;
-                }
                 if (TraceLastExec)
                 {
                     LastExecOpcode[LastExecPtr, 0] = MemoryRead(null, PC);
@@ -1092,6 +1084,14 @@ namespace Tiedye.Z80Core
                     LastExecOpcode[LastExecPtr, 3] = MemoryRead(null, (ushort)(PC + 3));
                     LastExecAddress[LastExecPtr] = PC;
                     LastExecPtr = (LastExecPtr + 1) & LastExecMask;
+                }
+                AssertM1();
+                temp = RAM_pp(ref PC);
+                ReleaseM1();
+                if (ForceReset)
+                {
+                    Reset();
+                    return;
                 }
                 thisIsATerribleHack:
                 switch (temp)
