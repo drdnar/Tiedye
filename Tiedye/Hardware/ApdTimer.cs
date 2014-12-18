@@ -28,15 +28,21 @@ namespace Tiedye.Hardware
         public readonly Calculator.InterruptId InterruptId;
 
         protected Calculator Master;
-
-        public ApdTimer(Scheduler sched, Calculator.InterruptId interruptId, Calculator master)
+        public ApdTimer(Scheduler sched, Calculator.InterruptId interruptId, Calculator master) : this(sched, interruptId, master, 0.002)
+        {
+            
+        }
+        
+        public ApdTimer(Scheduler sched, Calculator.InterruptId interruptId, Calculator master, double period)
         {
             NextIncrement = new Scheduler.WallTimeEvent();
             NextIncrement.Tag = "HW Timer tick " + interruptId.ToString();
             NextIncrement.Handler = new EventHandler<Scheduler.WallTimeEvent>(DoTick);
-            Scheduler.EnqueueRelativeEvent(NextIncrement, Period);
+            Scheduler = sched;
             InterruptId = interruptId;
             Master = master;
+            this.period = period;
+            Scheduler.EnqueueRelativeEvent(NextIncrement, Period);
         }
 
         public virtual void DoTick(object sender, Scheduler.WallTimeEvent e)

@@ -44,10 +44,8 @@ namespace Tiedye.Hardware
             CrystalTimer1 = new CrystalTimer(Crystal, Scheduler, 1);
             CrystalTimer2 = new CrystalTimer(Crystal, Scheduler, 2);
             CrystalTimer3 = new CrystalTimer(Crystal, Scheduler, 3);
-            Apd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer1, this);
-            Apd.Period = 1.0 / 512;
-            PApd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer2, this);
-            PApd.Period = 1.0 / 1024;
+            Apd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer1, this, 1.0 / 512);
+            PApd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer2, this, 1.0 / 1024);
         }
 
         public override void Reset()

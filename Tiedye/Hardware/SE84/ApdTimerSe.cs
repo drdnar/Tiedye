@@ -10,12 +10,13 @@ namespace Tiedye.Hardware
     {
         //internal Quartz32768HzCrystal MasterTimer;
 
-        public ApdTimerSe(Scheduler sched, Calculator.InterruptId interruptId, Calculator master)
-            : base(sched, interruptId, master)
+        public ApdTimerSe(Scheduler sched, Calculator.InterruptId interruptId, Calculator master, double defaultPeriod)
+            : base(sched, interruptId, master, defaultPeriod)
         {
             /*if (master is Ti84PlusCSe)
                 MasterTimer = ((Ti84PlusCSe)master).Crystal;*/
             //else if (master is TiSE84)
+
         }
         /*
         bool ChangedFrequency = false;
