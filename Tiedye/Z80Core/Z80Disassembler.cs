@@ -580,7 +580,7 @@ namespace Tiedye.Z80Core
                     case 0x6E:
                     case 0x7E:
                         disasm.Length = 3;
-                        disasm.Disassembly = "LD " + TableR[GetField(Field.z, b)] + "(" + indexRegister + " + " + ((sbyte)instr[2]).ToString("X2") + ")";
+                        disasm.Disassembly = "LD " + TableR[GetField(Field.y, b)] + "(" + indexRegister + " + " + ((sbyte)instr[2]).ToString("X2") + ")";
                         break;
                     case 0x84:
                     case 0x85:
