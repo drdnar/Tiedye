@@ -31,6 +31,8 @@ namespace TiedyeDesktop
             RefreshData();
         }
 
+        StringBuilder str = new StringBuilder();
+
         public void RefreshData()
         {
             onCheckBox.Checked = true;
@@ -45,6 +47,22 @@ namespace TiedyeDesktop
             windowBottomUpDown.Value = Lcd.WindowVerticalEnd;
             windowLeftUpDown.Value = Lcd.WindowHorizontalStart;
             windowRightUpDown.Value = Lcd.WindowHorizontalEnd;
+
+            int pos = (Lcd.LogPtr - 1) & Lcd.LogPtr;
+            int asdf = ColorLcd.LogSize;
+            str.Clear();
+            for (int i = 0; i < asdf; i++)
+            {
+                str.Append("(");
+                str.Append(Lcd.LogData[pos, 1]);
+                str.Append(", ");
+                str.Append(Lcd.LogData[pos, 2]);
+                str.Append(") <= ");
+                str.Append(Lcd.LogData[pos, 0]);
+                str.AppendLine();
+                pos = (pos - 1) & ColorLcd.LogMask;
+            }
+            logTextBox.Text = str.ToString();
         }
 
         private void ColorLcdDebug_FormClosed(object sender, FormClosedEventArgs e)

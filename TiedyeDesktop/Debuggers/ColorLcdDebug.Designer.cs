@@ -29,13 +29,22 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.windowRightUpDown = new System.Windows.Forms.NumericUpDown();
+            this.windowLeftUpDown = new System.Windows.Forms.NumericUpDown();
+            this.windowBottomUpDown = new System.Windows.Forms.NumericUpDown();
+            this.windowTopUpDown = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cursorColumnUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cursorColumnSetUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.upDownRadio = new System.Windows.Forms.RadioButton();
             this.leftRightRadio = new System.Windows.Forms.RadioButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.upCheckBox = new System.Windows.Forms.CheckBox();
             this.leftCheckBox = new System.Windows.Forms.CheckBox();
@@ -45,38 +54,30 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cursorRowUpDown = new System.Windows.Forms.NumericUpDown();
-            this.cursorRowSetUpDown = new System.Windows.Forms.NumericUpDown();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
+            this.cursorRowUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cursorColumnUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cursorColumnSetUpDown = new System.Windows.Forms.NumericUpDown();
+            this.cursorRowSetUpDown = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.onCheckBox = new System.Windows.Forms.CheckBox();
             this.panicCheckBox = new System.Windows.Forms.CheckBox();
-            this.windowTopUpDown = new System.Windows.Forms.NumericUpDown();
-            this.windowBottomUpDown = new System.Windows.Forms.NumericUpDown();
-            this.windowLeftUpDown = new System.Windows.Forms.NumericUpDown();
-            this.windowRightUpDown = new System.Windows.Forms.NumericUpDown();
+            this.logTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cursorRowUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).BeginInit();
-            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.windowRightUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowLeftUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowBottomUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowTopUpDown)).BeginInit();
             this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cursorColumnUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursorColumnSetUpDown)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cursorRowUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).BeginInit();
             this.flowLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.windowTopUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowBottomUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowLeftUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowRightUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -84,6 +85,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.logTextBox, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.windowRightUpDown, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.windowLeftUpDown, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.windowBottomUpDown, 1, 7);
@@ -120,8 +122,114 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 261);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 361);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // windowRightUpDown
+            // 
+            this.windowRightUpDown.Location = new System.Drawing.Point(103, 228);
+            this.windowRightUpDown.Maximum = new decimal(new int[] {
+            511,
+            0,
+            0,
+            0});
+            this.windowRightUpDown.Name = "windowRightUpDown";
+            this.windowRightUpDown.Size = new System.Drawing.Size(80, 20);
+            this.windowRightUpDown.TabIndex = 42;
+            // 
+            // windowLeftUpDown
+            // 
+            this.windowLeftUpDown.Location = new System.Drawing.Point(103, 203);
+            this.windowLeftUpDown.Maximum = new decimal(new int[] {
+            511,
+            0,
+            0,
+            0});
+            this.windowLeftUpDown.Name = "windowLeftUpDown";
+            this.windowLeftUpDown.Size = new System.Drawing.Size(80, 20);
+            this.windowLeftUpDown.TabIndex = 41;
+            // 
+            // windowBottomUpDown
+            // 
+            this.windowBottomUpDown.Location = new System.Drawing.Point(103, 178);
+            this.windowBottomUpDown.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.windowBottomUpDown.Name = "windowBottomUpDown";
+            this.windowBottomUpDown.Size = new System.Drawing.Size(80, 20);
+            this.windowBottomUpDown.TabIndex = 32;
+            // 
+            // windowTopUpDown
+            // 
+            this.windowTopUpDown.Location = new System.Drawing.Point(103, 153);
+            this.windowTopUpDown.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.windowTopUpDown.Name = "windowTopUpDown";
+            this.windowTopUpDown.Size = new System.Drawing.Size(80, 20);
+            this.windowTopUpDown.TabIndex = 31;
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.label12);
+            this.flowLayoutPanel4.Controls.Add(this.cursorColumnUpDown);
+            this.flowLayoutPanel4.Controls.Add(this.label13);
+            this.flowLayoutPanel4.Controls.Add(this.cursorColumnSetUpDown);
+            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(100, 125);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(284, 25);
+            this.flowLayoutPanel4.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 6);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Current";
+            // 
+            // cursorColumnUpDown
+            // 
+            this.cursorColumnUpDown.Location = new System.Drawing.Point(50, 3);
+            this.cursorColumnUpDown.Maximum = new decimal(new int[] {
+            511,
+            0,
+            0,
+            0});
+            this.cursorColumnUpDown.Name = "cursorColumnUpDown";
+            this.cursorColumnUpDown.Size = new System.Drawing.Size(80, 20);
+            this.cursorColumnUpDown.TabIndex = 40;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(136, 6);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(23, 13);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Set";
+            // 
+            // cursorColumnSetUpDown
+            // 
+            this.cursorColumnSetUpDown.Location = new System.Drawing.Point(165, 3);
+            this.cursorColumnSetUpDown.Maximum = new decimal(new int[] {
+            511,
+            0,
+            0,
+            0});
+            this.cursorColumnSetUpDown.Name = "cursorColumnSetUpDown";
+            this.cursorColumnSetUpDown.Size = new System.Drawing.Size(80, 20);
+            this.cursorColumnSetUpDown.TabIndex = 41;
             // 
             // label1
             // 
@@ -162,6 +270,17 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Increment";
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.upDownRadio);
+            this.flowLayoutPanel1.Controls.Add(this.leftRightRadio);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(100, 50);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 25);
+            this.flowLayoutPanel1.TabIndex = 6;
+            // 
             // upDownRadio
             // 
             this.upDownRadio.AutoSize = true;
@@ -183,17 +302,6 @@
             this.leftRightRadio.TabStop = true;
             this.leftRightRadio.Text = "Left/Right";
             this.leftRightRadio.UseVisualStyleBackColor = true;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.upDownRadio);
-            this.flowLayoutPanel1.Controls.Add(this.leftRightRadio);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(100, 50);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(284, 25);
-            this.flowLayoutPanel1.TabIndex = 6;
             // 
             // flowLayoutPanel2
             // 
@@ -286,30 +394,6 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Window Right";
             // 
-            // cursorRowUpDown
-            // 
-            this.cursorRowUpDown.Location = new System.Drawing.Point(50, 3);
-            this.cursorRowUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.cursorRowUpDown.Name = "cursorRowUpDown";
-            this.cursorRowUpDown.Size = new System.Drawing.Size(80, 20);
-            this.cursorRowUpDown.TabIndex = 30;
-            // 
-            // cursorRowSetUpDown
-            // 
-            this.cursorRowSetUpDown.Location = new System.Drawing.Point(165, 3);
-            this.cursorRowSetUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.cursorRowSetUpDown.Name = "cursorRowSetUpDown";
-            this.cursorRowSetUpDown.Size = new System.Drawing.Size(80, 20);
-            this.cursorRowSetUpDown.TabIndex = 31;
-            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label10);
@@ -333,6 +417,18 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Current";
             // 
+            // cursorRowUpDown
+            // 
+            this.cursorRowUpDown.Location = new System.Drawing.Point(50, 3);
+            this.cursorRowUpDown.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.cursorRowUpDown.Name = "cursorRowUpDown";
+            this.cursorRowUpDown.Size = new System.Drawing.Size(80, 20);
+            this.cursorRowUpDown.TabIndex = 30;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -343,62 +439,17 @@
             this.label11.TabIndex = 16;
             this.label11.Text = "Set";
             // 
-            // flowLayoutPanel4
+            // cursorRowSetUpDown
             // 
-            this.flowLayoutPanel4.Controls.Add(this.label12);
-            this.flowLayoutPanel4.Controls.Add(this.cursorColumnUpDown);
-            this.flowLayoutPanel4.Controls.Add(this.label13);
-            this.flowLayoutPanel4.Controls.Add(this.cursorColumnSetUpDown);
-            this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(100, 125);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(284, 25);
-            this.flowLayoutPanel4.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 6);
-            this.label12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Current";
-            // 
-            // cursorColumnUpDown
-            // 
-            this.cursorColumnUpDown.Location = new System.Drawing.Point(50, 3);
-            this.cursorColumnUpDown.Maximum = new decimal(new int[] {
-            511,
+            this.cursorRowSetUpDown.Location = new System.Drawing.Point(165, 3);
+            this.cursorRowSetUpDown.Maximum = new decimal(new int[] {
+            255,
             0,
             0,
             0});
-            this.cursorColumnUpDown.Name = "cursorColumnUpDown";
-            this.cursorColumnUpDown.Size = new System.Drawing.Size(80, 20);
-            this.cursorColumnUpDown.TabIndex = 40;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(136, 6);
-            this.label13.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 13);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "Set";
-            // 
-            // cursorColumnSetUpDown
-            // 
-            this.cursorColumnSetUpDown.Location = new System.Drawing.Point(165, 3);
-            this.cursorColumnSetUpDown.Maximum = new decimal(new int[] {
-            511,
-            0,
-            0,
-            0});
-            this.cursorColumnSetUpDown.Name = "cursorColumnSetUpDown";
-            this.cursorColumnSetUpDown.Size = new System.Drawing.Size(80, 20);
-            this.cursorColumnSetUpDown.TabIndex = 41;
+            this.cursorRowSetUpDown.Name = "cursorRowSetUpDown";
+            this.cursorRowSetUpDown.Size = new System.Drawing.Size(80, 20);
+            this.cursorRowSetUpDown.TabIndex = 31;
             // 
             // label14
             // 
@@ -441,59 +492,23 @@
             this.panicCheckBox.Text = "Panic";
             this.panicCheckBox.UseVisualStyleBackColor = true;
             // 
-            // windowTopUpDown
+            // logTextBox
             // 
-            this.windowTopUpDown.Location = new System.Drawing.Point(103, 153);
-            this.windowTopUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.windowTopUpDown.Name = "windowTopUpDown";
-            this.windowTopUpDown.Size = new System.Drawing.Size(80, 20);
-            this.windowTopUpDown.TabIndex = 31;
-            // 
-            // windowBottomUpDown
-            // 
-            this.windowBottomUpDown.Location = new System.Drawing.Point(103, 178);
-            this.windowBottomUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.windowBottomUpDown.Name = "windowBottomUpDown";
-            this.windowBottomUpDown.Size = new System.Drawing.Size(80, 20);
-            this.windowBottomUpDown.TabIndex = 32;
-            // 
-            // windowLeftUpDown
-            // 
-            this.windowLeftUpDown.Location = new System.Drawing.Point(103, 203);
-            this.windowLeftUpDown.Maximum = new decimal(new int[] {
-            511,
-            0,
-            0,
-            0});
-            this.windowLeftUpDown.Name = "windowLeftUpDown";
-            this.windowLeftUpDown.Size = new System.Drawing.Size(80, 20);
-            this.windowLeftUpDown.TabIndex = 41;
-            // 
-            // windowRightUpDown
-            // 
-            this.windowRightUpDown.Location = new System.Drawing.Point(103, 228);
-            this.windowRightUpDown.Maximum = new decimal(new int[] {
-            511,
-            0,
-            0,
-            0});
-            this.windowRightUpDown.Name = "windowRightUpDown";
-            this.windowRightUpDown.Size = new System.Drawing.Size(80, 20);
-            this.windowRightUpDown.TabIndex = 42;
+            this.tableLayoutPanel1.SetColumnSpan(this.logTextBox, 2);
+            this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTextBox.Location = new System.Drawing.Point(3, 253);
+            this.logTextBox.Multiline = true;
+            this.logTextBox.Name = "logTextBox";
+            this.tableLayoutPanel1.SetRowSpan(this.logTextBox, 2);
+            this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.logTextBox.Size = new System.Drawing.Size(378, 105);
+            this.logTextBox.TabIndex = 44;
             // 
             // ColorLcdDebug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 361);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximizeBox = false;
             this.Name = "ColorLcdDebug";
@@ -501,24 +516,24 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ColorLcdDebug_FormClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cursorRowUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).EndInit();
-            this.flowLayoutPanel3.ResumeLayout(false);
-            this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.windowRightUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowLeftUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowBottomUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.windowTopUpDown)).EndInit();
             this.flowLayoutPanel4.ResumeLayout(false);
             this.flowLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cursorColumnUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursorColumnSetUpDown)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
+            this.flowLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cursorRowUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).EndInit();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.windowTopUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowBottomUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowLeftUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.windowRightUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,5 +575,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.CheckBox onCheckBox;
         private System.Windows.Forms.CheckBox panicCheckBox;
+        private System.Windows.Forms.TextBox logTextBox;
     }
 }

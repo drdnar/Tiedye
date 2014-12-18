@@ -136,9 +136,14 @@ namespace TiedyeDesktop
                         unchecked
                         {
                             ScreenImage.SetPixel(x, y, Color.FromArgb((int)((uint)0xFF000000 | (uint)lcd[x, y])));
+                            /*if (((int)(Calculator.Cpu.Clock.WallTime * 10) & 1) != 0)
+                                ScreenImage.SetPixel(x, y, (lcd.Data[x, y] != 0 ? Color.Blue : Color.Red));
+                            else
+                                ScreenImage.SetPixel(x, y, (lcd.Data[x, y] != 0 ? Color.Purple : Color.Pink));*/
                         }
             }
             screen.Image = ScreenImage;
+            screen.Refresh();
         }
 
         private void Ti8xCalculator_FormClosed(object sender, FormClosedEventArgs e)

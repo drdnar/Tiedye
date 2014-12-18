@@ -30,11 +30,19 @@ namespace Tiedye.Hardware
         {
             get
             {
+                /*54321 098765 43210
+                bbbbb gggggg rrrrr*/
                 int r, g, b;
                 int p = Data[x, y];
-                r = p & 0x3F;
-                g = (p >> 6) & 0x3F;
-                b = (p >> 12) & 0x3F;
+                r = ((p & 0x1F) <<  3);
+                if ((r & 8) != 0)
+                    r |= 7;
+                g = ((p >> 5) & 0x3F) << 2;
+                if ((g & 4) != 0)
+                    g |= 3;
+                b = ((p >> 11) & 0x1F) << 3;
+                if ((b & 8) != 0)
+                    b |= 7;
                 return (b << 16) | (g << 8) | (r);
                 //return Data[x, y];
             }
@@ -160,6 +168,16 @@ namespace Tiedye.Hardware
             return 0;
         }
 
+        public const int LogSize = 4096;//256;
+
+        public const int LogMask = 0xFFF;//0xFF;
+
+        public ushort[,] LogData = new ushort[LogSize, 4];
+        
+        public int LogPtr = 0;
+
+        public bool LogEnable = true;
+        
         public void WriteData(byte value)
         {
             if (WaitingForByte && !WritingData)
@@ -187,7 +205,15 @@ namespace Tiedye.Hardware
                     CursorColumn = val;
                     break;
                 case 0x22: // GRAM Buffer
+                    if (LogEnable)
+                    {
+                        LogData[LogPtr, 0] = val;
+                        LogData[LogPtr, 1] = (ushort)CursorColumn;
+                        LogData[LogPtr, 2] = (ushort)CursorRow;
+                        LogPtr = (LogPtr + 1) & LogMask;
+                    }
                     Data[CursorColumn, CursorRow] = val;
+                    IncCursor();
                     break;
                 case 0x50: // Window Vertical Start
                     WindowVerticalStart = val;
