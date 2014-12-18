@@ -176,7 +176,7 @@ namespace Tiedye.Hardware
         
         public int LogPtr = 0;
 
-        public bool LogEnable = true;
+        public bool LogEnable = false;
         
         public void WriteData(byte value)
         {
