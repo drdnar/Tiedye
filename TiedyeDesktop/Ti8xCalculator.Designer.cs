@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.screen = new System.Windows.Forms.PictureBox();
-            this.keypad = new TiedyeDesktop.Keypad();
             this.cpuTimer = new System.Windows.Forms.Timer(this.components);
             this.screenTimer = new System.Windows.Forms.Timer(this.components);
+            this.keypad = new TiedyeDesktop.Keypad();
             ((System.ComponentModel.ISupportInitialize)(this.screen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,6 +44,16 @@
             this.screen.TabIndex = 0;
             this.screen.TabStop = false;
             // 
+            // cpuTimer
+            // 
+            this.cpuTimer.Tick += new System.EventHandler(this.cpuTimer_Tick);
+            // 
+            // screenTimer
+            // 
+            this.screenTimer.Enabled = true;
+            this.screenTimer.Interval = 50;
+            this.screenTimer.Tick += new System.EventHandler(this.screenTimer_Tick);
+            // 
             // keypad
             // 
             this.keypad.Location = new System.Drawing.Point(12, 259);
@@ -52,17 +62,6 @@
             this.keypad.TabIndex = 1;
             this.keypad.KeyPressed += new System.EventHandler<TiedyeDesktop.Keypad.KeyLocation>(this.keypad_KeyPressed);
             this.keypad.KeyReleased += new System.EventHandler<TiedyeDesktop.Keypad.KeyLocation>(this.keypad_KeyReleased);
-            // 
-            // cpuTimer
-            // 
-            this.cpuTimer.Interval = 25;
-            this.cpuTimer.Tick += new System.EventHandler(this.cpuTimer_Tick);
-            // 
-            // screenTimer
-            // 
-            this.screenTimer.Enabled = true;
-            this.screenTimer.Interval = 1000;
-            this.screenTimer.Tick += new System.EventHandler(this.screenTimer_Tick);
             // 
             // Ti8xCalculator
             // 

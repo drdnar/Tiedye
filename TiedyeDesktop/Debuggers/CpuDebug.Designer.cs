@@ -61,6 +61,7 @@
             this.iff1Box = new System.Windows.Forms.CheckBox();
             this.iff2Box = new System.Windows.Forms.CheckBox();
             this.haltBox = new System.Windows.Forms.CheckBox();
+            this.resetCheckBox = new System.Windows.Forms.CheckBox();
             this.exAfAfButton = new System.Windows.Forms.Button();
             this.exxButton = new System.Windows.Forms.Button();
             this.aUpDown = new System.Windows.Forms.NumericUpDown();
@@ -90,7 +91,10 @@
             this.stepForButton = new System.Windows.Forms.Button();
             this.stepForUpDown = new System.Windows.Forms.NumericUpDown();
             this.disassemblyTextBox = new System.Windows.Forms.TextBox();
-            this.resetCheckBox = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.irUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
+            this.imUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -118,6 +122,8 @@
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stepForUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.irUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -157,6 +163,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
@@ -198,16 +205,20 @@
             this.tableLayoutPanel2.Controls.Add(this.bPrimeUpDown, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.dPrimeUpDown, 5, 2);
             this.tableLayoutPanel2.Controls.Add(this.hPrimeUpDown, 5, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label18, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.irUpDown, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.imUpDown, 3, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2853F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28531F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.2853F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28816F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(338, 336);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -215,7 +226,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 21);
+            this.label1.Location = new System.Drawing.Point(8, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 13);
             this.label1.TabIndex = 0;
@@ -225,7 +236,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 76);
+            this.label2.Location = new System.Drawing.Point(8, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 13);
             this.label2.TabIndex = 1;
@@ -235,7 +246,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 132);
+            this.label3.Location = new System.Drawing.Point(7, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 13);
             this.label3.TabIndex = 2;
@@ -245,7 +256,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 188);
+            this.label4.Location = new System.Drawing.Point(7, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 13);
             this.label4.TabIndex = 3;
@@ -255,7 +266,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 244);
+            this.label5.Location = new System.Drawing.Point(6, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 13);
             this.label5.TabIndex = 4;
@@ -265,7 +276,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 301);
+            this.label6.Location = new System.Drawing.Point(4, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(21, 13);
             this.label6.TabIndex = 5;
@@ -275,7 +286,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(92, 21);
+            this.label8.Location = new System.Drawing.Point(92, 17);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 13);
             this.label8.TabIndex = 6;
@@ -285,7 +296,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(92, 76);
+            this.label7.Location = new System.Drawing.Point(92, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 13);
             this.label7.TabIndex = 6;
@@ -295,7 +306,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(92, 132);
+            this.label9.Location = new System.Drawing.Point(92, 111);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(14, 13);
             this.label9.TabIndex = 6;
@@ -305,7 +316,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(92, 188);
+            this.label10.Location = new System.Drawing.Point(92, 158);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(13, 13);
             this.label10.TabIndex = 6;
@@ -315,7 +326,7 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(90, 244);
+            this.label11.Location = new System.Drawing.Point(90, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(17, 13);
             this.label11.TabIndex = 6;
@@ -325,7 +336,7 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(88, 301);
+            this.label12.Location = new System.Drawing.Point(88, 252);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(21, 13);
             this.label12.TabIndex = 6;
@@ -335,7 +346,7 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(175, 21);
+            this.label13.Location = new System.Drawing.Point(175, 17);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(16, 13);
             this.label13.TabIndex = 6;
@@ -345,7 +356,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(175, 76);
+            this.label14.Location = new System.Drawing.Point(175, 64);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(16, 13);
             this.label14.TabIndex = 6;
@@ -355,7 +366,7 @@
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(174, 132);
+            this.label15.Location = new System.Drawing.Point(174, 111);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(17, 13);
             this.label15.TabIndex = 6;
@@ -365,7 +376,7 @@
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(174, 188);
+            this.label16.Location = new System.Drawing.Point(174, 158);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(17, 13);
             this.label16.TabIndex = 6;
@@ -375,7 +386,7 @@
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(259, 21);
+            this.label19.Location = new System.Drawing.Point(259, 17);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(15, 13);
             this.label19.TabIndex = 6;
@@ -385,7 +396,7 @@
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(259, 76);
+            this.label20.Location = new System.Drawing.Point(259, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(16, 13);
             this.label20.TabIndex = 6;
@@ -395,7 +406,7 @@
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(259, 132);
+            this.label21.Location = new System.Drawing.Point(259, 111);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(16, 13);
             this.label21.TabIndex = 6;
@@ -405,7 +416,7 @@
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(259, 188);
+            this.label22.Location = new System.Drawing.Point(259, 158);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 13);
             this.label22.TabIndex = 6;
@@ -427,10 +438,10 @@
             this.flowLayoutPanel1.Controls.Add(this.exAfAfButton);
             this.flowLayoutPanel1.Controls.Add(this.exxButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(171, 226);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(171, 191);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.tableLayoutPanel2.SetRowSpan(this.flowLayoutPanel1, 2);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(164, 107);
+            this.tableLayoutPanel2.SetRowSpan(this.flowLayoutPanel1, 3);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(164, 142);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
             // sFlagBox
@@ -532,6 +543,17 @@
             this.haltBox.UseVisualStyleBackColor = true;
             this.haltBox.CheckedChanged += new System.EventHandler(this.haltBox_CheckedChanged);
             // 
+            // resetCheckBox
+            // 
+            this.resetCheckBox.AutoSize = true;
+            this.resetCheckBox.Location = new System.Drawing.Point(107, 49);
+            this.resetCheckBox.Name = "resetCheckBox";
+            this.resetCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.resetCheckBox.TabIndex = 11;
+            this.resetCheckBox.Text = "Reset";
+            this.resetCheckBox.UseVisualStyleBackColor = true;
+            this.resetCheckBox.CheckedChanged += new System.EventHandler(this.resetCheckBox_CheckedChanged);
+            // 
             // exAfAfButton
             // 
             this.exAfAfButton.Location = new System.Drawing.Point(3, 72);
@@ -556,7 +578,7 @@
             // 
             this.aUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.aUpDown.Hexadecimal = true;
-            this.aUpDown.Location = new System.Drawing.Point(33, 17);
+            this.aUpDown.Location = new System.Drawing.Point(33, 13);
             this.aUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -571,7 +593,7 @@
             // 
             this.bUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bUpDown.Hexadecimal = true;
-            this.bUpDown.Location = new System.Drawing.Point(33, 73);
+            this.bUpDown.Location = new System.Drawing.Point(33, 60);
             this.bUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -586,7 +608,7 @@
             // 
             this.dUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dUpDown.Hexadecimal = true;
-            this.dUpDown.Location = new System.Drawing.Point(33, 129);
+            this.dUpDown.Location = new System.Drawing.Point(33, 107);
             this.dUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -601,7 +623,7 @@
             // 
             this.hUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hUpDown.Hexadecimal = true;
-            this.hUpDown.Location = new System.Drawing.Point(33, 185);
+            this.hUpDown.Location = new System.Drawing.Point(33, 154);
             this.hUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -616,7 +638,7 @@
             // 
             this.fUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fUpDown.Hexadecimal = true;
-            this.fUpDown.Location = new System.Drawing.Point(117, 17);
+            this.fUpDown.Location = new System.Drawing.Point(117, 13);
             this.fUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -631,7 +653,7 @@
             // 
             this.cUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cUpDown.Hexadecimal = true;
-            this.cUpDown.Location = new System.Drawing.Point(117, 73);
+            this.cUpDown.Location = new System.Drawing.Point(117, 60);
             this.cUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -646,7 +668,7 @@
             // 
             this.eUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.eUpDown.Hexadecimal = true;
-            this.eUpDown.Location = new System.Drawing.Point(117, 129);
+            this.eUpDown.Location = new System.Drawing.Point(117, 107);
             this.eUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -661,7 +683,7 @@
             // 
             this.lUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lUpDown.Hexadecimal = true;
-            this.lUpDown.Location = new System.Drawing.Point(117, 185);
+            this.lUpDown.Location = new System.Drawing.Point(117, 154);
             this.lUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -676,7 +698,7 @@
             // 
             this.iyUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.iyUpDown.Hexadecimal = true;
-            this.iyUpDown.Location = new System.Drawing.Point(117, 241);
+            this.iyUpDown.Location = new System.Drawing.Point(117, 201);
             this.iyUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -691,7 +713,7 @@
             // 
             this.spUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.spUpDown.Hexadecimal = true;
-            this.spUpDown.Location = new System.Drawing.Point(117, 297);
+            this.spUpDown.Location = new System.Drawing.Point(117, 248);
             this.spUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -706,7 +728,7 @@
             // 
             this.pcUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcUpDown.Hexadecimal = true;
-            this.pcUpDown.Location = new System.Drawing.Point(33, 297);
+            this.pcUpDown.Location = new System.Drawing.Point(33, 248);
             this.pcUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -721,7 +743,7 @@
             // 
             this.ixUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ixUpDown.Hexadecimal = true;
-            this.ixUpDown.Location = new System.Drawing.Point(33, 241);
+            this.ixUpDown.Location = new System.Drawing.Point(33, 201);
             this.ixUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -736,7 +758,7 @@
             // 
             this.lPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lPrimeUpDown.Hexadecimal = true;
-            this.lPrimeUpDown.Location = new System.Drawing.Point(285, 185);
+            this.lPrimeUpDown.Location = new System.Drawing.Point(285, 154);
             this.lPrimeUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -751,7 +773,7 @@
             // 
             this.ePrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ePrimeUpDown.Hexadecimal = true;
-            this.ePrimeUpDown.Location = new System.Drawing.Point(285, 129);
+            this.ePrimeUpDown.Location = new System.Drawing.Point(285, 107);
             this.ePrimeUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -766,7 +788,7 @@
             // 
             this.cPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cPrimeUpDown.Hexadecimal = true;
-            this.cPrimeUpDown.Location = new System.Drawing.Point(285, 73);
+            this.cPrimeUpDown.Location = new System.Drawing.Point(285, 60);
             this.cPrimeUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -781,7 +803,7 @@
             // 
             this.fPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.fPrimeUpDown.Hexadecimal = true;
-            this.fPrimeUpDown.Location = new System.Drawing.Point(285, 17);
+            this.fPrimeUpDown.Location = new System.Drawing.Point(285, 13);
             this.fPrimeUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -796,7 +818,7 @@
             // 
             this.aPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.aPrimeUpDown.Hexadecimal = true;
-            this.aPrimeUpDown.Location = new System.Drawing.Point(201, 17);
+            this.aPrimeUpDown.Location = new System.Drawing.Point(201, 13);
             this.aPrimeUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -811,7 +833,7 @@
             // 
             this.bPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bPrimeUpDown.Hexadecimal = true;
-            this.bPrimeUpDown.Location = new System.Drawing.Point(201, 73);
+            this.bPrimeUpDown.Location = new System.Drawing.Point(201, 60);
             this.bPrimeUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -826,7 +848,7 @@
             // 
             this.dPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dPrimeUpDown.Hexadecimal = true;
-            this.dPrimeUpDown.Location = new System.Drawing.Point(201, 129);
+            this.dPrimeUpDown.Location = new System.Drawing.Point(201, 107);
             this.dPrimeUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -841,7 +863,7 @@
             // 
             this.hPrimeUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.hPrimeUpDown.Hexadecimal = true;
-            this.hPrimeUpDown.Location = new System.Drawing.Point(201, 185);
+            this.hPrimeUpDown.Location = new System.Drawing.Point(201, 154);
             this.hPrimeUpDown.Maximum = new decimal(new int[] {
             255,
             0,
@@ -950,16 +972,55 @@
             this.disassemblyTextBox.TabIndex = 4;
             this.disassemblyTextBox.Text = "0000: 00       nop\r\n0001: 00       nop\r\nABCD: AABBCCDD SET A,7,(IX+7F)";
             // 
-            // resetCheckBox
+            // label17
             // 
-            this.resetCheckBox.AutoSize = true;
-            this.resetCheckBox.Location = new System.Drawing.Point(107, 49);
-            this.resetCheckBox.Name = "resetCheckBox";
-            this.resetCheckBox.Size = new System.Drawing.Size(54, 17);
-            this.resetCheckBox.TabIndex = 11;
-            this.resetCheckBox.Text = "Reset";
-            this.resetCheckBox.UseVisualStyleBackColor = true;
-            this.resetCheckBox.CheckedChanged += new System.EventHandler(this.resetCheckBox_CheckedChanged);
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 302);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 13);
+            this.label17.TabIndex = 9;
+            this.label17.Text = "IR";
+            // 
+            // irUpDown
+            // 
+            this.irUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.irUpDown.Hexadecimal = true;
+            this.irUpDown.Location = new System.Drawing.Point(33, 299);
+            this.irUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.irUpDown.Name = "irUpDown";
+            this.irUpDown.Size = new System.Drawing.Size(48, 20);
+            this.irUpDown.TabIndex = 10;
+            this.irUpDown.ValueChanged += new System.EventHandler(this.irUpDown_ValueChanged);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(89, 302);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(19, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "IM";
+            // 
+            // imUpDown
+            // 
+            this.imUpDown.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.imUpDown.Hexadecimal = true;
+            this.imUpDown.Location = new System.Drawing.Point(117, 299);
+            this.imUpDown.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.imUpDown.Name = "imUpDown";
+            this.imUpDown.Size = new System.Drawing.Size(48, 20);
+            this.imUpDown.TabIndex = 12;
+            this.imUpDown.ValueChanged += new System.EventHandler(this.imUpDown_ValueChanged);
             // 
             // CpuDebug
             // 
@@ -1005,6 +1066,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.stepForUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.irUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1074,5 +1137,9 @@
         private System.Windows.Forms.TextBox disassemblyTextBox;
         private System.Windows.Forms.CheckBox haltBox;
         private System.Windows.Forms.CheckBox resetCheckBox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown irUpDown;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown imUpDown;
     }
 }

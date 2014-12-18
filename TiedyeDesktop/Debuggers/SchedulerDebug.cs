@@ -23,7 +23,7 @@ namespace TiedyeDesktop
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)
         {
-            dataTextBox.Text = Master.Scheduler.GetDebugInformation();
+            dataTextBox.Text = "Frequency: " + Master.Cpu.Clock.Frequency + "\r\n" + Master.Scheduler.GetDebugInformation();
         }
 
         private void SchedulerDebug_FormClosed(object sender, FormClosedEventArgs e)

@@ -121,7 +121,7 @@ namespace TiedyeDesktop
 
         private void cpuTimer_Tick(object sender, EventArgs e)
         {
-            Calculator.ExecuteFor(0.025);
+            Calculator.ExecuteFor((double)cpuTimer.Interval / 1000);
             if (Calculator.Cpu.Break)
                 Pause();
         }

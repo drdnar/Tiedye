@@ -35,7 +35,8 @@ namespace Tiedye.Hardware
                 r = p & 0x3F;
                 g = (p >> 6) & 0x3F;
                 b = (p >> 12) & 0x3F;
-                return b << 16 | g << 8 | r;
+                return (b << 16) | (g << 8) | (r);
+                //return Data[x, y];
             }
             set
             {
@@ -77,8 +78,22 @@ namespace Tiedye.Hardware
             return (byte)CurrentRegister;
         }
 
+        public int ResetCount = 0;
+
         public void SetCurrentRegister(byte value)
         {
+            if (value != 0)
+                ResetCount = 0;
+            else
+            {
+                ResetCount++;
+                if (ResetCount > 3)
+                {
+                    WaitingForByte = false;
+                    WritingData = false;
+                    return;
+                }
+            }
             if (WaitingForByte && !WritingData)
             {
                 PanicMode = true;
@@ -87,11 +102,13 @@ namespace Tiedye.Hardware
             if (!WaitingForByte)
             {
                 WaitingForByte = true;
+                WritingData = true;
                 // And do nothing.
                 return;
             }
             CurrentRegister = value;
             WaitingForByte = false;
+            WritingData = false;
         }
 
         public byte ReadData()
@@ -153,6 +170,8 @@ namespace Tiedye.Hardware
             if (!WaitingForByte)
             {
                 ByteBuffer = value;
+                WritingData = true;
+                WaitingForByte = true;
                 return;
             }
             ushort val = (ushort)(value | (ByteBuffer << 8));
@@ -183,6 +202,8 @@ namespace Tiedye.Hardware
                     WindowHorizontalEnd = val;
                     break;
             }
+            WaitingForByte = false;
+            WritingData = false;
 
         }
 

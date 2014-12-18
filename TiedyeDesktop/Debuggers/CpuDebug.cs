@@ -44,6 +44,8 @@ namespace TiedyeDesktop
             iyUpDown.Value = Cpu.IY;
             pcUpDown.Value = Cpu.PC;
             spUpDown.Value = Cpu.SP;
+            irUpDown.Value = Cpu.IR;
+            imUpDown.Value = Cpu.IM;
             aPrimeUpDown.Value = Cpu.ShadowA;
             bPrimeUpDown.Value = Cpu.ShadowB;
             cPrimeUpDown.Value = Cpu.ShadowC;
@@ -273,6 +275,10 @@ namespace TiedyeDesktop
         {
             Cpu.IY = (ushort)iyUpDown.Value;
         }
+        private void irUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Cpu.IR = (ushort)irUpDown.Value;
+        }
 
         private void haltBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -284,8 +290,10 @@ namespace TiedyeDesktop
             Cpu.ForceReset = resetCheckBox.Checked;
         }
 
-
-
+        private void imUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            Cpu.IM = (ushort)imUpDown.Value;
+        }
 
     }
 }

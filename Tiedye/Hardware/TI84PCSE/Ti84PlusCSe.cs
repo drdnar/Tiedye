@@ -142,10 +142,14 @@ namespace Tiedye.Hardware
                 case 0x10: // LCD command port
                 case 0x12:
                     Lcd.SetCurrentRegister(value);
+                    if (Lcd.PanicMode)
+                        Cpu.Break = true;
                     break;
                 case 0x11: // LCD data port
                 case 0x13:
                     Lcd.WriteData(value);
+                    if (Lcd.PanicMode)
+                        Cpu.Break = true;
                     break;
                 case 0x14: // Flash write enable
                     // TODO: Implement protection
