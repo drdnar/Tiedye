@@ -33,13 +33,14 @@
             this.newCalculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cPUDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.executionHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memoryDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.breakPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hWSchedulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lCDDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keyboardDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.executionHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timersDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,8 @@
             this.breakPointsToolStripMenuItem,
             this.hWSchedulerToolStripMenuItem,
             this.lCDDebugToolStripMenuItem,
-            this.keyboardDebugToolStripMenuItem});
+            this.keyboardDebugToolStripMenuItem,
+            this.timersDebugToolStripMenuItem});
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
             this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.calculatorToolStripMenuItem.Text = "&Calculator";
@@ -90,6 +92,13 @@
             this.cPUDebugToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.cPUDebugToolStripMenuItem.Text = "&CPU Debug";
             this.cPUDebugToolStripMenuItem.Click += new System.EventHandler(this.cPUDebugToolStripMenuItem_Click);
+            // 
+            // executionHistoryToolStripMenuItem
+            // 
+            this.executionHistoryToolStripMenuItem.Name = "executionHistoryToolStripMenuItem";
+            this.executionHistoryToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.executionHistoryToolStripMenuItem.Text = "E&xecution History";
+            this.executionHistoryToolStripMenuItem.Click += new System.EventHandler(this.executionHistoryToolStripMenuItem_Click);
             // 
             // memoryDebugToolStripMenuItem
             // 
@@ -133,12 +142,12 @@
             this.playToolStripMenuItem.Text = "&Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
-            // executionHistoryToolStripMenuItem
+            // timersDebugToolStripMenuItem
             // 
-            this.executionHistoryToolStripMenuItem.Name = "executionHistoryToolStripMenuItem";
-            this.executionHistoryToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.executionHistoryToolStripMenuItem.Text = "E&xecution History";
-            this.executionHistoryToolStripMenuItem.Click += new System.EventHandler(this.executionHistoryToolStripMenuItem_Click);
+            this.timersDebugToolStripMenuItem.Name = "timersDebugToolStripMenuItem";
+            this.timersDebugToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.timersDebugToolStripMenuItem.Text = "&Timers Debug";
+            this.timersDebugToolStripMenuItem.Click += new System.EventHandler(this.timersDebugToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -171,6 +180,7 @@
         private System.Windows.Forms.ToolStripMenuItem lCDDebugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem keyboardDebugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem executionHistoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem timersDebugToolStripMenuItem;
     }
 }
 

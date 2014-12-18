@@ -300,6 +300,27 @@ namespace TiedyeDesktop
             executionHistory.FormClosed -= executionHistory_FormClosed;
             executionHistory = null;
         }
+
+        TimersDebug timersDebug;
+        public TimersDebug TimersDebug
+        {
+            get
+            {
+                return timersDebug;
+            }
+            set
+            {
+                timersDebug = value;
+                if (value != null)
+                    timersDebug.FormClosed += timersDebug_FormClosed;
+            }
+        }
+
+        void timersDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timersDebug.FormClosed -= timersDebug_FormClosed;
+            timersDebug = null;
+        }
         #endregion
 
     }

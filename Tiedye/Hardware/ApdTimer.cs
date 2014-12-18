@@ -57,6 +57,14 @@ namespace Tiedye.Hardware
             HasInterrupt = false;
         }
 
+        public double NextTick
+        {
+            get
+            {
+                return NextIncrement.Time;
+            }
+        }
+
         public bool HasInterrupt
         {
             get

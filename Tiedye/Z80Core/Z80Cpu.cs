@@ -661,7 +661,7 @@ namespace Tiedye.Z80Core
         }
 
         private int interrupt = 0;
-        public void Interrupt()
+        /*public void Interrupt()
         {
             interrupt++;
         }
@@ -670,7 +670,9 @@ namespace Tiedye.Z80Core
         {
             if (interrupt > 0)
                 interrupt--;
-        }
+        }*/
+        public bool Interrupt;
+
 
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private void AssertM1()
@@ -1045,7 +1047,7 @@ namespace Tiedye.Z80Core
             {
                 Break = false;
                 int temp, acu, sum, cbits, adr, op;
-                if (IFF1 && interrupt > 0)
+                if (IFF1 & Interrupt /* && interrupt > 0*/)
                 {
                     if (BpInterrupt)
                         Break = true;
@@ -1079,7 +1081,10 @@ namespace Tiedye.Z80Core
                     }
                 }
                 if (halt)
+                {
+                    Clock.IncTime(10);
                     return;
+                }
                 if (TraceLastExec)
                 {
                     /*LastExecOpcode[LastExecPtr, 0] = MemoryRead(null, PC);

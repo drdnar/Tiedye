@@ -17,8 +17,12 @@ namespace Tiedye.Hardware
         public Keypad Keypad;
         public DBus DBus;
         public Scheduler Scheduler;
+        public ApdTimer Apd;
+        public ApdTimer PApd;
+
 
         protected bool OffEnableMode = false;
+        public int TimerSetting = 0;
 
         public Calculator()
         {
@@ -194,6 +198,7 @@ namespace Tiedye.Hardware
         protected virtual void doStep()
         {
             //Interrupt = false;
+            Cpu.Interrupt = Interrupts != InterruptId.None;
             Scheduler.ProcessEvents();
             //Interrupt = DBus.HasInterrupt || Keypad.HasInterrupt;
         }

@@ -12,8 +12,6 @@ namespace Tiedye.Hardware
         public CrystalTimer CrystalTimer1;
         public CrystalTimer CrystalTimer2;
         public CrystalTimer CrystalTimer3;
-        public ApdTimerSe Apd;
-        public ApdTimerSe PApd;
 
 
         protected MemoryMapperSE Mapper
@@ -110,6 +108,7 @@ namespace Tiedye.Hardware
                             PApd.Period = 1.0 / (32768 / 152);
                             break;
                     }
+                    TimerSetting = (value >> 1) & 3;
                     // TODO: Battery cutoff voltage
                     Mapper.MemoryMappingMode = value & 1;
                     break;

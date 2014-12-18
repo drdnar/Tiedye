@@ -78,6 +78,12 @@
     <Compile Include="Debuggers\HexEditorPanel.Designer.cs">
       <DependentUpon>HexEditorPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Debuggers\TimersDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\TimersDebug.Designer.cs">
+      <DependentUpon>TimersDebug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Keypad.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Debuggers\MemoryEditorPanel.resx">
       <DependentUpon>MemoryEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\TimersDebug.resx">
+      <DependentUpon>TimersDebug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

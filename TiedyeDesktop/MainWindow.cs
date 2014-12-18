@@ -154,5 +154,18 @@ namespace TiedyeDesktop
             }
             SelectedCalculator.ExecutionHistory.Focus();
         }
+
+        private void timersDebugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedCalculator == null)
+                return;
+            if (SelectedCalculator.TimersDebug == null)
+            {
+                SelectedCalculator.TimersDebug = new TimersDebug(SelectedCalculator);
+                SelectedCalculator.TimersDebug.MdiParent = this;
+                SelectedCalculator.TimersDebug.Show();
+            }
+            SelectedCalculator.TimersDebug.Focus();
+        }
     }
 }
