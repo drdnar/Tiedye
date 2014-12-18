@@ -12,6 +12,8 @@ namespace Tiedye.Hardware
     /// </summary>
     public class Keypad
     {
+        public Calculator Master;
+
         /// <summary>
         /// Probably what the name implies it is.
         /// </summary>
@@ -52,14 +54,42 @@ namespace Tiedye.Hardware
             }
         }
 
+        protected bool onInterruptEnable = false;
+        public bool OnInterruptEnable
+        {
+            get
+            {
+                return onInterruptEnable;
+            }
+            set
+            {
+                onInterruptEnable = value;
+                if (!value)
+                {
+                    HasInterrupt = false;
+                }
+            }
+        }
+
         /// <summary>
         /// True if pressing the ON key has caused an interrupt which has not
         /// been ACKed.
         /// </summary>
-        public bool HasInterrupt = false;
-
-        public Keypad()
+        public bool HasInterrupt
         {
+            get
+            {
+                return Master.GetInterrupt(Calculator.InterruptId.OnKey);
+            }
+            set
+            {
+                Master.SetInterrupt(Calculator.InterruptId.OnKey, value);
+            }
+        }
+
+        public Keypad(Calculator master)
+        {
+            Master = master;
             Reset();
         }
 

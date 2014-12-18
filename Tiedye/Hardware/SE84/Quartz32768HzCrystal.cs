@@ -31,6 +31,14 @@ namespace Tiedye.Hardware
                 Tick(this, null);
         }
 
+        public double NextTickTime
+        {
+            get
+            {
+                return NextIncrement.Time;
+            }
+        }
+
         public Quartz32768HzCrystal(Calculator master)
         {
             Master = master;

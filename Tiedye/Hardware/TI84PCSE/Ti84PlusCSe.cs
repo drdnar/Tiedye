@@ -12,6 +12,8 @@ namespace Tiedye.Hardware
         public CrystalTimer CrystalTimer1;
         public CrystalTimer CrystalTimer2;
         public CrystalTimer CrystalTimer3;
+        public ApdTimerSe Apd;
+        public ApdTimerSe PApd;
 
 
         protected MemoryMapperSE Mapper
@@ -42,6 +44,10 @@ namespace Tiedye.Hardware
             CrystalTimer1 = new CrystalTimer(Crystal, Scheduler, 1);
             CrystalTimer2 = new CrystalTimer(Crystal, Scheduler, 2);
             CrystalTimer3 = new CrystalTimer(Crystal, Scheduler, 3);
+            Apd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer1, this);
+            Apd.Period = 1.0 / 512;
+            PApd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer2, this);
+            PApd.Period = 1.0 / 1024;
         }
 
         public override void Reset()
@@ -75,12 +81,37 @@ namespace Tiedye.Hardware
                 case 0x01: // Keypad
                     Keypad.CurrentGroup = value;
                     break;
-                case 0x02: // TODO: Interrupt ACK
+                case 0x02: // Interrupt ACK
+                    ulong old = (ulong)(Interrupts & (InterruptId.OnKey | InterruptId.ApdTimer1 | InterruptId.ApdTimer2 | InterruptId.DBus)) & value;
+                    Interrupts = (Interrupts & ~(InterruptId.OnKey | InterruptId.ApdTimer1 | InterruptId.ApdTimer2 | InterruptId.DBus)) | (InterruptId)old;
                     break;
                 case 0x03: // TODO: Interrupt mask
+                    Keypad.OnInterruptEnable = (value & 1) != 0;
+                    Apd.GenerateInterrupt = (value & 2) != 0;
+                    PApd.GenerateInterrupt = (value & 4) != 0;
+                    OffEnableMode = (value & 8) != 0;
+                    // TODO: DBus interrupt
                     break;
                 case 0x04: // Memory mapping, timer frequencies, battery cutoff voltage
-                    // TODO: Timers
+                    switch (value & 6)
+                    {
+                        case 0:
+                            Apd.Period = 1.0 / (32768 / 64);
+                            PApd.Period = 1.0 / (32768 / 32);
+                            break;
+                        case 2:
+                            Apd.Period = 1.0 / (32768 / 144);
+                            PApd.Period = 1.0 / (32768 / 72);
+                            break;
+                        case 4:
+                            Apd.Period = 1.0 / (32768 / 224);
+                            PApd.Period = 1.0 / (32768 / 112);
+                            break;
+                        case 6:
+                            Apd.Period = 1.0 / (32768 / 304);
+                            PApd.Period = 1.0 / (32768 / 152);
+                            break;
+                    }
                     // TODO: Battery cutoff voltage
                     Mapper.MemoryMappingMode = value & 1;
                     break;
@@ -216,9 +247,10 @@ namespace Tiedye.Hardware
                     // Bit 1 is the LCD ready timer.
                     return (byte)(1 | 2 | (Mapper.FlashWriteEnable ? 4 : 0) | 0xE0);
                 case 0x03: // Interrupt mask
-                    return 0;
+                    // TODO: DBus interrupt enable
+                    return (byte)((Keypad.OnInterruptEnable ? 1 : 0) | (Apd.GenerateInterrupt ? 2 : 0) | (PApd.GenerateInterrupt ? 4 : 0) | (OffEnableMode ? 8 : 0));// | (DBus.I));
                 case 0x04: // Interrupt ID
-                    return (byte)(Keypad.OnKey ? 8 : 0);
+                    return (byte)((Keypad.OnKey ? 8 : 0) | ((byte)Interrupts & 0xFF));
                 case 0x05: // Memory page C
                     return (byte)Mapper.PageC;
                 case 0x06: // Memory page A lower bits

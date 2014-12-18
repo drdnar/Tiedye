@@ -8,7 +8,18 @@ namespace Tiedye.Hardware
 {
     public class ApdTimer
     {
-        public double Period = 0.002;
+        protected double period = 0.002;
+        public virtual double Period
+        {
+            get
+            {
+                return period;
+            }
+            set
+            {
+                period = value;
+            }
+        }
 
         protected Scheduler Scheduler;
 
@@ -21,19 +32,18 @@ namespace Tiedye.Hardware
         public ApdTimer(Scheduler sched, Calculator.InterruptId interruptId, Calculator master)
         {
             NextIncrement = new Scheduler.WallTimeEvent();
-            NextIncrement.Tag = "HW Timer tick";
+            NextIncrement.Tag = "HW Timer tick " + interruptId.ToString();
             NextIncrement.Handler = new EventHandler<Scheduler.WallTimeEvent>(DoTick);
             Scheduler.EnqueueRelativeEvent(NextIncrement, Period);
             InterruptId = interruptId;
             Master = master;
         }
 
-        public void DoTick(object sender, Scheduler.WallTimeEvent e)
+        public virtual void DoTick(object sender, Scheduler.WallTimeEvent e)
         {
             Scheduler.EnqueueRelativeEvent(e, Period);
             if (GenerateInterrupt)
                 Master.SetInterrupt(InterruptId);
-
         }
         
         public void Reset()

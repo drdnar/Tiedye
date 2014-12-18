@@ -18,17 +18,20 @@ namespace Tiedye.Hardware
         public DBus DBus;
         public Scheduler Scheduler;
 
+        protected bool OffEnableMode = false;
+
         public Calculator()
         {
             Cpu = new Z80Core.Z80Cpu();
             Cpu.Clock.Frequency = 6000000;
             Scheduler = new Scheduler(Cpu.Clock);
-            Keypad = new Keypad();
+            Keypad = new Keypad(this);
         }
 
         public virtual void Reset()
         {
             Cpu.ForceReset = true;
+            OffEnableMode = false;
             Flash.Reset();
             Ram.Reset();
             MemoryMapper.Reset();
