@@ -116,11 +116,11 @@ namespace Tiedye.Hardware
                     Mapper.PageC = value;
                     break;
                 case 0x06: // Memory page A lower bits
-                    Mapper.PageA = (Mapper.PageA & 0xF80) | (value & 0x7F);
+                    Mapper.PageA = (Mapper.PageA & 0x180) | (value & 0x7F);
                     Mapper.PageAIsRam = (value & 0x80) != 0;
                     break;
                 case 0x07: // Memory page B lower bits
-                    Mapper.PageB = (Mapper.PageB & 0xF80) | (value & 0x7F);
+                    Mapper.PageB = (Mapper.PageB & 0x180) | (value & 0x7F);
                     Mapper.PageBIsRam = (value & 0x80) != 0;
                     break;
                 case 0x08: // TODO: UART enable

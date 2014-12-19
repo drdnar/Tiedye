@@ -75,7 +75,7 @@ namespace TiedyeDesktop
                     lastKeyTimer.Stop();
                     if (KeyReleased != null)
                     {
-                        Log(". . . released.");
+                        Log(". . . released. (fast click)");
                         KeyReleased(this, LastKey);
                     }
                 }
@@ -98,11 +98,11 @@ namespace TiedyeDesktop
         private void KeyTimerTick(object sender, EventArgs e)
         {
             lastKeyTimer.Stop();
-            if (lastKeyMouseReleased)
+            if (!lastKeyMouseReleased)
                 return;
             if (KeyReleased != null)
             {
-                Log(". . . released.");
+                Log(". . . released. (timer)");
                 KeyReleased(this, LastKey);
             }
         }
@@ -115,8 +115,12 @@ namespace TiedyeDesktop
                 lastKeyMouseReleased = true;
                 return;
             }
+            lastKeyMouseReleased = true;
             if (KeyReleased != null)
+            {
+                Log(". . . released. (mouse)");
                 KeyReleased(this, LastKey);
+            }
         }
 
     }

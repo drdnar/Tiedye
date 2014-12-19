@@ -14,15 +14,16 @@ namespace TiedyeDesktop
 {
     public partial class ColorLcdDebug : Form
     {
-        Ti84PlusCSe Master;
+        Ti8xCalculator Master;
         ColorLcd Lcd;
         
-        public ColorLcdDebug(Ti84PlusCSe master)
+        public ColorLcdDebug(Ti8xCalculator master)
         {
             InitializeComponent();
             Master = master;
-            Lcd = Master.Lcd;
-            Master.ExecutionFinished += Calculator_ExecutionFinished;
+            Lcd = ((Ti84PlusCSe)(Master.Calculator)).Lcd;
+            //Master.ExecutionFinished += Calculator_ExecutionFinished;
+            Master.UpdateData += Calculator_ExecutionFinished;
             RefreshData();
         }
 
@@ -67,7 +68,8 @@ namespace TiedyeDesktop
 
         private void ColorLcdDebug_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Master.ExecutionFinished -= Calculator_ExecutionFinished;
+            //Master.ExecutionFinished -= Calculator_ExecutionFinished;
+            Master.UpdateData -= Calculator_ExecutionFinished;
         }
     }
 }

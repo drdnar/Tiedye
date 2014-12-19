@@ -27,7 +27,8 @@ namespace TiedyeDesktop
             Master = master;
             InitializeComponent();
             RefreshData();
-            Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            //Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            Master.UpdateData += Calculator_ExecutionFinished;
         }
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)

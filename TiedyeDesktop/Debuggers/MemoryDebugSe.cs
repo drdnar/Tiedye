@@ -31,7 +31,8 @@ namespace TiedyeDesktop
             z80MemoryEditor.ReadAByte = new MemoryEditorPanel.ReadByte(GetZ80Byte);
             z80MemoryEditor.WriteAByte = new MemoryEditorPanel.WriteByte(PutZ80Byte);
             z80MemoryEditor.DataLength = 0x10000;
-            Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            //Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            Master.UpdateData += Calculator_ExecutionFinished;
         }
 
         private byte GetZ80Byte(object sender, int address)

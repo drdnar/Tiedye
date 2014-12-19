@@ -189,6 +189,8 @@ namespace Tiedye.Hardware
                 doStep();
                 if (Cpu.Break)
                     break;
+                if (Cpu.Halt)
+                    DoHalt();
             }
             if (ExecutionFinished != null)
                 ExecutionFinished(this, null);
@@ -220,9 +222,16 @@ namespace Tiedye.Hardware
                     break;
                 if (Cpu.Break)
                     break;
+                if (Cpu.Halt)
+                    DoHalt();
             }
             if (ExecutionFinished != null)
                 ExecutionFinished(this, null);
+        }
+
+        public void DoHalt()
+        {
+            Cpu.Clock.IncWallTime(Scheduler.GetNextEventTime());
         }
 
         public abstract void WritePort(object sender, ushort address, byte value);

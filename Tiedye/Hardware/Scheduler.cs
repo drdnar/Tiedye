@@ -59,6 +59,32 @@ namespace Tiedye.Hardware
             return str.ToString();
         }
 
+        /// <summary>
+        /// Returns when the next event will fire, (assuming CPU frequency does not change)
+        /// </summary>
+        /// <returns></returns>
+        public double GetNextEventTime()
+        {
+            if (wtHead == null && scHead == null)
+                throw new Exception("Scheduler has nothing!");
+            double wt = 0, sc = 0;
+            if (wtHead != null)
+                wt = wtHead.Time;
+            else
+                wt = 0;
+            if (scHead != null && scHead.Time != 0)
+            {
+                sc = (double)(scHead.Time - clock.ClockTime) * clock.Period + clock.WallTime;
+                if (sc < 0)
+                    sc = 0;
+            }
+            if (sc == 0)
+                return wt;
+            if (wt == 0)
+                return sc;
+            return wt < sc ? wt : sc;
+        }
+
         SystemClock clock;
         public Scheduler(SystemClock c)
         {

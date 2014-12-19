@@ -26,6 +26,14 @@ namespace Tiedye.Z80Core
                 period = 1 / value;
             }
         }
+
+        public double Period
+        {
+            get
+            {
+                return period;
+            }
+        }
         
         private double wallTime = 0;
         /// <summary>

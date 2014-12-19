@@ -107,7 +107,7 @@ namespace TiedyeDesktop
                 return;
             if (SelectedCalculator.SchedulerDebug == null)
             {
-                SelectedCalculator.SchedulerDebug = new SchedulerDebug(SelectedCalculator.Calculator);
+                SelectedCalculator.SchedulerDebug = new SchedulerDebug(SelectedCalculator);
                 SelectedCalculator.SchedulerDebug.MdiParent = this;
                 SelectedCalculator.SchedulerDebug.Show();
             }
@@ -122,7 +122,7 @@ namespace TiedyeDesktop
                 return;
             if (SelectedCalculator.ColorLcdDebug == null)
             {
-                SelectedCalculator.ColorLcdDebug = new ColorLcdDebug(SelectedCalculator.Calculator as Ti84PlusCSe);
+                SelectedCalculator.ColorLcdDebug = new ColorLcdDebug(SelectedCalculator);
                 SelectedCalculator.ColorLcdDebug.MdiParent = this;
                 SelectedCalculator.ColorLcdDebug.Show();
             }

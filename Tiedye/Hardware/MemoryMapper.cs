@@ -59,6 +59,8 @@ namespace Tiedye.Hardware
             }
             set
             {
+                if (value > 0x1FF)
+                    bank4000 = value << 14;
                 bank4000 = value << 14;
             }
         }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Tiedye.Hardware;
 
@@ -55,6 +56,7 @@ namespace TiedyeDesktop
             Calculator.ExecutionFinished += Calculator_ExecutionFinished;
             Calculator.Cpu.ResetEvent += Calculator_Reset;
             screen.Image = ScreenImage;
+            executionThread = new Thread(new ThreadStart(DoEmulation));
         }
 
         void Calculator_Reset(object sender, EventArgs e)
@@ -70,7 +72,7 @@ namespace TiedyeDesktop
         {
             if (Calculator.Cpu.Break)
                 Pause();
-            UpdateScreen();
+            //UpdateScreen();
         }
 
         private void Ti8xCalculator_Enter(object sender, EventArgs e)
@@ -109,6 +111,7 @@ namespace TiedyeDesktop
         public void Pause()
         {
             cpuTimer.Stop();
+            ContinueExecution = false;
             Master.playToolStripMenuItem.Text = "&Play";
             UpdateScreen();
         }
@@ -116,14 +119,56 @@ namespace TiedyeDesktop
         public void Play()
         {
             cpuTimer.Start();
+            if (executing)
+                return;
+            ContinueExecution = true;
+            executionThread.Start();
             Master.playToolStripMenuItem.Text = "&Pause";
+        }
+
+        protected bool executing;
+        public bool ContinueExecution = false;
+
+        public bool Throttle = true;
+
+        protected Thread executionThread;
+
+        public double ExecutionQuantum = 0.05;
+
+        public double AverageDeltaT = 0.01;
+
+        protected void DoEmulation()
+        {
+            executing = true;
+            System.Diagnostics.Stopwatch timer = System.Diagnostics.Stopwatch.StartNew();
+            System.TimeSpan lastTime;
+            System.TimeSpan delta;
+            System.TimeSpan execQuantumSpan = new System.TimeSpan(0, 0, 0, (int)ExecutionQuantum, (int)(ExecutionQuantum * 1000));
+            double deltaT;
+            double alpha = 0.2;
+            while (ContinueExecution)
+            {
+                lastTime = timer.Elapsed;
+                Calculator.ExecuteFor(ExecutionQuantum);
+                if (Calculator.Cpu.Break)
+                    Pause();
+                delta = (timer.Elapsed - lastTime);
+                deltaT = delta.TotalSeconds;
+                AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds + (1.0 - alpha) * AverageDeltaT;
+                if (deltaT < ExecutionQuantum)
+                    Thread.Sleep(execQuantumSpan - delta);
+            }
+            executing = false;
         }
 
         private void cpuTimer_Tick(object sender, EventArgs e)
         {
-            Calculator.ExecuteFor((double)cpuTimer.Interval / 1000);
+            /*Calculator.ExecuteFor((double)cpuTimer.Interval / 10000);
             if (Calculator.Cpu.Break)
-                Pause();
+                Pause();*/
+            if (UpdateData != null)
+                UpdateData(this, null);
+            UpdateScreen();
         }
 
         public void UpdateScreen()
@@ -149,14 +194,20 @@ namespace TiedyeDesktop
 
         private void Ti8xCalculator_FormClosed(object sender, FormClosedEventArgs e)
         {
+            executionThread.Abort();
             Calculator.ExecutionFinished -= Calculator_ExecutionFinished;
         }
 
         private void screenTimer_Tick(object sender, EventArgs e)
         {
-            UpdateScreen();
+            //UpdateScreen();
         }
 
+
+        /// <summary>
+        /// This event is fired regularly, so that things can do updating.
+        /// </summary>
+        public event EventHandler UpdateData;
 
         #region Associated windows
         

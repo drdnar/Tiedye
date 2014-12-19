@@ -21,7 +21,8 @@ namespace TiedyeDesktop
             InitializeComponent();
             Master = master;
             Cpu = Master.Calculator.Cpu;
-            Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            //Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
+            Master.UpdateData += Calculator_ExecutionFinished;
             instrCountUpDown.Minimum = 1;
             instrCountUpDown.Maximum = Z80Cpu.LastExecSize;
             RefreshData();
