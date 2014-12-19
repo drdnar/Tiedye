@@ -34,8 +34,13 @@ namespace TiedyeDesktop
 
         StringBuilder str = new StringBuilder();
 
+        bool RefreshingData = false;
+
         public void RefreshData()
         {
+            /*if (RefreshingData)
+                return;
+            RefreshingData = true;*/
             onCheckBox.Checked = true;
             panicCheckBox.Checked = Lcd.PanicMode;
             upDownRadio.Checked = !Lcd.MajorDirectionIsHorizontal;
@@ -64,6 +69,8 @@ namespace TiedyeDesktop
                 pos = (pos - 1) & ColorLcd.LogMask;
             }
             logTextBox.Text = str.ToString();
+
+            //RefreshingData = false;
         }
 
         private void ColorLcdDebug_FormClosed(object sender, FormClosedEventArgs e)

@@ -63,8 +63,6 @@ namespace TiedyeDesktop
             Calculator.Cpu.Break = true;
             Pause();
             Calculator.Cpu.ForceReset = false;
-            UpdateScreen();
-            MessageBox.Show("Calculator reset!", "Calculator Reset", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)

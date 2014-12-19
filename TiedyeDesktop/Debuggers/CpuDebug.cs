@@ -31,8 +31,13 @@ namespace TiedyeDesktop
             RefreshRegisters();
         }
 
+        protected bool RefreshingData = false;
+
         public void RefreshRegisters()
         {
+            if (RefreshingData)
+                return;
+            //RefreshingData = true;
             aUpDown.Value = Cpu.A;
             bUpDown.Value = Cpu.B;
             cUpDown.Value = Cpu.C;
@@ -64,6 +69,7 @@ namespace TiedyeDesktop
             haltBox.Checked = Cpu.Halt;
             resetCheckBox.Checked = Cpu.ForceReset;
             RefreshDisassembly();
+            RefreshingData = false;
         }
 
         private void RefreshDisassembly()
@@ -100,41 +106,57 @@ namespace TiedyeDesktop
 
         private void aUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return; 
             Cpu.A = (byte)aUpDown.Value;
         }
 
         private void bUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.B = (byte)bUpDown.Value;
         }
 
         private void dUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.D = (byte)dUpDown.Value;
         }
 
         private void hUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.H = (byte)hUpDown.Value;
         }
 
         private void ixUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IX = (ushort)ixUpDown.Value;
         }
 
         private void pcUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.PC = (ushort)pcUpDown.Value;
         }
 
         private void fUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.F = (byte)fUpDown.Value;
         }
 
         private void cUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (cUpDown.Value > 0xFF)
                 bUpDown.Value = (int)cUpDown.Value >> 8;
             Cpu.C = (byte)cUpDown.Value;
@@ -142,6 +164,8 @@ namespace TiedyeDesktop
 
         private void eUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (eUpDown.Value > 0xFF)
                 dUpDown.Value = (int)eUpDown.Value >> 8;
             Cpu.E = (byte)eUpDown.Value;
@@ -149,6 +173,8 @@ namespace TiedyeDesktop
 
         private void lUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (lUpDown.Value > 0xFF)
                 hUpDown.Value = (int)lUpDown.Value >> 8;
             Cpu.L = (byte)lUpDown.Value;
@@ -156,31 +182,43 @@ namespace TiedyeDesktop
 
         private void aPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ShadowA = (byte)aPrimeUpDown.Value;
         }
 
         private void fPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ShadowF = (byte)fPrimeUpDown.Value;
         }
 
         private void bPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ShadowB = (byte)bPrimeUpDown.Value;
         }
 
         private void dPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ShadowD = (byte)dPrimeUpDown.Value;
         }
 
         private void hPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ShadowH = (byte)hPrimeUpDown.Value;
         }
 
         private void cPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (cPrimeUpDown.Value > 0xFF)
                 bPrimeUpDown.Value = (int)cPrimeUpDown.Value >> 8;
             Cpu.ShadowC = (byte)cPrimeUpDown.Value;
@@ -188,6 +226,8 @@ namespace TiedyeDesktop
 
         private void ePrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (ePrimeUpDown.Value > 0xFF)
                 dPrimeUpDown.Value = (int)ePrimeUpDown.Value >> 8;
             Cpu.ShadowE = (byte)ePrimeUpDown.Value;
@@ -195,6 +235,8 @@ namespace TiedyeDesktop
 
         private void lPrimeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (lPrimeUpDown.Value > 0xFF)
                 hPrimeUpDown.Value = (int)lPrimeUpDown.Value >> 8;
             Cpu.ShadowL = (byte)lPrimeUpDown.Value;
@@ -202,41 +244,57 @@ namespace TiedyeDesktop
 
         private void sFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagS = sFlagBox.Checked;
         }
 
         private void zFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagZ = zFlagBox.Checked;
         }
 
         private void hFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagH = hFlagBox.Checked;
         }
 
         private void pvFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagPv = pvFlagBox.Checked;
         }
 
         private void nFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagN = nFlagBox.Checked;
         }
 
         private void cFlagBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.FlagC = cFlagBox.Checked;
         }
 
         private void iff1Box_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IFF1 = iff1Box.Checked;
         }
 
         private void iff2Box_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IFF2 = iff2Box.Checked;
         }
 
@@ -271,30 +329,42 @@ namespace TiedyeDesktop
 
         private void spUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.SP = (ushort)(spUpDown.Value);
         }
 
         private void iyUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IY = (ushort)iyUpDown.Value;
         }
         private void irUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IR = (ushort)irUpDown.Value;
         }
 
         private void haltBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.Halt = haltBox.Checked;
         }
 
         private void resetCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.ForceReset = resetCheckBox.Checked;
         }
 
         private void imUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Cpu.IM = (ushort)imUpDown.Value;
         }
 

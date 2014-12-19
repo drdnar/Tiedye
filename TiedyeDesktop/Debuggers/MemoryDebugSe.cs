@@ -57,8 +57,13 @@ namespace TiedyeDesktop
             RefreshData();
         }
 
+        bool RefreshingData = false;
+
         public void RefreshData()
         {
+            if (RefreshingData)
+                return;
+            RefreshingData = true;
             /*if (Mapper.PageAIsRam)
                 bankAUpDown.Value = Mapper.PageA & 0x0F;
             else*/
@@ -96,56 +101,75 @@ namespace TiedyeDesktop
             flashUpperLimitUpDown.Value = Mapper.FlashUpperLimit;
             ramPage1AlwaysPresentUpDown.Value = Mapper.LowerPageAlwaysPresentAmount;
             ramPage0AlwaysPresentUpDown.Value = Mapper.UpperPageAlwaysPresentAmount;
+            RefreshingData = false;
         }
 
         private void bankAUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageA = (int)bankAUpDown.Value;
             RefreshData();
         }
         private void bankAIsRam_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageAIsRam = bankAIsRam.Checked;
             RefreshData();
         }
         private void bankAIsFlash_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageAIsRam = !bankAIsFlash.Checked;
             RefreshData();
         }
 
         private void bankBUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageB = (int)bankBUpDown.Value;
             RefreshData();
         }
 
         private void bankBIsRam_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageBIsRam = bankBIsRam.Checked;
             RefreshData();
         }
 
         private void bankBIsFlash_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageBIsRam = !bankBIsFlash.Checked;
             RefreshData();
         }
 
         private void bankCUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.PageC = (int)bankCUpDown.Value;
             RefreshData();
         }
 
         private void bootModeBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.BootMode = bootModeBox.Checked;
             RefreshData();
         }
 
         private void mode1Box_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (mode1Box.Checked)
                 Mapper.MemoryMappingMode = 1;
             else
@@ -155,48 +179,64 @@ namespace TiedyeDesktop
 
         private void ramTypeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.RamType = (int)ramTypeUpDown.Value;
             RefreshData();
         }
 
         private void flashTypeUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.FlashType = (int)flashTypeUpDown.Value;
             RefreshData();
         }
 
         private void ramLowerLimitUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.RamLowerLimit = (int)ramLowerLimitUpDown.Value;
             RefreshData();
         }
 
         private void ramUpperLimitUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.RamUpperLimit = (int)ramUpperLimitUpDown.Value;
             RefreshData();
         }
 
         private void flashLowerLimitUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.FlashLowerLimit = (int)flashLowerLimitUpDown.Value;
             RefreshData();
         }
 
         private void flashUpperLimitUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.FlashUpperLimit = (int)flashUpperLimitUpDown.Value;
             RefreshData();
         }
 
         private void ramPage1AlwaysPresentUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.LowerPageAlwaysPresentAmount = (int)ramPage1AlwaysPresentUpDown.Value;
             RefreshData();
         }
 
         private void ramPage0AlwaysPresentUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             Mapper.UpperPageAlwaysPresentAmount = (int)ramPage0AlwaysPresentUpDown.Value;
             RefreshData();
         }
