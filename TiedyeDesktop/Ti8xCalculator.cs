@@ -109,10 +109,9 @@ namespace TiedyeDesktop
 
         public void Pause()
         {
-            cpuTimer.Stop();
+            //cpuTimer.Stop();
             ContinueExecution = false;
             Master.playToolStripMenuItem.Text = "&Play";
-            UpdateScreen();
         }
 
         public void Play()
@@ -145,11 +144,11 @@ namespace TiedyeDesktop
             System.TimeSpan delta;
             System.TimeSpan execQuantumSpan = new System.TimeSpan(0, 0, 0, (int)ExecutionQuantum, (int)(ExecutionQuantum * 1000));
             double deltaT;
-            double alpha = 0.2;
+            double alpha = 0.1;
             while (ContinueExecution)
             {
                 lastTime = timer.Elapsed;
-                Calculator.ExecuteFor(ExecutionQuantum);
+                Calculator.ExecuteFor(ExecutionQuantum);//0.005);//
                 if (Calculator.Cpu.Break)
                     Pause();
                 delta = (timer.Elapsed - lastTime);
@@ -167,6 +166,8 @@ namespace TiedyeDesktop
             if (Calculator.Cpu.Break)
                 Pause();*/
             UpdateEverything();
+            if (!ContinueExecution)
+                cpuTimer.Stop();
         }
 
         public void UpdateEverything()

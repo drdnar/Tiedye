@@ -199,10 +199,10 @@ namespace Tiedye.Hardware
                     RegEntryMode = val;
                     break;
                 case 0x20: // Cursor Row
-                    CursorRow = val;
+                    CursorRow = (val % 240);
                     break;
                 case 0x21: // Cursor Column
-                    CursorColumn = val;
+                    CursorColumn = (val % 320);
                     break;
                 case 0x22: // GRAM Buffer
                     if (LogEnable)
