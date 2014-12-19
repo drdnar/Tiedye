@@ -10,6 +10,7 @@ namespace Tiedye.Hardware
     {
         public Ram128K()
         {
+            SizeMask = 0x1FFFF;
             Data = new byte[131072];
         }
         public override void Reset()

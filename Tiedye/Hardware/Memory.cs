@@ -13,6 +13,8 @@ namespace Tiedye.Hardware
     {
         public abstract void Reset();
 
+        public int SizeMask = 0xFFFF;
+
         /// <summary>
         /// Reads a byte.
         /// </summary>

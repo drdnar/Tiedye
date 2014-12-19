@@ -10,6 +10,7 @@ namespace Tiedye.Hardware
     {
         public Flash4096K()
         {
+            SizeMask = 0x3FFFFF;
             Data = new byte[4194304];
         }
 

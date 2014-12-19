@@ -116,12 +116,28 @@ namespace Tiedye.Hardware
                     Mapper.PageC = value;
                     break;
                 case 0x06: // Memory page A lower bits
-                    Mapper.PageA = (Mapper.PageA & 0x180) | (value & 0x7F);
-                    Mapper.PageAIsRam = (value & 0x80) != 0;
+                    if ((value & 0x80) == 0)
+                    {
+                        Mapper.PageA = (Mapper.PageA & 0x180) | (value & 0x7F);
+                        Mapper.PageAIsRam = false;
+                    }
+                    else
+                    {
+                        Mapper.PageA = (Mapper.PageA & 0x180) | (value & 0x0F);
+                        Mapper.PageAIsRam = true;
+                    }
                     break;
                 case 0x07: // Memory page B lower bits
-                    Mapper.PageB = (Mapper.PageB & 0x180) | (value & 0x7F);
-                    Mapper.PageBIsRam = (value & 0x80) != 0;
+                    if ((value & 0x80) == 0)
+                    {
+                        Mapper.PageB = (Mapper.PageB & 0x180) | (value & 0x7F);
+                        Mapper.PageBIsRam = false;
+                    }
+                    else
+                    {
+                        Mapper.PageB = (Mapper.PageB & 0x180) | (value & 0x0F);
+                        Mapper.PageBIsRam = true;
+                    }
                     break;
                 case 0x08: // TODO: UART enable
                     break;
@@ -134,10 +150,10 @@ namespace Tiedye.Hardware
                 case 0x0D: // TODO
                     break;
                 case 0x0E: // Memory page A upper bits
-                    Mapper.PageA = (Mapper.PageA & 0x7F) | (value << 7);
+                    Mapper.PageA = (Mapper.PageA & 0x7F) | ((value & 3) << 7);
                     break;
                 case 0x0F: // Memory Page B upper bits
-                    Mapper.PageB = (Mapper.PageB & 0x7F) | (value << 7);
+                    Mapper.PageB = (Mapper.PageB & 0x7F) | ((value & 3) << 7);
                     break;
                 case 0x10: // LCD command port
                 case 0x12:

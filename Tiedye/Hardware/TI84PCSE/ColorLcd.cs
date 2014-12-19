@@ -326,6 +326,8 @@ namespace Tiedye.Hardware
                         CursorColumn = WindowHorizontalEnd;
                 }
             }
+            CursorColumn = CursorColumn % 320;
+            CursorRow = CursorRow % 240;
         }
 
 

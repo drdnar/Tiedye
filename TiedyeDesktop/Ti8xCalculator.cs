@@ -56,7 +56,6 @@ namespace TiedyeDesktop
             Calculator.ExecutionFinished += Calculator_ExecutionFinished;
             Calculator.Cpu.ResetEvent += Calculator_Reset;
             screen.Image = ScreenImage;
-            executionThread = new Thread(new ThreadStart(DoEmulation));
         }
 
         void Calculator_Reset(object sender, EventArgs e)
@@ -122,6 +121,7 @@ namespace TiedyeDesktop
             if (executing)
                 return;
             ContinueExecution = true;
+            executionThread = new Thread(new ThreadStart(DoEmulation));
             executionThread.Start();
             Master.playToolStripMenuItem.Text = "&Pause";
         }
@@ -166,6 +166,11 @@ namespace TiedyeDesktop
             /*Calculator.ExecuteFor((double)cpuTimer.Interval / 10000);
             if (Calculator.Cpu.Break)
                 Pause();*/
+            UpdateEverything();
+        }
+
+        public void UpdateEverything()
+        {
             if (UpdateData != null)
                 UpdateData(this, null);
             UpdateScreen();
@@ -194,7 +199,8 @@ namespace TiedyeDesktop
 
         private void Ti8xCalculator_FormClosed(object sender, FormClosedEventArgs e)
         {
-            executionThread.Abort();
+            if (executing && executionThread != null)
+                executionThread.Abort();
             Calculator.ExecutionFinished -= Calculator_ExecutionFinished;
         }
 

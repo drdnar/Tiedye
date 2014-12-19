@@ -59,9 +59,13 @@ namespace Tiedye.Hardware
             }
             set
             {
+                bank4000 = value << 14;
+                if (Bank4000IsRam)
+                    bank4000 = bank4000 & Ram.SizeMask;
+                else
+                    bank4000 = bank4000 & Flash.SizeMask;
                 if (value > 0x1FF)
                     bank4000 = value << 14;
-                bank4000 = value << 14;
             }
         }
 
@@ -79,6 +83,10 @@ namespace Tiedye.Hardware
             set
             {
                 bank8000 = value << 14;
+                if (Bank8000IsRam)
+                    bank8000 = bank8000 & Ram.SizeMask;
+                else
+                    bank8000 = bank8000 & Flash.SizeMask;
             }
         }
 
@@ -95,6 +103,10 @@ namespace Tiedye.Hardware
             set
             {
                 bankC000 = value << 14;
+                if (Bank8000IsRam)
+                    bankC000 = bankC000 & Ram.SizeMask;
+                else
+                    bankC000 = bankC000 & Flash.SizeMask;
             }
         }
 

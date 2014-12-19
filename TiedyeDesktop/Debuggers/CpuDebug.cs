@@ -255,11 +255,13 @@ namespace TiedyeDesktop
         private void stepOnceButton_Click(object sender, EventArgs e)
         {
             Master.Calculator.Step();
+            Master.UpdateEverything();
         }
 
         private void stepForButton_Click(object sender, EventArgs e)
         {
             Master.Calculator.Step((long)stepForUpDown.Value);
+            Master.UpdateEverything();
         }
 
         private void CpuDebug_FormClosed(object sender, FormClosedEventArgs e)

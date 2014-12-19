@@ -181,7 +181,7 @@ namespace Tiedye.Hardware
                 }
                 else
                 {
-                    Bank4000 = value & 0xFFE;
+                    Bank4000 = value & 0x1FE;
                     Bank8000 = value | 1;
                 }
             }
@@ -206,7 +206,7 @@ namespace Tiedye.Hardware
                 else
                 {
                     Bank4000IsRam = Bank8000IsRam = pageAIsRam = value;
-                    Bank4000 = pageA & 0xFFE;
+                    Bank4000 = pageA & 0x1FE;
                     Bank8000 = pageA | 1;
                 }
             }
