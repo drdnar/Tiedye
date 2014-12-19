@@ -1506,7 +1506,7 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(4);
                         break;
                     case 0x38:			/* JR C,dd */
-                        PC += (ushort)((TSTFLAG(FLAG_C)) ? (byte)GetBYTE(PC) + 1 : 1);
+                        PC += (ushort)((TSTFLAG(FLAG_C)) ? (sbyte)GetBYTE(PC) + 1 : 1);
                         if (TSTFLAG(FLAG_C))
                             Clock.IncTime(12);
                         else
