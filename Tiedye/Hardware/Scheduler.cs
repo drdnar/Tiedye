@@ -68,13 +68,13 @@ namespace Tiedye.Hardware
             if (wtHead == null && scHead == null)
                 throw new Exception("Scheduler has nothing!");
             double wt = 0, sc = 0;
-            if (wtHead != null)
-                wt = wtHead.Time;
+            if (wtHead != null && wtHead.Next != null)
+                wt = wtHead.Next.Time;
             else
                 wt = 0;
-            if (scHead != null && scHead.Time != 0)
+            if (scHead != null && scHead.Next != null && scHead.Next.Time != 0)
             {
-                sc = (double)(scHead.Time - clock.ClockTime) * clock.Period + clock.WallTime;
+                sc = (double)(scHead.Next.Time - clock.ClockTime) * clock.Period + clock.WallTime;
                 if (sc < 0)
                     sc = 0;
             }

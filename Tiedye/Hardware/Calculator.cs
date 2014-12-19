@@ -178,7 +178,10 @@ namespace Tiedye.Hardware
         /// </summary>
         public void Step()
         {
-            doStep();
+            if (Cpu.Halt)
+                DoHalt(); 
+            else
+                doStep();
             if (ExecutionFinished != null)
                 ExecutionFinished(this, null);
         }
@@ -231,7 +234,9 @@ namespace Tiedye.Hardware
 
         public void DoHalt()
         {
-            Cpu.Clock.IncWallTime(Scheduler.GetNextEventTime());
+            double t = Scheduler.GetNextEventTime() - Cpu.Clock.WallTime;
+            if (t > 0)
+                Cpu.Clock.IncWallTime(t);
         }
 
         public abstract void WritePort(object sender, ushort address, byte value);
