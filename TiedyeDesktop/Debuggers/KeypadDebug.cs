@@ -29,6 +29,12 @@ namespace TiedyeDesktop
             RefreshData();
             //Master.Calculator.ExecutionFinished += Calculator_ExecutionFinished;
             Master.UpdateData += Calculator_ExecutionFinished;
+            foreach (Tiedye.Hardware.Keypad.KeyScanCode k in Enum.GetValues(typeof(Tiedye.Hardware.Keypad.KeyScanCode)).Cast<Tiedye.Hardware.Keypad.KeyScanCode>())
+                keysComboBox.Items.Add(k);
+            /*keysComboBox.Items.AddRange(
+                Enum.GetValues(typeof(Tiedye.Hardware.Keypad.KeyScanCode)).Cast<Tiedye.Hardware.Keypad.KeyScanCode>()
+            );*/
+                //Ke)keysComboBox.Items.Add()
         }
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)
@@ -47,6 +53,24 @@ namespace TiedyeDesktop
             group6TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xBF), 2);
             onKeyCheckBox.Checked = Keypad.OnKey;
             maskTextBox.Text = Convert.ToString(Keypad.CurrentGroup, 2) + " (" + Keypad.CurrentGroup.ToString("X2") + ")";
+            if (keysComboBox.SelectedItem != null)
+                keyPressedCheckBox.Checked = Keypad.TestKey((Tiedye.Hardware.Keypad.KeyScanCode)keysComboBox.SelectedItem);
+        }
+
+        private void keysComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void keyPressedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (keysComboBox.SelectedItem == null)
+                return;
+            if (keyPressedCheckBox.Checked)
+                Keypad.SetKey((Tiedye.Hardware.Keypad.KeyScanCode)keysComboBox.SelectedItem);
+            else
+                Keypad.ResetKey((Tiedye.Hardware.Keypad.KeyScanCode)keysComboBox.SelectedItem);
+            RefreshData();
         }
     }
 }

@@ -38,7 +38,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.group1TextBox = new System.Windows.Forms.TextBox();
             this.group2TextBox = new System.Windows.Forms.TextBox();
             this.group0TextBox = new System.Windows.Forms.TextBox();
@@ -48,15 +47,19 @@
             this.group5TextBox = new System.Windows.Forms.TextBox();
             this.group6TextBox = new System.Windows.Forms.TextBox();
             this.onKeyCheckBox = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.keysComboBox = new System.Windows.Forms.ComboBox();
+            this.keyPressedCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
@@ -65,16 +68,18 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.group1TextBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.group2TextBox, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.group0TextBox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.maskTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.group3TextBox, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.group4TextBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.group5TextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.group6TextBox, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.onKeyCheckBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.maskTextBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -88,7 +93,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 261);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -99,9 +104,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Selected Mask";
+            this.label1.Text = "Mask";
             // 
             // label2
             // 
@@ -183,19 +188,9 @@
             this.label9.TabIndex = 8;
             this.label9.Text = "Group 6 (BF)";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 231);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(10, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = " ";
-            // 
             // group1TextBox
             // 
-            this.group1TextBox.Location = new System.Drawing.Point(103, 78);
+            this.group1TextBox.Location = new System.Drawing.Point(83, 78);
             this.group1TextBox.Name = "group1TextBox";
             this.group1TextBox.ReadOnly = true;
             this.group1TextBox.Size = new System.Drawing.Size(100, 20);
@@ -203,7 +198,7 @@
             // 
             // group2TextBox
             // 
-            this.group2TextBox.Location = new System.Drawing.Point(103, 103);
+            this.group2TextBox.Location = new System.Drawing.Point(83, 103);
             this.group2TextBox.Name = "group2TextBox";
             this.group2TextBox.ReadOnly = true;
             this.group2TextBox.Size = new System.Drawing.Size(100, 20);
@@ -211,7 +206,7 @@
             // 
             // group0TextBox
             // 
-            this.group0TextBox.Location = new System.Drawing.Point(103, 53);
+            this.group0TextBox.Location = new System.Drawing.Point(83, 53);
             this.group0TextBox.Name = "group0TextBox";
             this.group0TextBox.ReadOnly = true;
             this.group0TextBox.Size = new System.Drawing.Size(100, 20);
@@ -219,7 +214,7 @@
             // 
             // maskTextBox
             // 
-            this.maskTextBox.Location = new System.Drawing.Point(103, 3);
+            this.maskTextBox.Location = new System.Drawing.Point(83, 3);
             this.maskTextBox.Name = "maskTextBox";
             this.maskTextBox.ReadOnly = true;
             this.maskTextBox.Size = new System.Drawing.Size(100, 20);
@@ -227,7 +222,7 @@
             // 
             // group3TextBox
             // 
-            this.group3TextBox.Location = new System.Drawing.Point(103, 128);
+            this.group3TextBox.Location = new System.Drawing.Point(83, 128);
             this.group3TextBox.Name = "group3TextBox";
             this.group3TextBox.ReadOnly = true;
             this.group3TextBox.Size = new System.Drawing.Size(100, 20);
@@ -235,7 +230,7 @@
             // 
             // group4TextBox
             // 
-            this.group4TextBox.Location = new System.Drawing.Point(103, 153);
+            this.group4TextBox.Location = new System.Drawing.Point(83, 153);
             this.group4TextBox.Name = "group4TextBox";
             this.group4TextBox.ReadOnly = true;
             this.group4TextBox.Size = new System.Drawing.Size(100, 20);
@@ -243,7 +238,7 @@
             // 
             // group5TextBox
             // 
-            this.group5TextBox.Location = new System.Drawing.Point(103, 178);
+            this.group5TextBox.Location = new System.Drawing.Point(83, 178);
             this.group5TextBox.Name = "group5TextBox";
             this.group5TextBox.ReadOnly = true;
             this.group5TextBox.Size = new System.Drawing.Size(100, 20);
@@ -251,7 +246,7 @@
             // 
             // group6TextBox
             // 
-            this.group6TextBox.Location = new System.Drawing.Point(103, 203);
+            this.group6TextBox.Location = new System.Drawing.Point(83, 203);
             this.group6TextBox.Name = "group6TextBox";
             this.group6TextBox.ReadOnly = true;
             this.group6TextBox.Size = new System.Drawing.Size(100, 20);
@@ -260,12 +255,55 @@
             // onKeyCheckBox
             // 
             this.onKeyCheckBox.AutoSize = true;
-            this.onKeyCheckBox.Location = new System.Drawing.Point(103, 28);
+            this.onKeyCheckBox.Location = new System.Drawing.Point(83, 28);
             this.onKeyCheckBox.Name = "onKeyCheckBox";
             this.onKeyCheckBox.Size = new System.Drawing.Size(61, 17);
             this.onKeyCheckBox.TabIndex = 18;
             this.onKeyCheckBox.Text = "On Key";
             this.onKeyCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 232);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(70, 13);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Manual press";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.keysComboBox);
+            this.flowLayoutPanel1.Controls.Add(this.keyPressedCheckBox);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(80, 225);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(204, 28);
+            this.flowLayoutPanel1.TabIndex = 20;
+            // 
+            // keysComboBox
+            // 
+            this.keysComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.keysComboBox.FormattingEnabled = true;
+            this.keysComboBox.Location = new System.Drawing.Point(3, 3);
+            this.keysComboBox.MaxDropDownItems = 32;
+            this.keysComboBox.Name = "keysComboBox";
+            this.keysComboBox.Size = new System.Drawing.Size(125, 21);
+            this.keysComboBox.TabIndex = 0;
+            this.keysComboBox.SelectedValueChanged += new System.EventHandler(this.keysComboBox_SelectedValueChanged);
+            // 
+            // keyPressedCheckBox
+            // 
+            this.keyPressedCheckBox.AutoSize = true;
+            this.keyPressedCheckBox.Location = new System.Drawing.Point(134, 3);
+            this.keyPressedCheckBox.Name = "keyPressedCheckBox";
+            this.keyPressedCheckBox.Size = new System.Drawing.Size(64, 17);
+            this.keyPressedCheckBox.TabIndex = 1;
+            this.keyPressedCheckBox.Text = "Pressed";
+            this.keyPressedCheckBox.UseVisualStyleBackColor = true;
+            this.keyPressedCheckBox.CheckedChanged += new System.EventHandler(this.keyPressedCheckBox_CheckedChanged);
             // 
             // KeypadDebug
             // 
@@ -278,6 +316,8 @@
             this.Text = "Keypad Debug";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -294,7 +334,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox group1TextBox;
         private System.Windows.Forms.TextBox group2TextBox;
         private System.Windows.Forms.TextBox group0TextBox;
@@ -304,5 +343,9 @@
         private System.Windows.Forms.TextBox group5TextBox;
         private System.Windows.Forms.TextBox group6TextBox;
         private System.Windows.Forms.CheckBox onKeyCheckBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox keysComboBox;
+        private System.Windows.Forms.CheckBox keyPressedCheckBox;
     }
 }
