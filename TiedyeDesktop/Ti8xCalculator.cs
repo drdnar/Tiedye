@@ -128,6 +128,7 @@ namespace TiedyeDesktop
 
         public void UpdateScreen()
         {
+            keyLogTextBox.Text = keypad.KeyLog;
             if (Calculator is Ti84PlusCSe)
             {
                 ColorLcd lcd = (Calculator as Ti84PlusCSe).Lcd;

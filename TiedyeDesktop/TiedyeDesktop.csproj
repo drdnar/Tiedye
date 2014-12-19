@@ -155,6 +155,9 @@
     <EmbeddedResource Include="Debuggers\TimersDebug.resx">
       <DependentUpon>TimersDebug.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Keypad.resx">
+      <DependentUpon>Keypad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>

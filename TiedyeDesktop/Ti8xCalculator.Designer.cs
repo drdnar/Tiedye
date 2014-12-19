@@ -33,6 +33,7 @@
             this.cpuTimer = new System.Windows.Forms.Timer(this.components);
             this.screenTimer = new System.Windows.Forms.Timer(this.components);
             this.keypad = new TiedyeDesktop.Keypad();
+            this.keyLogTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.screen)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,11 +64,21 @@
             this.keypad.KeyPressed += new System.EventHandler<TiedyeDesktop.Keypad.KeyLocation>(this.keypad_KeyPressed);
             this.keypad.KeyReleased += new System.EventHandler<TiedyeDesktop.Keypad.KeyLocation>(this.keypad_KeyReleased);
             // 
+            // keyLogTextBox
+            // 
+            this.keyLogTextBox.AcceptsReturn = true;
+            this.keyLogTextBox.Location = new System.Drawing.Point(351, 12);
+            this.keyLogTextBox.Multiline = true;
+            this.keyLogTextBox.Name = "keyLogTextBox";
+            this.keyLogTextBox.Size = new System.Drawing.Size(241, 627);
+            this.keyLogTextBox.TabIndex = 2;
+            // 
             // Ti8xCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 651);
+            this.Controls.Add(this.keyLogTextBox);
             this.Controls.Add(this.keypad);
             this.Controls.Add(this.screen);
             this.Name = "Ti8xCalculator";
@@ -76,6 +87,7 @@
             this.Enter += new System.EventHandler(this.Ti8xCalculator_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.screen)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,5 +97,6 @@
         private Keypad keypad;
         private System.Windows.Forms.Timer cpuTimer;
         private System.Windows.Forms.Timer screenTimer;
+        private System.Windows.Forms.TextBox keyLogTextBox;
     }
 }

@@ -18,7 +18,7 @@ namespace TiedyeDesktop
         {
             InitializeComponent();
             lastKeyTimer.Tick += new EventHandler(KeyTimerTick);
-            lastKeyTimer.Interval = 30;
+            lastKeyTimer.Interval = 50;
         }
 
         public event EventHandler<KeyLocation> KeyPressed;
@@ -41,6 +41,13 @@ namespace TiedyeDesktop
         private KeyLocation LastKey = default(KeyLocation);
         private bool lastKeyMouseReleased = false;
 
+        public string KeyLog = "";
+
+        protected void Log(string text)
+        {
+            KeyLog = text + "\r\n" + KeyLog;
+        }
+
         private void Keypad_MouseDown(object sender, MouseEventArgs e)
         {
             MouseEventArgs f = e as MouseEventArgs;
@@ -60,20 +67,27 @@ namespace TiedyeDesktop
             KeyLocation data = new KeyLocation(Group: group, Key: key, On: on);
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
+                Log("Click " + Convert.ToString(group, 2) + " " + Convert.ToString(key, 2) + on);
                 if (lastKeyTimer.Enabled)
                 {
                     // What a fast clicker!
                     // Release last key.
                     lastKeyTimer.Stop();
                     if (KeyReleased != null)
+                    {
+                        Log(". . . released.");
                         KeyReleased(this, LastKey);
+                    }
                 }
                 LastKey = data;
                 lastKeyMouseReleased = false;
                 lastKeyTimer.Stop();
                 lastKeyTimer.Start();
                 if (KeyPressed != null)
+                {
+                    Log(". . . pressed.");
                     KeyPressed(this, data);
+                }
             }
             else if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
@@ -87,7 +101,10 @@ namespace TiedyeDesktop
             if (lastKeyMouseReleased)
                 return;
             if (KeyReleased != null)
+            {
+                Log(". . . released.");
                 KeyReleased(this, LastKey);
+            }
         }
 
 
