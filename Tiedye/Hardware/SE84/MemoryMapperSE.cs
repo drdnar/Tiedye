@@ -390,7 +390,7 @@ namespace Tiedye.Hardware
             if (isRam)
             {
                 // Check execution permissions: address must be within allowed limits, masked by RAM chip size
-                if (Cpu.M1)
+                if (Cpu.M1 && sender is Z80Cpu)
                     if ((linearAddress & ramTypeMask) < ramLowerLimit || (linearAddress & ramTypeMask) >= ramUpperLimit)
                         Master.Reset();
                 return Ram.ReadByte(sender, linearAddress & 0x3FFFF);
@@ -398,7 +398,7 @@ namespace Tiedye.Hardware
             else
             {
                 // Check execution permissions: address must be within allowed limits
-                if (Cpu.M1)
+                if (Cpu.M1 && sender is Z80Cpu)
                     if ((linearAddress & flashTypeMask) >= flashLowerLimit && (linearAddress & flashTypeMask) < flashUpperLimit)
                         // . . . unless it's on a privileged page, in which case, execution is always allowed
                         if (!((((linearAddress >> 14) & 0xF) >= 0xC) && (((linearAddress >> 18) & 0x2) >= 2) && ((linearAddress >> 20) == (1 << flashType) - 1)))
