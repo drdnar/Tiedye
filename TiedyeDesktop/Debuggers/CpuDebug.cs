@@ -37,7 +37,7 @@ namespace TiedyeDesktop
         {
             if (RefreshingData)
                 return;
-            //RefreshingData = true;
+            RefreshingData = true;
             aUpDown.Value = Cpu.A;
             bUpDown.Value = Cpu.B;
             cUpDown.Value = Cpu.C;
