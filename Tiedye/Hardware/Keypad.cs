@@ -46,10 +46,10 @@ namespace Tiedye.Hardware
             }
             set
             {
-                if (onKey && value)
+                if (onKey == value)
                     return;
                 onKey = value;
-                if (onKey)
+                if (onKey && OnInterruptEnable)
                     HasInterrupt = true;
             }
         }
@@ -176,7 +176,7 @@ namespace Tiedye.Hardware
                 return;
             if (key == KeyScanCode.On)
             {
-                onKey = true;
+                OnKey = true;
                 return;
             }
             int n = (int)key - 1;
@@ -193,7 +193,7 @@ namespace Tiedye.Hardware
                 return;
             if (key == KeyScanCode.On)
             {
-                onKey = false;
+                OnKey = false;
                 return;
             }
             int n = (int)key - 1;
