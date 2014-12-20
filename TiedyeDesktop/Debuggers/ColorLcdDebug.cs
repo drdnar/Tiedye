@@ -34,7 +34,7 @@ namespace TiedyeDesktop
 
         StringBuilder str = new StringBuilder();
 
-        bool RefreshingData = false;
+        //bool RefreshingData = false;
 
         public void RefreshData()
         {
