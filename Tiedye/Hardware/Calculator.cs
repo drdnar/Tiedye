@@ -54,7 +54,7 @@ namespace Tiedye.Hardware
         /// <summary>
         /// Bitfield showing what devices are asserting an interrupt.
         /// </summary>
-        protected InterruptId Interrupts = InterruptId.None;
+        public InterruptId Interrupts = InterruptId.None;
 
         [Flags]
         public enum InterruptId : ulong
@@ -234,9 +234,11 @@ namespace Tiedye.Hardware
 
         public void DoHalt()
         {
+            //Keypad.HasInterrupt = true;
             double t = Scheduler.GetNextEventTime() - Cpu.Clock.WallTime;
             if (t > 0)
                 Cpu.Clock.IncWallTime(t);
+             
         }
 
         public abstract void WritePort(object sender, ushort address, byte value);
