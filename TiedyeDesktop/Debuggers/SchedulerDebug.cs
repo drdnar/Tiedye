@@ -27,7 +27,10 @@ namespace TiedyeDesktop
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)
         {
-            dataTextBox.Text = "Frequency: " + Calc.Cpu.Clock.Frequency + "\r\n" + "Execution quantum (" + Math.Round(Master.ExecutionQuantum * 1000, 0) + " ms) excess: " + Math.Round(Master.AverageDeltaT * 1000, 3) + " ms\r\n" + Calc.Scheduler.GetDebugInformation();
+            dataTextBox.Text = "Frequency: " + Calc.Cpu.Clock.Frequency + "\r\n"
+                + "Execution quantum (" + Math.Round(Master.ExecutionQuantum * 1000, 0) + " ms) excess: " + Math.Round(Master.AverageDeltaT * 1000, 3) + " ms\r\n"
+                + "Interrupts: " + Calc.Interrupts.ToString() + "\r\n"
+                + Calc.Scheduler.GetDebugInformation();
         }
 
         private void SchedulerDebug_FormClosed(object sender, FormClosedEventArgs e)
