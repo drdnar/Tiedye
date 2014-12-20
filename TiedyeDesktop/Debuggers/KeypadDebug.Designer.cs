@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +40,6 @@
             this.group1TextBox = new System.Windows.Forms.TextBox();
             this.group2TextBox = new System.Windows.Forms.TextBox();
             this.group0TextBox = new System.Windows.Forms.TextBox();
-            this.maskTextBox = new System.Windows.Forms.TextBox();
             this.group3TextBox = new System.Windows.Forms.TextBox();
             this.group4TextBox = new System.Windows.Forms.TextBox();
             this.group5TextBox = new System.Windows.Forms.TextBox();
@@ -51,8 +49,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.keysComboBox = new System.Windows.Forms.ComboBox();
             this.keyPressedCheckBox = new System.Windows.Forms.CheckBox();
+            this.maskTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.interruptCheckBox = new System.Windows.Forms.CheckBox();
+            this.interruptEnableCheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -75,11 +79,11 @@
             this.tableLayoutPanel1.Controls.Add(this.group4TextBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.group5TextBox, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.group6TextBox, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.onKeyCheckBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 9);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.maskTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -97,16 +101,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 261);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mask";
             // 
             // label2
             // 
@@ -212,14 +206,6 @@
             this.group0TextBox.Size = new System.Drawing.Size(100, 20);
             this.group0TextBox.TabIndex = 11;
             // 
-            // maskTextBox
-            // 
-            this.maskTextBox.Location = new System.Drawing.Point(83, 3);
-            this.maskTextBox.Name = "maskTextBox";
-            this.maskTextBox.ReadOnly = true;
-            this.maskTextBox.Size = new System.Drawing.Size(100, 20);
-            this.maskTextBox.TabIndex = 10;
-            // 
             // group3TextBox
             // 
             this.group3TextBox.Location = new System.Drawing.Point(83, 128);
@@ -255,12 +241,13 @@
             // onKeyCheckBox
             // 
             this.onKeyCheckBox.AutoSize = true;
-            this.onKeyCheckBox.Location = new System.Drawing.Point(83, 28);
+            this.onKeyCheckBox.Location = new System.Drawing.Point(3, 3);
             this.onKeyCheckBox.Name = "onKeyCheckBox";
             this.onKeyCheckBox.Size = new System.Drawing.Size(61, 17);
             this.onKeyCheckBox.TabIndex = 18;
             this.onKeyCheckBox.Text = "On Key";
             this.onKeyCheckBox.UseVisualStyleBackColor = true;
+            this.onKeyCheckBox.CheckedChanged += new System.EventHandler(this.onKeyCheckBox_CheckedChanged);
             // 
             // label11
             // 
@@ -305,6 +292,58 @@
             this.keyPressedCheckBox.UseVisualStyleBackColor = true;
             this.keyPressedCheckBox.CheckedChanged += new System.EventHandler(this.keyPressedCheckBox_CheckedChanged);
             // 
+            // maskTextBox
+            // 
+            this.maskTextBox.Location = new System.Drawing.Point(83, 3);
+            this.maskTextBox.Name = "maskTextBox";
+            this.maskTextBox.ReadOnly = true;
+            this.maskTextBox.Size = new System.Drawing.Size(100, 20);
+            this.maskTextBox.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mask";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.onKeyCheckBox);
+            this.flowLayoutPanel2.Controls.Add(this.interruptCheckBox);
+            this.flowLayoutPanel2.Controls.Add(this.interruptEnableCheckBox);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(80, 25);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(204, 25);
+            this.flowLayoutPanel2.TabIndex = 21;
+            // 
+            // interruptCheckBox
+            // 
+            this.interruptCheckBox.AutoSize = true;
+            this.interruptCheckBox.Location = new System.Drawing.Point(70, 3);
+            this.interruptCheckBox.Name = "interruptCheckBox";
+            this.interruptCheckBox.Size = new System.Drawing.Size(38, 17);
+            this.interruptCheckBox.TabIndex = 19;
+            this.interruptCheckBox.Text = "Int";
+            this.interruptCheckBox.UseVisualStyleBackColor = true;
+            this.interruptCheckBox.CheckedChanged += new System.EventHandler(this.interruptCheckBox_CheckedChanged);
+            // 
+            // interruptEnableCheckBox
+            // 
+            this.interruptEnableCheckBox.AutoSize = true;
+            this.interruptEnableCheckBox.Location = new System.Drawing.Point(114, 3);
+            this.interruptEnableCheckBox.Name = "interruptEnableCheckBox";
+            this.interruptEnableCheckBox.Size = new System.Drawing.Size(74, 17);
+            this.interruptEnableCheckBox.TabIndex = 20;
+            this.interruptEnableCheckBox.Text = "Int Enable";
+            this.interruptEnableCheckBox.UseVisualStyleBackColor = true;
+            this.interruptEnableCheckBox.CheckedChanged += new System.EventHandler(this.interruptEnableCheckBox_CheckedChanged);
+            // 
             // KeypadDebug
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +357,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +388,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.ComboBox keysComboBox;
         private System.Windows.Forms.CheckBox keyPressedCheckBox;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.CheckBox interruptCheckBox;
+        private System.Windows.Forms.CheckBox interruptEnableCheckBox;
     }
 }

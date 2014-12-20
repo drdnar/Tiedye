@@ -42,8 +42,13 @@ namespace TiedyeDesktop
             RefreshData();
         }
 
+        bool RefreshingData = false;
+
         public void RefreshData()
         {
+            if (RefreshingData)
+                return;
+            RefreshingData = true;
             group0TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xFE), 2);
             group1TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xFD), 2);
             group2TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xBF), 2);
@@ -52,9 +57,12 @@ namespace TiedyeDesktop
             group5TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xDF), 2);
             group6TextBox.Text = Convert.ToString(Keypad.ReadGroup(0xBF), 2);
             onKeyCheckBox.Checked = Keypad.OnKey;
+            interruptCheckBox.Checked = Keypad.HasInterrupt;
+            interruptEnableCheckBox.Checked = Keypad.OnInterruptEnable;
             maskTextBox.Text = Convert.ToString(Keypad.CurrentGroup, 2) + " (" + Keypad.CurrentGroup.ToString("X2") + ")";
             if (keysComboBox.SelectedItem != null)
                 keyPressedCheckBox.Checked = Keypad.TestKey((Tiedye.Hardware.Keypad.KeyScanCode)keysComboBox.SelectedItem);
+            RefreshingData = false;
         }
 
         private void keysComboBox_SelectedValueChanged(object sender, EventArgs e)
@@ -64,6 +72,8 @@ namespace TiedyeDesktop
 
         private void keyPressedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
+            if (RefreshingData)
+                return;
             if (keysComboBox.SelectedItem == null)
                 return;
             if (keyPressedCheckBox.Checked)
@@ -72,5 +82,29 @@ namespace TiedyeDesktop
                 Keypad.ResetKey((Tiedye.Hardware.Keypad.KeyScanCode)keysComboBox.SelectedItem);
             RefreshData();
         }
+
+        private void interruptCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RefreshingData)
+                return;
+            Keypad.HasInterrupt = interruptCheckBox.Checked;
+        }
+
+        private void interruptEnableCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RefreshingData)
+                return;
+            Keypad.OnInterruptEnable = interruptEnableCheckBox.Checked;
+        }
+
+        private void onKeyCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RefreshingData)
+                return;
+            Keypad.OnKey = onKeyCheckBox.Checked;
+        }
+
+        
+
     }
 }
