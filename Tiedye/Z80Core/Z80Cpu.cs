@@ -615,10 +615,24 @@ namespace Tiedye.Z80Core
 
         public bool Break = false;
 
+        bool forceReset = false;
+
         /// <summary>
         /// Set to true to tell the Z80 to reset immediately.
         /// </summary>
-        public bool ForceReset = false;
+        public bool ForceReset// = false;
+        {
+            get
+            {
+                return forceReset;
+            }
+            set
+            {
+                forceReset = value;
+                if (value)
+                    forceReset = value;
+            }
+        }
 
         private bool intAck = false;
         /// <summary>
@@ -975,13 +989,13 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryWrite)
+                if (a == BpMemoryRead)
                     Break = true;
-                if ((ushort)(a + 1) == BpMemoryWrite)
+                if ((ushort)(a + 1) == BpMemoryRead)
                     Break = true;
                 return (ushort)(
                         MemoryRead(this, (ushort)a)
-                        | (MemoryRead(this, (ushort)((ushort)a + 1)) << 8)
+                        | (MemoryRead(this, (ushort)((ushort)(a + 1))) << 8)
                     );
             }
         }
@@ -3902,7 +3916,7 @@ namespace Tiedye.Z80Core
                                 cbits = acu ^ temp ^ sum;
                                 //AF = (AF & ~0xfe) | (sum & 0x80) | (!(sum & 0xff) << 6) |
                                 //  sum & 0xff != 0
-                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) == 0) ? 1 : 0) << 6) |
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
                                     (((sum - ((cbits & 16) >> 4)) & 2) << 4) | (cbits & 16) |
                                     ((sum - ((cbits >> 4) & 1)) & 8) |
                                     ((--BC & 0xffff) != 0 ? 1 : 0) << 2 | 2
@@ -3942,7 +3956,7 @@ namespace Tiedye.Z80Core
                                 sum = acu - temp;
                                 cbits = acu ^ temp ^ sum;
                                 //AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | (!(sum & 0xff) << 6) |
-                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) == 0) ? 1 : 0) << 6) |
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
                                     (((sum - ((cbits & 16) >> 4)) & 2) << 4) | (cbits & 16) |
                                     ((sum - ((cbits >> 4) & 1)) & 8) |
                                     ((--BC & 0xffff) != 0 ? 1 : 0) << 2 | 2);
@@ -4011,14 +4025,14 @@ namespace Tiedye.Z80Core
                                 op = --BC != 0 ? 1 : 0;
                                 sum = acu - temp;
                                 cbits = acu ^ temp ^ sum;
-                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) == 0) ? 1 : 0) << 6) |
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
                                     (((sum - ((cbits & 16) >> 4)) & 2) << 4) |
                                     (cbits & 16) | ((sum - ((cbits >> 4) & 1)) & 8) |
                                     op << 2 | 2
                                     );
                                 if ((sum & 15) == 8 && (cbits & 16) != 0)
                                     AF &= (ushort)(~8);
-                                if (BC != 0)
+                                if (op != 0 && sum != 0)
                                 {
                                     PC -= 2;
                                     AF |= FLAG_P;
@@ -4121,14 +4135,14 @@ namespace Tiedye.Z80Core
                                 op = --BC != 0 ? 1 : 0;
                                 sum = acu - temp;
                                 cbits = acu ^ temp ^ sum;
-                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) == 0) ? 1 : 0) << 6) |
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
                                     (((sum - ((cbits & 16) >> 4)) & 2) << 4) |
                                     (cbits & 16) | ((sum - ((cbits >> 4) & 1)) & 8) |
                                     op << 2 | 2
                                     );
                                 if ((sum & 15) == 8 && (cbits & 16) != 0)
                                     AF &= (ushort)(~8);
-                                if (BC != 0)
+                                if (op != 0 && sum != 0)
                                 {
                                     PC -= 2;
                                     AF |= FLAG_P;
