@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.logTextBox = new System.Windows.Forms.TextBox();
             this.windowRightUpDown = new System.Windows.Forms.NumericUpDown();
             this.windowLeftUpDown = new System.Windows.Forms.NumericUpDown();
             this.windowBottomUpDown = new System.Windows.Forms.NumericUpDown();
@@ -63,7 +64,9 @@
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.onCheckBox = new System.Windows.Forms.CheckBox();
             this.panicCheckBox = new System.Windows.Forms.CheckBox();
-            this.logTextBox = new System.Windows.Forms.TextBox();
+            this.traceEnableCheckBox = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.traceCountUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.windowRightUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.windowLeftUpDown)).BeginInit();
@@ -78,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cursorRowUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).BeginInit();
             this.flowLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traceCountUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,7 +89,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.logTextBox, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.windowRightUpDown, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.windowLeftUpDown, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.windowBottomUpDown, 1, 7);
@@ -106,10 +109,15 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel3, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel5, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.logTextBox, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.traceCountUpDown, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.traceEnableCheckBox, 1, 10);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowCount = 11;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
@@ -123,8 +131,21 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 361);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // logTextBox
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.logTextBox, 2);
+            this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTextBox.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.logTextBox.Location = new System.Drawing.Point(3, 303);
+            this.logTextBox.Multiline = true;
+            this.logTextBox.Name = "logTextBox";
+            this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.logTextBox.Size = new System.Drawing.Size(378, 55);
+            this.logTextBox.TabIndex = 44;
             // 
             // windowRightUpDown
             // 
@@ -492,17 +513,39 @@
             this.panicCheckBox.Text = "Panic";
             this.panicCheckBox.UseVisualStyleBackColor = true;
             // 
-            // logTextBox
+            // traceEnableCheckBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.logTextBox, 2);
-            this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logTextBox.Location = new System.Drawing.Point(3, 253);
-            this.logTextBox.Multiline = true;
-            this.logTextBox.Name = "logTextBox";
-            this.tableLayoutPanel1.SetRowSpan(this.logTextBox, 2);
-            this.logTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.logTextBox.Size = new System.Drawing.Size(378, 105);
-            this.logTextBox.TabIndex = 44;
+            this.traceEnableCheckBox.AutoSize = true;
+            this.traceEnableCheckBox.Location = new System.Drawing.Point(103, 253);
+            this.traceEnableCheckBox.Name = "traceEnableCheckBox";
+            this.traceEnableCheckBox.Size = new System.Drawing.Size(97, 17);
+            this.traceEnableCheckBox.TabIndex = 45;
+            this.traceEnableCheckBox.Text = "Trace LCD I/O";
+            this.traceEnableCheckBox.UseVisualStyleBackColor = true;
+            this.traceEnableCheckBox.CheckedChanged += new System.EventHandler(this.traceEnableCheckBox_CheckedChanged);
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(3, 281);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 13);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "Display Count";
+            // 
+            // traceCountUpDown
+            // 
+            this.traceCountUpDown.Location = new System.Drawing.Point(103, 278);
+            this.traceCountUpDown.Name = "traceCountUpDown";
+            this.traceCountUpDown.Size = new System.Drawing.Size(80, 20);
+            this.traceCountUpDown.TabIndex = 47;
+            this.traceCountUpDown.Value = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            this.traceCountUpDown.ValueChanged += new System.EventHandler(this.traceCountUpDown_ValueChanged);
             // 
             // ColorLcdDebug
             // 
@@ -534,6 +577,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cursorRowSetUpDown)).EndInit();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.traceCountUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -576,5 +620,8 @@
         private System.Windows.Forms.CheckBox onCheckBox;
         private System.Windows.Forms.CheckBox panicCheckBox;
         private System.Windows.Forms.TextBox logTextBox;
+        private System.Windows.Forms.CheckBox traceEnableCheckBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown traceCountUpDown;
     }
 }

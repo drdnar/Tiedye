@@ -51,6 +51,16 @@ namespace Tiedye.Hardware
             }
         }
 
+        public const int IoLogSize = 4096;//256;
+
+        public const int IoLogMask = 0xFFF;//0xFF;
+
+        public readonly byte[,] IoLogData = new byte[IoLogSize, 3];
+
+        public int IoLogPtr = 0;
+
+        public bool TraceIo = false;
+
         /// <summary>
         /// Bitfield showing what devices are asserting an interrupt.
         /// </summary>

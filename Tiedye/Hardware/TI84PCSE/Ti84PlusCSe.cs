@@ -66,9 +66,153 @@ namespace Tiedye.Hardware
             set;
         }
 
+        public enum PortNames
+        {
+            Link = 0,
+            Key = 1,
+            StatusIntAck = 2,
+            IntMask = 3,
+            IntIdAsicCfg = 4,
+            MemoryPageC = 5,
+            MemoryPageA = 6,
+            MemoryPageB = 7,
+            LinkAssistEnable = 8,
+            LinkAssistStatusSpeed6Mhz = 9,
+            LinkAssistInBufferSpeed15Mhz = 0x0A,
+            LinkAssistSpeed20Mhz = 0x0B,
+            LinkAssistSpeed25Mhz = 0x0C,
+            LinkAssistOutBuffer = 0x0D,
+            MemoryPageAHigh = 0x0E,
+            MemoryPageBHigh = 0x0F,
+            LcdCommand = 0x10,
+            LcdData = 0x11,
+            ProtectionControl = 0x14,
+            AsicId = 0x15,
+            Md5RegA = 0x18,
+            Md5RegB = 0x19,
+            Md5RegC = 0x1A,
+            Md5RegD = 0x1B,
+            Md5RegXByte0 = 0x1C,
+            Md5RegACByte1 = 0x1D,
+            Md5RegSByte2 = 0x1E,
+            Md5FuncByte3 = 0x1F,
+            CpuSpeed = 0x20,
+            FlashRamType = 0x21,
+            FlashExecLowerLimit = 0x22,
+            FlashExecUpperLimit = 0x23,
+            FlashExecHighBitsLimit = 0x24,
+            RamExecLowerLimit = 0x25,
+            RamExecUpperLimit = 0x26,
+            BlockMemoryRemapPageC = 0x27,
+            BlockMemoryRemapPageB = 0x28,
+            LcdDelay6MHz = 0x29,
+            LcdDelay15MHz = 0x2A,
+            LcdDelay20MHz = 0x2B,
+            LcdDelay25MHz = 0x2C,
+            CrystalKeepAlive = 0x2D,
+            MemoryDelay = 0x2E,
+            LcdDelay = 0x2F,
+            Timer1Frequency = 0x30,
+            Timer1Config = 0x31,
+            Timer1Count = 0x32,
+            Timer2Frequency = 0x33,
+            Timer2Config = 0x34,
+            Timer2Count = 0x35,
+            Timer3Frequency = 0x36,
+            Timer3Config = 0x37,
+            Timer3Count = 0x38,
+            GpioDirection = 0x39,
+            GpioData = 0x3A,
+            ExtCs0 = 0x3C,
+            ExtCs1 = 0x3D,
+            ExtCs2 = 0x3E,
+            ExtCs3 = 0x3F,
+            RtcControl = 0x40,
+            RtcSet0 = 0x41,
+            RtcSet1 = 0x42,
+            RtcSet2 = 0x43,
+            RtcSet3 = 0x44,
+            RtcRead0 = 0x45,
+            RtcRead1 = 0x46,
+            RtcRead2 = 0x47,
+            RtcRead3 = 0x48,
+            UsbXcvr = 0x49,
+            PuPdCtrl = 0x4A,
+            VBusCtrl = 0x4B,
+            UsbSystem = 0x4C,
+            UsbActivity = 0x4D,
+            ZsVBusControl = 0x4F,
+            ZsVBusSetValue = 0x50,
+            Usb48MHzGateTime = 0x51,
+            ChargePumpEnableTime = 0x52,
+            PdEnableTime = 0x53,
+            UsbSuspendControl = 0x54,
+            UsbInterruptStatus = 0x55,
+            UsbLineInterruptStatus = 0x56,
+            UsbLineInterruptEnable = 0x57,
+            UsbHardwareEnableActivity = 0x58,
+            UsbHardwareEnableActivityEnable = 0x59,
+            ViewScreenDma = 0x5A,
+            UsbCoreInterruptEnable = 0x5B,
+            UsbFunctionAddress = 0x80,
+            UsbPower = 0x81,
+            UsbTxInterrupt = 0x82,
+            UsbTxInterruptCont = 0x83,
+            UsbRxInterrupt = 0x84,
+            UsbRxInterruptCont = 0x85,
+            UsbOtherInterruptId = 0x86,
+            UsbTxInterruptMask = 0x87,
+            UsbTxInterruptMaskCont = 0x88,
+            UsbRxInterruptMask = 0x89,
+            UsbRxInterruptMaskCont = 0x8A,
+            UsbOtherInterruptMask = 0x8B,
+            UsbFrame = 0x8C,
+            UsbFrameCont = 0x8D,
+            UsbIndex = 0x8E,
+            UsbDeviceControl = 0x8F,
+            UsbTxMaxPacketSize = 0x90,
+            UsbTxCsrControlPipeCsr = 0x91,
+            UsbTxCsrControlPipeCsrCont = 0x92,
+            UsbRxMaxPacketSize = 0x93,
+            UsbRxCsr = 0x94,
+            UsbRxCsrCont = 0x95,
+            UsbRxCountControlPipeCount = 0x96,
+            UsbRxCountControlPipeCountCont = 0x97,
+            UsbTxType = 0x98,
+            UsbTxIntervalUsbNakLimit0 = 0x99,
+            UsbRxType = 0x9A,
+            UsbRxInterval = 0x9B,
+            UsbPipe0 = 0xA0,
+            UsbPipe1 = 0xA1,
+            UsbPipe2 = 0xA2,
+            UsbPipe3 = 0xA3,
+            UsbPipe4 = 0xA4,
+            UsbPipe5 = 0xA5,
+            UsbPipe6 = 0xA6,
+            UsbPipe7 = 0xA7,
+            UsbPipe8 = 0xA8,
+            UsbPipe9 = 0xA9,
+            UsbPipeA = 0xAA,
+            UsbPipeB = 0xAB,
+            UsbPipeC = 0xAC,
+            UsbPipeD = 0xAD,
+            UsbPipeE = 0xAE,
+            UsbPipeF = 0xAF,
+        }
+
+        public byte GpioDirection = 0;
+        public byte GpioData = 0;
+
         public override void WritePort(object sender, ushort address, byte value)
         {
             address = (ushort)(address & 0xFF);
+            if (TraceIo && sender is Z80Core.Z80Cpu && (address & 0xFE) != 0x10)
+            {
+                IoLogData[IoLogPtr, 0] = (byte)(address & 0xFF);
+                IoLogData[IoLogPtr, 1] = value;
+                IoLogData[IoLogPtr, 2] = 1;
+                IoLogPtr = (IoLogPtr + 1) & IoLogMask;
+            }
             switch (address)
             {
                 case 0x00: // D-Bus
@@ -249,10 +393,17 @@ namespace Tiedye.Hardware
                 case 0x2F: // LCD I/O delay
                     // TODO: Implement delay cycles
                     break;
+                case 0x39: // GPIO direction
+                    GpioDirection = value;
+                    break;
+                case 0x3A: // GPIO data
+                    GpioData = value;
+                    break;
             }
         }
 
-        public override byte ReadPort(object sender, ushort address)
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        byte ReadLogPort(object sender, ushort address)
         {
             switch (address & 0xFF)
             {
@@ -267,7 +418,7 @@ namespace Tiedye.Hardware
                     // TODO: DBus interrupt enable
                     return (byte)((Keypad.OnInterruptEnable ? 1 : 0) | (Apd.GenerateInterrupt ? 2 : 0) | (PApd.GenerateInterrupt ? 4 : 0) | (OffEnableMode ? 8 : 0));// | (DBus.I));
                 case 0x04: // Interrupt ID
-                    return (byte)((Keypad.OnKey ? 8 : 0) | ((byte)Interrupts & 0xFF));
+                    return (byte)((Keypad.OnKey ? 0 : 8) | ((byte)Interrupts & 0xFF));
                 case 0x05: // Memory page C
                     return (byte)Mapper.PageC;
                 case 0x06: // Memory page A lower bits
@@ -340,6 +491,10 @@ namespace Tiedye.Hardware
                     return 0;
                 case 0x2F:
                     return 0x4B;
+                case 0x39: // GPIO direction
+                    return GpioDirection;
+                case 0x3A: // GPIO data
+                    return GpioData;
 
                 // Dummy USB implementation
                 case 0x4A:
@@ -408,6 +563,20 @@ namespace Tiedye.Hardware
                     return 255;
             }
             return 0;
+
+        }
+
+        public override byte ReadPort(object sender, ushort address)
+        {
+            byte val = ReadLogPort(sender, address);
+            if (TraceIo && sender is Z80Core.Z80Cpu && (address & 0xFE) != 0x10)
+            {
+                IoLogData[IoLogPtr, 0] = (byte)(address & 0xFF);
+                IoLogData[IoLogPtr, 1] = val;
+                IoLogData[IoLogPtr, 2] = 0;
+                IoLogPtr = (IoLogPtr + 1) & IoLogMask;
+            }
+            return val;
         }
     }
 }

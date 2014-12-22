@@ -129,43 +129,64 @@ namespace Tiedye.Hardware
             if (WaitingForByte)
             {
                 WaitingForByte = false;
+                if (LogEnable)
+                {
+                    int i = (LogPtr - 1) & LogMask;
+                    LogData[i, 1] = (ushort)(LogData[i, 1] | ByteBuffer);
+                }
                 return ByteBuffer;
             }
             WaitingForByte = true;
+            byte val = 0;
             switch (CurrentRegister)
             {
                 case 0:
                     ByteBuffer = 0x35;
-                    return 0x93;
+                    val = 0x93;
+                    break;
                 case 3: // Entry Mode
                     ByteBuffer = (byte)(RegEntryMode & 0xFF);
-                    return (byte)(RegEntryMode >> 8);
+                    val = (byte)(RegEntryMode >> 8);
+                    break;
                 case 0x20: // Cursor Row
                     ByteBuffer = (byte)(CursorRow & 0xFF);
-                    return (byte)(CursorRow >> 8);
+                    val = (byte)(CursorRow >> 8);
+                    break;
                 case 0x21: // Cursor Column
                     ByteBuffer = (byte)(CursorColumn & 0xFF);
-                    return (byte)(CursorColumn >> 8);
+                    val = (byte)(CursorColumn >> 8);
+                    break;
                 case 0x22: // GRAM Buffer
                     int r = GramBuffer;
                     GramBuffer = Data[CursorColumn, CursorRow];
                     IncCursor();
                     ByteBuffer = (byte)(r & 0xFF);
-                    return (byte)(r>> 8);
+                    val = (byte)(r >> 8);
+                    break;
                 case 0x50: // Window Vertical Start
                     ByteBuffer = (byte)(WindowVerticalStart & 0xFF);
-                    return (byte)(WindowVerticalStart >> 8);
+                    val = (byte)(WindowVerticalStart >> 8);
+                    break;
                 case 0x51: // Window Vertical End
                     ByteBuffer = (byte)(WindowVerticalEnd & 0xFF);
-                    return (byte)(WindowVerticalEnd >> 8);
+                    val = (byte)(WindowVerticalEnd >> 8);
+                    break;
                 case 0x52: // Window Horizontal Start
                     ByteBuffer = (byte)(WindowHorizontalStart & 0xFF);
-                    return (byte)(WindowHorizontalStart >> 8);
+                    val = (byte)(WindowHorizontalStart >> 8);
+                    break;
                 case 0x53: // Window Horizontal End
                     ByteBuffer = (byte)(WindowHorizontalEnd & 0xFF);
-                    return (byte)(WindowHorizontalEnd >> 8);
+                    val = (byte)(WindowHorizontalEnd >> 8);
+                    break;
             }
-            return 0;
+            if (LogEnable)
+            {
+                LogData[LogPtr, 0] = (ushort)CurrentRegister;
+                LogData[LogPtr, 1] = (ushort)(val << 8);
+                LogPtr = (LogPtr + 1) & LogMask;
+            }
+            return val;
         }
 
         public const int LogSize = 4096;//256;
@@ -193,6 +214,11 @@ namespace Tiedye.Hardware
                 return;
             }
             ushort val = (ushort)(value | (ByteBuffer << 8));
+            if (LogEnable)
+            {
+                LogData[LogPtr, 0] = (ushort)(CurrentRegister | 0x8000);
+                LogData[LogPtr, 1] = val;
+            }
             switch (CurrentRegister)
             {
                 case 3: // Entry Mode
@@ -207,10 +233,8 @@ namespace Tiedye.Hardware
                 case 0x22: // GRAM Buffer
                     if (LogEnable)
                     {
-                        LogData[LogPtr, 0] = val;
-                        LogData[LogPtr, 1] = (ushort)CursorColumn;
-                        LogData[LogPtr, 2] = (ushort)CursorRow;
-                        LogPtr = (LogPtr + 1) & LogMask;
+                        LogData[LogPtr, 2] = (ushort)CursorColumn;
+                        LogData[LogPtr, 3] = (ushort)CursorRow;
                     }
                     Data[CursorColumn, CursorRow] = val;
                     IncCursor();
@@ -228,6 +252,8 @@ namespace Tiedye.Hardware
                     WindowHorizontalEnd = val;
                     break;
             }
+            if (LogEnable)
+                LogPtr = (LogPtr + 1) & LogMask;
             WaitingForByte = false;
             WritingData = false;
 

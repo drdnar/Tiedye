@@ -383,6 +383,27 @@ namespace TiedyeDesktop
             timersDebug.FormClosed -= timersDebug_FormClosed;
             timersDebug = null;
         }
+
+        IoLogDebug ioLogDebug;
+        public IoLogDebug IoLogDebug
+        {
+            get
+            {
+                return ioLogDebug;
+            }
+            set
+            {
+                ioLogDebug = value;
+                if (value != null)
+                    ioLogDebug.FormClosed += ioLogDebug_FormClosed;
+            }
+        }
+
+        void ioLogDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ioLogDebug.FormClosed -= ioLogDebug_FormClosed;
+            ioLogDebug = null;
+        }
         #endregion
 
     }

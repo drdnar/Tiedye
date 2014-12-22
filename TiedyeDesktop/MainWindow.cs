@@ -167,5 +167,18 @@ namespace TiedyeDesktop
             }
             SelectedCalculator.TimersDebug.Focus();
         }
+
+        private void iOLogDebugToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedCalculator == null)
+                return;
+            if (SelectedCalculator.IoLogDebug == null)
+            {
+                SelectedCalculator.IoLogDebug = new IoLogDebug(SelectedCalculator);
+                SelectedCalculator.IoLogDebug.MdiParent = this;
+                SelectedCalculator.IoLogDebug.Show();
+            }
+            SelectedCalculator.IoLogDebug.Focus();
+        }
     }
 }

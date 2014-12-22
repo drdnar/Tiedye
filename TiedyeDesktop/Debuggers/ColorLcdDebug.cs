@@ -24,6 +24,8 @@ namespace TiedyeDesktop
             Lcd = ((Ti84PlusCSe)(Master.Calculator)).Lcd;
             //Master.ExecutionFinished += Calculator_ExecutionFinished;
             Master.UpdateData += Calculator_ExecutionFinished;
+            traceCountUpDown.Minimum = 1;
+            traceCountUpDown.Maximum = ColorLcd.LogSize;
             RefreshData();
         }
 
@@ -53,23 +55,42 @@ namespace TiedyeDesktop
             windowBottomUpDown.Value = Lcd.WindowVerticalEnd;
             windowLeftUpDown.Value = Lcd.WindowHorizontalStart;
             windowRightUpDown.Value = Lcd.WindowHorizontalEnd;
+            traceEnableCheckBox.Checked = Lcd.LogEnable;
 
-            int pos = (Lcd.LogPtr - 1) & Lcd.LogPtr;
-            int asdf = ColorLcd.LogSize;
+            int pos = (Lcd.LogPtr - 1) & ColorLcd.LogMask;
+            int asdf = (int)traceCountUpDown.Value;
             str.Clear();
             for (int i = 0; i < asdf; i++)
             {
-                str.Append("(");
-                str.Append(Lcd.LogData[pos, 1]);
-                str.Append(", ");
-                str.Append(Lcd.LogData[pos, 2]);
-                str.Append(") <= ");
-                str.Append(Lcd.LogData[pos, 0]);
+                int reg = Lcd.LogData[pos, 0];
+                int val = Lcd.LogData[pos, 1];
+                int col = Lcd.LogData[pos, 2];
+                int row = Lcd.LogData[pos, 3];
+                if ((reg & 0xFF) == 0x22)
+                {
+                    str.Append(val.ToString("X4"));
+                    if ((reg & 0x8000) != 0)
+                        str.Append(" => (");
+                    else
+                        str.Append(" <= (");
+                    str.Append(col);
+                    str.Append(", ");
+                    str.Append(row);
+                    str.Append(")");
+                }
+                else
+                {
+                    str.Append(val.ToString("X4"));
+                    if ((reg & 0x8000) != 0)
+                        str.Append(" => ");
+                    else
+                        str.Append(" <= ");
+                    str.Append((reg & 0xFF).ToString("X2"));
+                }
                 str.AppendLine();
                 pos = (pos - 1) & ColorLcd.LogMask;
             }
             logTextBox.Text = str.ToString();
-
             //RefreshingData = false;
         }
 
@@ -77,6 +98,16 @@ namespace TiedyeDesktop
         {
             //Master.ExecutionFinished -= Calculator_ExecutionFinished;
             Master.UpdateData -= Calculator_ExecutionFinished;
+        }
+
+        private void traceEnableCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Lcd.LogEnable = traceEnableCheckBox.Checked;
+        }
+
+        private void traceCountUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshData();
         }
     }
 }
