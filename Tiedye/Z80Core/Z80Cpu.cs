@@ -4096,8 +4096,8 @@ namespace Tiedye.Z80Core
                                 } while (--BC);
                                 acu += hreg(AF);
                                 AF = (AF & ~0x3e) | (acu & 8) | ((acu & 2) << 4);*/
-                                acu = GetBYTE_pp(ref HL);
-                                PutBYTE_pp(ref DE, acu);
+                                acu = GetBYTE_mm(ref HL);
+                                PutBYTE_mm(ref DE, acu);
                                 BC--;
                                 acu += hreg(AF);
                                 AF = (ushort)((AF & ~0x3e) | (acu & 8) | ((acu & 2) << 4));
