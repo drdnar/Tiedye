@@ -63,6 +63,7 @@
             this.logTextBox.AcceptsTab = true;
             this.tableLayoutPanel1.SetColumnSpan(this.logTextBox, 2);
             this.logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.logTextBox.Font = new System.Drawing.Font("Courier New", 8.25F);
             this.logTextBox.Location = new System.Drawing.Point(3, 58);
             this.logTextBox.Multiline = true;
             this.logTextBox.Name = "logTextBox";

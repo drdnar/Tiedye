@@ -86,6 +86,9 @@ namespace TiedyeDesktop
                     else
                         str.Append(" <= ");
                     str.Append((reg & 0xFF).ToString("X2"));
+                    str.Append(" (");
+                    str.Append(((ColorLcd.RegisterName)(reg & 0xFF)).ToString());
+                    str.Append(")");
                 }
                 str.AppendLine();
                 pos = (pos - 1) & ColorLcd.LogMask;

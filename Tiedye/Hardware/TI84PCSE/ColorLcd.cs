@@ -361,6 +361,57 @@ namespace Tiedye.Hardware
         public int WindowHorizontalEnd = 319;
         public int WindowVerticalStart = 0;
         public int WindowVerticalEnd = 239;
-
+        
+        public enum RegisterName
+        {
+            DriverCode = 0,
+            OutputControl1 = 1,
+            DrivingControl = 2,
+            EntryMode = 3,
+            DataFormatSelection = 5,
+            DisplayControl1 = 7,
+            DisplayControl2 = 8,
+            DisplayControl3 = 9,
+            DisplayControl4 = 0x0A,
+            DisplayInterfaceControl1 = 0x0C,
+            FrameMarkerPosition = 0x0D,
+            DisplayInterfaceControl2 = 0x0F,
+            PowerControl1 = 0x10,
+            PowerControl2 = 0x11,
+            PowerControl3 = 0x12,
+            PowerControl4 = 0x13,
+            CursorRow = 0x20,
+            CursorColumn = 0x21,
+            Gram = 0x22,
+            PowerControl7 = 0x29,
+            FrameRateAndColorControl = 0x2B,
+            GammaControl1 = 0x30,
+            GammaControl2 = 0x31,
+            GammaControl3 = 0x32,
+            GammaControl4 = 0x35,
+            GammaControl5 = 0x36,
+            GammaControl6 = 0x37,
+            GammaControl7 = 0x38,
+            GammaControl8 = 0x39,
+            GammaControl9 = 0x3C,
+            GammaControl10 = 0x3D,
+            WindowVerticalStart = 0x50,
+            WindowVerticalEnd = 0x51,
+            WindowHorizontalStart = 0x52,
+            WindowHorizontalEnd = 0x53,
+            GateScanControl = 0x60,
+            BaseImageDisplayControl = 0x61,
+            VerticalScrollControl = 0x6A,
+            PartialImage1DisplayPosition = 0x80,
+            PartialImage1StartLine = 0x81,
+            PartialImage1EndLine = 0x82,
+            PartialImage2DisplayPosition = 0x83,
+            PartialImage2StartLine = 0x84,
+            PartialImage2EndLine = 0x85,
+            PanelInterfaceControl1 = 0x90,
+            PanelInterfaceControl2 = 0x92,
+            PanelInterfaceControl4 = 0x95,
+            PanelInterfaceControl5 = 0x97,
+        }
     }
 }

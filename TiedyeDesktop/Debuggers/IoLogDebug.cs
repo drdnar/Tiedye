@@ -47,7 +47,10 @@ namespace TiedyeDesktop
                 else
                     str.Append("IN:  ");
                 str.Append(Calculator.IoLogData[pos, 1].ToString("X2"));
-                str.Append(" => ");
+                if ((Calculator.IoLogData[pos, 2] & 1) != 0)
+                    str.Append(" => ");
+                else
+                    str.Append(" <= ");
                 str.Append(Calculator.IoLogData[pos, 0].ToString("X2"));
                 str.Append(" (");
                 str.Append(((Ti84PlusCSe.PortNames)Calculator.IoLogData[pos, 0]).ToString());
