@@ -405,7 +405,7 @@ namespace Tiedye.Hardware
                             Master.Reset();
                 // Check for censorship
                 int highBits = ((1 << flashType) - 1) << 20;
-                if ((linearAddress & 0xF00000) == highBits)
+                if ((linearAddress & 0xF00000) == highBits && !FlashWriteEnable)
                 {
                     highBits = linearAddress & 0xFFFFF;
                     if (highBits >= 0xF8000 && highBits < 0xFC000)
