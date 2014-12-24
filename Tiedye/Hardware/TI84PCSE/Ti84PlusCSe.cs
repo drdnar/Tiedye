@@ -435,7 +435,7 @@ namespace Tiedye.Hardware
             switch (address & 0xFF)
             {
                 case 0x00: // D-Bus
-                    return DBus.ReadLines();
+                    return 3;//DBus.ReadLines();
                 case 0x01: // Keypad
                     return Keypad.Read();
                 case 0x02: // TODO: System status
@@ -443,7 +443,7 @@ namespace Tiedye.Hardware
                     return (byte)(1 | 2 | (Mapper.FlashWriteEnable ? 4 : 0) | 0xE0);
                 case 0x03: // Interrupt mask
                     // TODO: DBus interrupt enable
-                    return (byte)((Keypad.OnInterruptEnable ? 1 : 0) | (Apd.GenerateInterrupt ? 2 : 0) | (PApd.GenerateInterrupt ? 4 : 0) | (OffEnableMode ? 8 : 0));// | (DBus.I));
+                    return (byte)((Keypad.OnInterruptEnable ? 1 : 0) | (Apd.GenerateInterrupt ? 2 : 0) | (PApd.GenerateInterrupt ? 4 : 0) | 16);// | (DBus.I));
                 case 0x04: // Interrupt ID
                     return (byte)((Keypad.OnKey ? 0 : 8) | ((byte)Interrupts & 0xFF) | (CrystalTimer1.HasExpired ? 0x20 : 0) | (CrystalTimer2.HasExpired ? 0x40 : 0) | (CrystalTimer3.HasExpired ? 0x80 : 0));
                 case 0x05: // Memory page C

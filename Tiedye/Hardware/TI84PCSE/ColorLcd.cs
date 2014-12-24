@@ -225,10 +225,12 @@ namespace Tiedye.Hardware
                     RegEntryMode = val;
                     break;
                 case 0x20: // Cursor Row
-                    CursorRow = (val % 240);
+                    LastCursorRow = CursorRow = (val % 240);
+                    CursorColumn = LastCursorColumn;
                     break;
                 case 0x21: // Cursor Column
-                    CursorColumn = (val % 320);
+                    LastCursorColumn = CursorColumn = (val % 320);
+                    CursorRow = LastCursorRow;
                     break;
                 case 0x22: // GRAM Buffer
                     if (LogEnable)
@@ -305,6 +307,8 @@ namespace Tiedye.Hardware
 
         public int CursorRow = 0;
         public int CursorColumn = 0;
+        public int LastCursorRow = 0;
+        public int LastCursorColumn = 0;
         public int GramBuffer = 0;
         public void IncCursor()
         {
