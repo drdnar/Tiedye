@@ -393,6 +393,33 @@ namespace Tiedye.Hardware
                 case 0x2F: // LCD I/O delay
                     // TODO: Implement delay cycles
                     break;
+                case 0x30: // Crystal timer 1 frequency
+                    CrystalTimer1.SetMode(value);
+                    break;
+                case 0x31: // Crystal timer 1 loop control
+                    CrystalTimer1.SetLoopControl(value);
+                    break;
+                case 0x32: // Crystal timer 1 count
+                    CrystalTimer1.SetCount(value);
+                    break;
+                case 0x33: // Crystal timer 2 frequency
+                    CrystalTimer2.SetMode(value);
+                    break;
+                case 0x34: // Crystal timer 2 loop control
+                    CrystalTimer2.SetLoopControl(value);
+                    break;
+                case 0x35: // Crystal timer 2 count
+                    CrystalTimer2.SetCount(value);
+                    break;
+                case 0x36: // Crystal timer 3 frequency
+                    CrystalTimer3.SetMode(value);
+                    break;
+                case 0x37: // Crystal timer 3 loop control
+                    CrystalTimer3.SetLoopControl(value);
+                    break;
+                case 0x38: // Crystal timer 3 count
+                    CrystalTimer3.SetCount(value);
+                    break;
                 case 0x39: // GPIO direction
                     GpioDirection = value;
                     break;
@@ -418,7 +445,7 @@ namespace Tiedye.Hardware
                     // TODO: DBus interrupt enable
                     return (byte)((Keypad.OnInterruptEnable ? 1 : 0) | (Apd.GenerateInterrupt ? 2 : 0) | (PApd.GenerateInterrupt ? 4 : 0) | (OffEnableMode ? 8 : 0));// | (DBus.I));
                 case 0x04: // Interrupt ID
-                    return (byte)((Keypad.OnKey ? 0 : 8) | ((byte)Interrupts & 0xFF));
+                    return (byte)((Keypad.OnKey ? 0 : 8) | ((byte)Interrupts & 0xFF) | (CrystalTimer1.HasExpired ? 0x20 : 0) | (CrystalTimer2.HasExpired ? 0x40 : 0) | (CrystalTimer3.HasExpired ? 0x80 : 0));
                 case 0x05: // Memory page C
                     return (byte)Mapper.PageC;
                 case 0x06: // Memory page A lower bits
@@ -491,6 +518,24 @@ namespace Tiedye.Hardware
                     return 0;
                 case 0x2F:
                     return 0x4B;
+                case 0x30: // Crystal timer 1 frequency
+                    return CrystalTimer1.GetMode();
+                case 0x31: // Crystal timer 1 loop control
+                    return CrystalTimer1.GetLoopStatus();
+                case 0x32: // Crystal timer 1 count
+                    return CrystalTimer1.GetCount();
+                case 0x33: // Crystal timer 2 frequency
+                    return CrystalTimer2.GetMode();
+                case 0x34: // Crystal timer 2 loop control
+                    return CrystalTimer2.GetLoopStatus();
+                case 0x35: // Crystal timer 2 count
+                    return CrystalTimer2.GetCount();
+                case 0x36: // Crystal timer 3 frequency
+                    return CrystalTimer3.GetMode();
+                case 0x37: // Crystal timer 3 loop control
+                    return CrystalTimer3.GetLoopStatus();
+                case 0x38: // Crystal timer 3 count
+                    return CrystalTimer3.GetCount();
                 case 0x39: // GPIO direction
                     return GpioDirection;
                 case 0x3A: // GPIO data
