@@ -640,7 +640,7 @@ namespace Tiedye.Z80Core
                                     disasm.Disassembly = TableRot[GetField(Field.y, b)] + "(" + indexRegister + " + " + ((sbyte)instr[2]).ToString("X2") + ")";
                                 break;
                             case 1:
-                                disasm.Disassembly = "BIT " + GetField(Field.y, b).ToString() + ", " + TableR[GetField(Field.z, b)];
+                                disasm.Disassembly = "BIT " + GetField(Field.y, b).ToString() + ", (" + indexRegister + " + " + ((sbyte)instr[2]).ToString("X2") + ")";
                                 break;
                             case 2:
                                 if (GetField(Field.z, b) != 6)
