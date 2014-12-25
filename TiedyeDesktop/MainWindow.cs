@@ -42,6 +42,8 @@ namespace TiedyeDesktop
         private void newCalculatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ti8xCalculator blah = new Ti8xCalculator(this, new Ti84PlusCSe());
+            if (blah.Calculator.Flash.Data.Length < 4000000)
+                return;
             blah.CalculatorName = "Calc " + (CalculatorCounter++).ToString();
             blah.MdiParent = this;
             blah.Show();

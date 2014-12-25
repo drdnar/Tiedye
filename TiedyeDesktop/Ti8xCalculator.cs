@@ -52,7 +52,29 @@ namespace TiedyeDesktop
             InitializeComponent();
             Master = master;
             Calculator = calculator;
-            Calculator.Flash.Data = System.IO.File.ReadAllBytes("84PCSE.rom");
+            try
+            {
+                Calculator.Flash.Data = System.IO.File.ReadAllBytes("84PCSE.rom");
+            }
+            catch
+            {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Rom files|*.rom;*.bin|All files|*.*";
+                try
+                {
+                if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                    Calculator.Flash.Data = System.IO.File.ReadAllBytes(ofd.FileName);
+                else
+                    {
+                        return;
+                    }
+                }
+                catch (Exception e)
+                {
+                    return;
+                }
+            }
+            
             Calculator.ExecutionFinished += Calculator_ExecutionFinished;
             Calculator.Cpu.ResetEvent += Calculator_Reset;
             screen.Image = ScreenImage;
