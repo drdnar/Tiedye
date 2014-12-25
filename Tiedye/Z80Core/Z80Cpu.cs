@@ -1390,7 +1390,7 @@ namespace Tiedye.Z80Core
                         if (TSTFLAG(FLAG_N))
                         {	/* last operation was a subtract */
                             bool hd = (cbits != 0) || acu > 0x99;
-                            if (TSTFLAG(H) || (temp > 9))
+                            if (TSTFLAG(FLAG_H) || (temp > 9))
                             { /* adjust low digit */
                                 if (temp > 5)
                                     SETFLAG(FLAG_H, false);
@@ -1402,9 +1402,9 @@ namespace Tiedye.Z80Core
                         }
                         else
                         {			/* last operation was an add */
-                            if (TSTFLAG(H) || (temp > 9))
+                            if (TSTFLAG(FLAG_H) || (temp > 9))
                             { /* adjust low digit */
-                                SETFLAG(H, (temp > 9));
+                                SETFLAG(FLAG_H, (temp > 9));
                                 acu += 6;
                             }
                             if (cbits != 0 || ((acu & 0x1f0) > 0x90)) /* adjust high digit */
