@@ -170,7 +170,10 @@ namespace TiedyeDesktop
                 lastTime = timer.Elapsed;
                 Calculator.ExecuteFor(ExecutionQuantum);//0.005);//
                 if (Calculator.Cpu.Break)
+                {
                     Pause();
+                    break;
+                }
                 delta = (timer.Elapsed - lastTime);
                 deltaT = delta.TotalSeconds;
                 AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds + (1.0 - alpha) * AverageDeltaT;

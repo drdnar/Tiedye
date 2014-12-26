@@ -96,7 +96,7 @@ namespace TiedyeDesktop
                 return;
             if (SelectedCalculator.Breakpoints == null)
             {
-                SelectedCalculator.Breakpoints = new Breakpoints(SelectedCalculator.Calculator.Cpu);
+                SelectedCalculator.Breakpoints = new Breakpoints(SelectedCalculator);
                 SelectedCalculator.Breakpoints.MdiParent = this;
                 SelectedCalculator.Breakpoints.Show();
             }

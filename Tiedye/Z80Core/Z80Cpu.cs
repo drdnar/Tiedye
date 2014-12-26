@@ -692,7 +692,7 @@ namespace Tiedye.Z80Core
         private void AssertM1()
         {
             if (PC == BpExecution)
-                Break = true;
+                BreakExecution();
             m1 = true;
         }
 
@@ -773,6 +773,36 @@ namespace Tiedye.Z80Core
         public bool BpRet = false;
         public bool BpInterrupt = false;
         
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public void BreakExecution()
+        {
+            Break = true;
+            if (TraceLastExec)
+                for (int i = 0; i < BreakCpuState.Length; i++)
+                    BreakCpuState[i] = LastExecData[(LastExecPtr - 1) & LastExecMask, i];
+            else
+            {
+                BreakCpuState[0] = 0;
+                BreakCpuState[1] = 0;
+                BreakCpuState[2] = PC;
+                BreakCpuState[3] = SP;
+                BreakCpuState[4] = AF;
+                BreakCpuState[5] = BC;
+                BreakCpuState[6] = DE;
+                BreakCpuState[7] = HL;
+                BreakCpuState[8] = ShadowAF;
+                BreakCpuState[9] = ShadowBC;
+                BreakCpuState[10] = ShadowDE;
+                BreakCpuState[11] = ShadowHL;
+                BreakCpuState[12] = IX;
+                BreakCpuState[13] = IY;
+                BreakCpuState[14] = IR;
+                BreakCpuState[15] = IFF;
+            }
+        }
+
+        public ushort[] BreakCpuState = new ushort[16];
+
         #endregion
 
 
@@ -863,10 +893,10 @@ namespace Tiedye.Z80Core
             {
                 MemoryWrite(this, --SP, (byte)(x >> 8));
                 if (SP == BpMemoryWrite)
-                    Break = true;
+                    BreakExecution();
                 MemoryWrite(this, --SP, (byte)(x & 0xFF));
                 if (SP == BpMemoryWrite)
-                    Break = true;
+                    BreakExecution();
             }
         }
         
@@ -874,7 +904,7 @@ namespace Tiedye.Z80Core
         private byte Read(ushort address)
         {
             if (address == BpMemoryRead)
-                Break = true;
+                BreakExecution();
             return MemoryRead(this, address);
         }
 
@@ -884,7 +914,7 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return MemoryRead(this, a++);
             }
         }
@@ -895,7 +925,7 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return MemoryRead(this, a--);
             }
         }
@@ -907,7 +937,7 @@ namespace Tiedye.Z80Core
             {
                 byte t = MemoryRead(this, --a);
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return t;
             }
         }
@@ -916,7 +946,7 @@ namespace Tiedye.Z80Core
         private byte GetBYTE(ushort a)
         {
             if (a == BpMemoryRead)
-                Break = true;
+                BreakExecution();
             return MemoryRead(this, a);
         }
 
@@ -926,7 +956,7 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return MemoryRead(this, a++);
             }
         }
@@ -937,7 +967,7 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return MemoryRead(this, a--);
             }
         }
@@ -949,7 +979,7 @@ namespace Tiedye.Z80Core
             {
                 byte t = MemoryRead(this, --a);
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return t;
             }
         }
@@ -958,7 +988,7 @@ namespace Tiedye.Z80Core
         private void PutBYTE(ushort a, int v)
         {
             if (a == BpMemoryWrite)
-                Break = true;
+                BreakExecution();
             MemoryWrite(this, a, (byte)v);
         }
 
@@ -968,7 +998,7 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryWrite)
-                    Break = true;
+                    BreakExecution();
                 MemoryWrite(this, a++, (byte)v);
             }
         }
@@ -980,7 +1010,7 @@ namespace Tiedye.Z80Core
             {
                 MemoryWrite(this, a--, (byte)v);
                 if (a == BpMemoryWrite)
-                    Break = true;
+                    BreakExecution();
             }
         }
 
@@ -990,9 +1020,9 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 if (a == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 if ((ushort)(a + 1) == BpMemoryRead)
-                    Break = true;
+                    BreakExecution();
                 return (ushort)(
                         MemoryRead(this, (ushort)a)
                         | (MemoryRead(this, (ushort)((ushort)(a + 1))) << 8)
@@ -1004,10 +1034,10 @@ namespace Tiedye.Z80Core
         private void PutWORD(ushort a, int v)
         {
             if (a == BpMemoryWrite)
-                Break = true;
+                BreakExecution();
             MemoryWrite(this, a, (byte)(v & 0xFF));
             if ((ushort)(a + 1) == BpMemoryWrite)
-                Break = true;
+                BreakExecution();
             MemoryWrite(this, (ushort)(a + 1), (byte)((v >> 8) & 0xFF));
         }
 
@@ -1033,7 +1063,7 @@ namespace Tiedye.Z80Core
             ShadowAF = ShadowBC = ShadowDE = ShadowHL = 0;
             IX = IY = SP = PC = 0;
             IM = IFF = 0;
-            Break = true;
+            BreakExecution();
             if (ResetEvent != null)
                 ResetEvent(this, null);
         }
@@ -1064,7 +1094,7 @@ namespace Tiedye.Z80Core
                 if (IFF1 & Interrupt /* && interrupt > 0*/)
                 {
                     if (BpInterrupt)
-                        Break = true;
+                        BreakExecution();
                     IFF2 = IFF1;
                     IFF1 = false;
                     interrupt = 0;
@@ -2421,7 +2451,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -2478,7 +2508,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -2487,7 +2517,7 @@ namespace Tiedye.Z80Core
                         POP(ref PC);
                         Clock.IncTime(10);
                         if (BpRet)
-                            Break = true;
+                            BreakExecution();
                         break;
                     case 0xCA:			/* JP Z,nnnn */
                         /*if (TSTFLAG(FLAG_Z))
@@ -2641,7 +2671,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -2659,7 +2689,7 @@ namespace Tiedye.Z80Core
                         temp = temp | (temp << 8);
                         IoPortWrite(this, (ushort)temp, hreg(AF));
                         if (BpAnyIo || (temp & 0xFF) == BpIoWrite)
-                            Break = true;
+                            BreakExecution();
                         Clock.IncTime(11);
                         break;
                     case 0xD4:			/* CALL NC,nnnn */
@@ -2702,7 +2732,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -2721,7 +2751,7 @@ namespace Tiedye.Z80Core
                         temp = temp | (temp << 8);
                         Sethreg(ref AF, IoPortRead(this, (ushort)temp));
                         if (BpAnyIo || (temp & 0xFF) == BpIoRead)
-                            Break = true;
+                            BreakExecution();
                         Clock.IncTime(11);
                         break;
                     case 0xDC:			/* CALL C,nnnn */
@@ -3448,7 +3478,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -3499,7 +3529,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -3549,13 +3579,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x41:			/* OUT (C),B */
                                 IoPortWrite(this, BC, hreg(BC));//lreg(BC)
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x42:			/* SBC HL,BC */
@@ -3591,7 +3621,7 @@ namespace Tiedye.Z80Core
                                 POP(ref PC);
                                 Clock.IncTime(14);
                                 if (BpRet)
-                                    Break = true;
+                                    BreakExecution();
                                 break;
                             case 0x46:			/* IM 0 */
                                 /* interrupt mode 0 */
@@ -3610,13 +3640,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x49:			/* OUT (C),C */
                                 IoPortWrite(this, BC, lreg(BC));//Output(lreg(BC), BC);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x4A:			/* ADC HL,BC */
@@ -3643,7 +3673,7 @@ namespace Tiedye.Z80Core
                                 POP(ref PC);
                                 Clock.IncTime(14);
                                 if (BpRet)
-                                    Break = true;
+                                    BreakExecution();
                                 break;
                             case 0x4F:			/* LD R,A */
                                 IR = (ushort)((IR & ~255) | ((AF >> 8) & 255));
@@ -3657,13 +3687,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x51:			/* OUT (C),D */
                                 IoPortWrite(this, BC, hreg(DE));//Output(lreg(BC), DE);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x52:			/* SBC HL,DE */
@@ -3702,14 +3732,14 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x59:			/* OUT (C),E */
                                 IoPortWrite(this, BC, lreg(DE));
                                 //Output(lreg(BC), DE);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x5A:			/* ADC HL,DE */
@@ -3748,14 +3778,14 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x61:			/* OUT (C),H */
                                 //Output(lreg(BC), HL);
                                 IoPortWrite(this, BC, hreg(HL));
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x62:			/* SBC HL,HL */
@@ -3793,13 +3823,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x69:			/* OUT (C),L */
                                 IoPortWrite(this, BC, lreg(HL));//Output(lreg(BC), HL);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x6A:			/* ADC HL,HL */
@@ -3837,13 +3867,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x71:			/* OUT (C),0 */
                                 IoPortWrite(this, BC, 0);//Output(lreg(BC), 0);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x72:			/* SBC HL,SP */
@@ -3873,13 +3903,13 @@ namespace Tiedye.Z80Core
                                     parity(temp)
                                     );
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x79:			/* OUT (C),A */
                                 IoPortWrite(this, BC, hreg(AF));//Output(lreg(BC), AF);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(12);
                                 break;
                             case 0x7A:			/* ADC HL,SP */
@@ -3930,7 +3960,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_P, (--BC & 0xffff) != 0);
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(16);
                                 break;
                             case 0xA3:			/* OUTI */
@@ -3939,7 +3969,7 @@ namespace Tiedye.Z80Core
                                 Sethreg(ref BC, hreg(BC) - 1);
                                 SETFLAG(FLAG_Z, hreg(BC) == 0);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(16);
                                 break;
                             case 0xA8:			/* LDD */
@@ -3971,7 +4001,7 @@ namespace Tiedye.Z80Core
                                 Sethreg(ref BC, lreg(BC) - 1);
                                 SETFLAG(FLAG_Z, lreg(BC) == 0);
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(16);
                                 break;
                             case 0xAB:			/* OUTD */
@@ -3981,7 +4011,7 @@ namespace Tiedye.Z80Core
                                 Sethreg(ref BC, hreg(BC) - 1);
                                 SETFLAG(FLAG_Z, hreg(BC) == 0);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 Clock.IncTime(16);
                                 break;
                             case 0xB0:			/* LDIR */
@@ -4056,7 +4086,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 if (B != 0)
                                 {
                                     PC -= 2;
@@ -4077,7 +4107,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 if (B != 0)
                                 {
                                     PC -= 2;
@@ -4166,7 +4196,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
                                 if (BpAnyIo || C == BpIoRead)
-                                    Break = true;
+                                    BreakExecution();
                                 if (B != 0)
                                 {
                                     PC -= 2;
@@ -4187,7 +4217,7 @@ namespace Tiedye.Z80Core
                                 SETFLAG(FLAG_N, true);
                                 SETFLAG(FLAG_Z, --B == 0);
                                 if (BpAnyIo || C == BpIoWrite)
-                                    Break = true;
+                                    BreakExecution();
                                 if (B != 0)
                                 {
                                     PC -= 2;
@@ -4215,7 +4245,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
@@ -4264,7 +4294,7 @@ namespace Tiedye.Z80Core
                         {
                             Clock.IncTime(11);
                             if (BpRet)
-                                Break = true;
+                                BreakExecution();
                         }
                         else
                             Clock.IncTime(5);
