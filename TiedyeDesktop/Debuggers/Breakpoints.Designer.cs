@@ -58,16 +58,18 @@
             this.updateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.addMemBpButton = new System.Windows.Forms.Button();
-            this.deleteMemBpButton = new System.Windows.Forms.Button();
             this.memBpListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.isRamCheckBox = new System.Windows.Forms.CheckBox();
             this.memBpActiveCheckBox = new System.Windows.Forms.CheckBox();
             this.pageUpDown = new System.Windows.Forms.NumericUpDown();
             this.addressUpDown = new System.Windows.Forms.NumericUpDown();
             this.memBpTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deleteMemBpButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -93,6 +95,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).BeginInit();
+            this.groupBox9.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -479,97 +483,50 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.memBpListBox, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.addMemBpButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.memBpActiveCheckBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox9, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.deleteMemBpButton, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.isRamCheckBox, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.memBpActiveCheckBox, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pageUpDown, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.addressUpDown, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.memBpTypeComboBox, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 295);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // addMemBpButton
             // 
-            this.addMemBpButton.Location = new System.Drawing.Point(3, 218);
+            this.addMemBpButton.Location = new System.Drawing.Point(228, 33);
             this.addMemBpButton.Name = "addMemBpButton";
-            this.addMemBpButton.Size = new System.Drawing.Size(74, 23);
+            this.addMemBpButton.Size = new System.Drawing.Size(75, 23);
             this.addMemBpButton.TabIndex = 1;
             this.addMemBpButton.Text = "Add New";
             this.addMemBpButton.UseVisualStyleBackColor = true;
-            // 
-            // deleteMemBpButton
-            // 
-            this.deleteMemBpButton.Location = new System.Drawing.Point(83, 218);
-            this.deleteMemBpButton.Name = "deleteMemBpButton";
-            this.deleteMemBpButton.Size = new System.Drawing.Size(74, 23);
-            this.deleteMemBpButton.TabIndex = 2;
-            this.deleteMemBpButton.Text = "Delete";
-            this.deleteMemBpButton.UseVisualStyleBackColor = true;
+            this.addMemBpButton.Click += new System.EventHandler(this.addMemBpButton_Click);
             // 
             // memBpListBox
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.memBpListBox, 4);
+            this.tableLayoutPanel1.SetColumnSpan(this.memBpListBox, 2);
             this.memBpListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memBpListBox.FormattingEnabled = true;
             this.memBpListBox.Location = new System.Drawing.Point(3, 3);
             this.memBpListBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.memBpListBox.Name = "memBpListBox";
-            this.memBpListBox.Size = new System.Drawing.Size(332, 212);
+            this.memBpListBox.Size = new System.Drawing.Size(332, 177);
             this.memBpListBox.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 251);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Page:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 276);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Address:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(203, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Type:";
+            this.memBpListBox.SelectedValueChanged += new System.EventHandler(this.memBpListBox_SelectedValueChanged);
             // 
             // isRamCheckBox
             // 
-            this.isRamCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.isRamCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.isRamCheckBox.AutoSize = true;
-            this.isRamCheckBox.Location = new System.Drawing.Point(163, 274);
+            this.isRamCheckBox.Location = new System.Drawing.Point(156, 36);
             this.isRamCheckBox.Name = "isRamCheckBox";
             this.isRamCheckBox.Size = new System.Drawing.Size(62, 17);
             this.isRamCheckBox.TabIndex = 6;
@@ -580,54 +537,131 @@
             // 
             this.memBpActiveCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.memBpActiveCheckBox.AutoSize = true;
-            this.memBpActiveCheckBox.Location = new System.Drawing.Point(243, 274);
+            this.memBpActiveCheckBox.Location = new System.Drawing.Point(3, 186);
             this.memBpActiveCheckBox.Name = "memBpActiveCheckBox";
-            this.memBpActiveCheckBox.Size = new System.Drawing.Size(56, 17);
+            this.memBpActiveCheckBox.Size = new System.Drawing.Size(132, 17);
             this.memBpActiveCheckBox.TabIndex = 7;
-            this.memBpActiveCheckBox.Text = "Active";
+            this.memBpActiveCheckBox.Text = "Selected item is active";
             this.memBpActiveCheckBox.UseVisualStyleBackColor = true;
+            this.memBpActiveCheckBox.CheckedChanged += new System.EventHandler(this.memBpActiveCheckBox_CheckedChanged);
             // 
             // pageUpDown
             // 
             this.pageUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pageUpDown.Hexadecimal = true;
-            this.pageUpDown.Location = new System.Drawing.Point(83, 248);
+            this.pageUpDown.Location = new System.Drawing.Point(78, 5);
             this.pageUpDown.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.pageUpDown.Name = "pageUpDown";
-            this.pageUpDown.Size = new System.Drawing.Size(74, 20);
+            this.pageUpDown.Size = new System.Drawing.Size(69, 20);
             this.pageUpDown.TabIndex = 8;
             // 
             // addressUpDown
             // 
             this.addressUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.addressUpDown.Hexadecimal = true;
-            this.addressUpDown.Location = new System.Drawing.Point(83, 273);
+            this.addressUpDown.Location = new System.Drawing.Point(78, 35);
             this.addressUpDown.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.addressUpDown.Name = "addressUpDown";
-            this.addressUpDown.Size = new System.Drawing.Size(74, 20);
+            this.addressUpDown.Size = new System.Drawing.Size(69, 20);
             this.addressUpDown.TabIndex = 9;
             // 
             // memBpTypeComboBox
             // 
-            this.memBpTypeComboBox.DisplayMember = "1";
             this.memBpTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.memBpTypeComboBox.FormattingEnabled = true;
             this.memBpTypeComboBox.Items.AddRange(new object[] {
             "Execution",
             "Read",
             "Write"});
-            this.memBpTypeComboBox.Location = new System.Drawing.Point(243, 248);
+            this.memBpTypeComboBox.Location = new System.Drawing.Point(228, 3);
             this.memBpTypeComboBox.Name = "memBpTypeComboBox";
-            this.memBpTypeComboBox.Size = new System.Drawing.Size(92, 21);
+            this.memBpTypeComboBox.Size = new System.Drawing.Size(95, 21);
             this.memBpTypeComboBox.TabIndex = 10;
+            // 
+            // groupBox9
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.groupBox9, 2);
+            this.groupBox9.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(3, 213);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(332, 79);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Create Breakpoint";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.memBpTypeComboBox, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.addMemBpButton, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.isRamCheckBox, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pageUpDown, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.addressUpDown, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 60);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Page:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Type:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Address:";
+            // 
+            // deleteMemBpButton
+            // 
+            this.deleteMemBpButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.deleteMemBpButton.Location = new System.Drawing.Point(260, 183);
+            this.deleteMemBpButton.Name = "deleteMemBpButton";
+            this.deleteMemBpButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteMemBpButton.TabIndex = 12;
+            this.deleteMemBpButton.Text = "Delete";
+            this.deleteMemBpButton.UseVisualStyleBackColor = true;
+            this.deleteMemBpButton.Click += new System.EventHandler(this.deleteMemBpButton_Click);
             // 
             // Breakpoints
             // 
@@ -670,6 +704,9 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).EndInit();
+            this.groupBox9.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -707,14 +744,16 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ListBox memBpListBox;
         private System.Windows.Forms.Button addMemBpButton;
-        private System.Windows.Forms.Button deleteMemBpButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox isRamCheckBox;
         private System.Windows.Forms.CheckBox memBpActiveCheckBox;
         private System.Windows.Forms.NumericUpDown pageUpDown;
         private System.Windows.Forms.NumericUpDown addressUpDown;
         private System.Windows.Forms.ComboBox memBpTypeComboBox;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button deleteMemBpButton;
     }
 }

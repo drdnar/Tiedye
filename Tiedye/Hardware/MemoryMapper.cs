@@ -116,6 +116,153 @@ namespace Tiedye.Hardware
 
         public abstract void BusWrite(object sender, ushort address, byte value);
         
+        public enum MemoryBreakpointType
+        {
+            Execution,
+            Read,
+            Write,
+        }
+
+        public struct Breakpoint
+        {
+            public int Page;
+            public ushort Address;
+            public bool IsRam;
+            public MemoryBreakpointType Type;
+            public override string ToString()
+            {
+                return (Type == MemoryBreakpointType.Execution ? "EXEC: " : (Type == MemoryBreakpointType.Read ? "READ: " : "WRITE: "))
+                    + (IsRam ? "R" : "F")
+                    + Page.ToString(IsRam ? "X1" : "X2")
+                    + ":"
+                    + Address.ToString("X4");
+            }
+        }
+
+        public void AddBreakpoint(Breakpoint bp, bool isActive)
+        {
+            switch (bp.Type)
+            {
+                case MemoryBreakpointType.Execution:
+                    if (!ExecBps.ContainsKey(bp))
+                        ExecBps.Add(bp, isActive);
+                    break;
+                case MemoryBreakpointType.Read:
+                    if (!ReadBps.ContainsKey(bp))
+                        ReadBps.Add(bp, isActive);
+                    break;
+                case MemoryBreakpointType.Write:
+                    if (!WriteBps.ContainsKey(bp))
+                        WriteBps.Add(bp, isActive);
+                    break;
+            }
+        }
+
+        public void DeleteBreakpoint(Breakpoint bp)
+        {
+            switch (bp.Type)
+            {
+                case MemoryBreakpointType.Execution:
+                    //if (ExecBps.ContainsKey(bp))
+                    ExecBps.Remove(bp);
+                    break;
+                case MemoryBreakpointType.Read:
+                    //if (ReadBps.ContainsKey(bp))
+                    ReadBps.Remove(bp);
+                    break;
+                case MemoryBreakpointType.Write:
+                    //if (WriteBps.ContainsKey(bp))
+                    WriteBps.Remove(bp);
+                    break;
+            }
+        }
+
+        public void ActivateBreakpoint(Breakpoint bp)
+        {
+            switch (bp.Type)
+            {
+                case MemoryBreakpointType.Execution:
+                    if (ExecBps.ContainsKey(bp))
+                        ExecBps[bp] = true;
+                    break;
+                case MemoryBreakpointType.Read:
+                    if (ReadBps.ContainsKey(bp))
+                        ReadBps[bp] = true;
+                    break;
+                case MemoryBreakpointType.Write:
+                    if (WriteBps.ContainsKey(bp))
+                        WriteBps[bp] = true;
+                    break;
+            }
+        }
+
+        public void DeactivateBreakpoint(Breakpoint bp)
+        {
+            switch (bp.Type)
+            {
+                case MemoryBreakpointType.Execution:
+                    if (ExecBps.ContainsKey(bp))
+                        ExecBps[bp] = false;
+                    break;
+                case MemoryBreakpointType.Read:
+                    if (ReadBps.ContainsKey(bp))
+                        ReadBps[bp] = false;
+                    break;
+                case MemoryBreakpointType.Write:
+                    if (WriteBps.ContainsKey(bp))
+                        WriteBps[bp] = false;
+                    break;
+            }
+        }
+
+        public bool IsBreakpoint(Breakpoint bp)
+        {
+            switch (bp.Type)
+            {
+                case MemoryBreakpointType.Execution:
+                    return IsExecutionBreakpoint(bp);
+                case MemoryBreakpointType.Read:
+                    return IsReadBreakpoint(bp);
+                case MemoryBreakpointType.Write:
+                    return IsWriteBreakpoint(bp);
+            }
+            return false;
+        }
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public bool IsExecutionBreakpoint(Breakpoint bp)
+        {
+            bool isActive = false;
+            return ExecBps.TryGetValue(bp, out isActive) ? isActive : false;
+        }
+        
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public bool IsReadBreakpoint(Breakpoint bp)
+        {
+            bool isActive = false;
+            return ReadBps.TryGetValue(bp, out isActive) ? isActive : false;
+        }
+        
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public bool IsWriteBreakpoint(Breakpoint bp)
+        {
+            bool isActive = false;
+            return WriteBps.TryGetValue(bp, out isActive) ? isActive : false;
+        }
+
+        public List<KeyValuePair<Breakpoint, bool>> GetBreakpoints()
+        {
+            List<KeyValuePair<Breakpoint, bool>> items = new List<KeyValuePair<Breakpoint, bool>>(ExecBps);
+            items.AddRange(ReadBps);
+            items.AddRange(WriteBps);
+            return items;
+        }
+
+        Dictionary<Breakpoint, bool> ExecBps = new Dictionary<Breakpoint, bool>();
+
+        Dictionary<Breakpoint, bool> ReadBps = new Dictionary<Breakpoint, bool>();
+
+        Dictionary<Breakpoint, bool> WriteBps = new Dictionary<Breakpoint, bool>();
 
     }
 }
