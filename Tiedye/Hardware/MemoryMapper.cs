@@ -141,6 +141,7 @@ namespace Tiedye.Hardware
 
         public void AddBreakpoint(Breakpoint bp, bool isActive)
         {
+            bp.Address = (ushort)(bp.Address & 0x3FFF);
             switch (bp.Type)
             {
                 case MemoryBreakpointType.Execution:

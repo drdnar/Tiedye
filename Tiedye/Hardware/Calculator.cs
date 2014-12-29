@@ -197,6 +197,10 @@ namespace Tiedye.Hardware
         }
         public void Step(long count)
         {
+            Cpu.BreakEnable = false;
+            doStep();
+            Cpu.BreakEnable = true;
+            count--;
             while (count --> 0) // "while count goes toward zero"
             {
                 doStep();
@@ -226,11 +230,17 @@ namespace Tiedye.Hardware
 
         public virtual void ExecuteFor(double seconds)
         {
+            Cpu.BreakEnable = false;
             double endTime = Cpu.Clock.WallTime + seconds;
             int abortTimer = 1000000;
             while (Cpu.Clock.WallTime < endTime)
             {
                 doStep();
+                if (!Cpu.BreakEnable)
+                {
+                    Cpu.BreakEnable = true;
+                    continue;
+                }
                 if (abortTimer-- < 0)
                     break;
                 if (Cpu.Break)

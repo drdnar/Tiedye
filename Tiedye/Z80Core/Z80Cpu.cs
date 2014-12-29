@@ -691,8 +691,8 @@ namespace Tiedye.Z80Core
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private void AssertM1()
         {
-            if (PC == BpExecution)
-                BreakExecution();
+            /*if (PC == BpExecution)
+                BreakExecution();*/
             m1 = true;
         }
 
@@ -764,9 +764,9 @@ namespace Tiedye.Z80Core
 
         #region Break Points
 
-        public int BpExecution = -1;
-        public int BpMemoryRead = -1;
-        public int BpMemoryWrite = -1;
+        //public int BpExecution = -1;
+        //public int BpMemoryRead = -1;
+        //public int BpMemoryWrite = -1;
         public int BpIoRead = -1;
         public int BpIoWrite = -1;
         public bool BpAnyIo = false;
@@ -892,19 +892,19 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 MemoryWrite(this, --SP, (byte)(x >> 8));
-                if (SP == BpMemoryWrite)
-                    BreakExecution();
+                /*if (SP == BpMemoryWrite)
+                    BreakExecution();*/
                 MemoryWrite(this, --SP, (byte)(x & 0xFF));
-                if (SP == BpMemoryWrite)
-                    BreakExecution();
+                /*if (SP == BpMemoryWrite)
+                    BreakExecution();*/
             }
         }
         
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private byte Read(ushort address)
         {
-            if (address == BpMemoryRead)
-                BreakExecution();
+            /*if (address == BpMemoryRead)
+                BreakExecution();*/
             return MemoryRead(this, address);
         }
 
@@ -913,8 +913,8 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return MemoryRead(this, a++);
             }
         }
@@ -924,8 +924,8 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return MemoryRead(this, a--);
             }
         }
@@ -936,8 +936,8 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 byte t = MemoryRead(this, --a);
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return t;
             }
         }
@@ -945,8 +945,8 @@ namespace Tiedye.Z80Core
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private byte GetBYTE(ushort a)
         {
-            if (a == BpMemoryRead)
-                BreakExecution();
+            /*if (a == BpMemoryRead)
+                BreakExecution();*/
             return MemoryRead(this, a);
         }
 
@@ -955,8 +955,8 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return MemoryRead(this, a++);
             }
         }
@@ -966,8 +966,8 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return MemoryRead(this, a--);
             }
         }
@@ -978,8 +978,8 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 byte t = MemoryRead(this, --a);
-                if (a == BpMemoryRead)
-                    BreakExecution();
+                /*if (a == BpMemoryRead)
+                    BreakExecution();*/
                 return t;
             }
         }
@@ -987,8 +987,8 @@ namespace Tiedye.Z80Core
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private void PutBYTE(ushort a, int v)
         {
-            if (a == BpMemoryWrite)
-                BreakExecution();
+            /*if (a == BpMemoryWrite)
+                BreakExecution();*/
             MemoryWrite(this, a, (byte)v);
         }
 
@@ -997,8 +997,8 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryWrite)
-                    BreakExecution();
+                /*if (a == BpMemoryWrite)
+                    BreakExecution();*/
                 MemoryWrite(this, a++, (byte)v);
             }
         }
@@ -1009,8 +1009,8 @@ namespace Tiedye.Z80Core
             unchecked
             {
                 MemoryWrite(this, a--, (byte)v);
-                if (a == BpMemoryWrite)
-                    BreakExecution();
+                /*if (a == BpMemoryWrite)
+                    BreakExecution();*/
             }
         }
 
@@ -1019,10 +1019,10 @@ namespace Tiedye.Z80Core
         {
             unchecked
             {
-                if (a == BpMemoryRead)
+                /*if (a == BpMemoryRead)
                     BreakExecution();
                 if ((ushort)(a + 1) == BpMemoryRead)
-                    BreakExecution();
+                    BreakExecution();*/
                 return (ushort)(
                         MemoryRead(this, (ushort)a)
                         | (MemoryRead(this, (ushort)((ushort)(a + 1))) << 8)
@@ -1033,11 +1033,11 @@ namespace Tiedye.Z80Core
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         private void PutWORD(ushort a, int v)
         {
-            if (a == BpMemoryWrite)
-                BreakExecution();
+            /*if (a == BpMemoryWrite)
+                BreakExecution();*/
             MemoryWrite(this, a, (byte)(v & 0xFF));
-            if ((ushort)(a + 1) == BpMemoryWrite)
-                BreakExecution();
+            /*if ((ushort)(a + 1) == BpMemoryWrite)
+                BreakExecution();*/
             MemoryWrite(this, (ushort)(a + 1), (byte)((v >> 8) & 0xFF));
         }
 
@@ -1084,7 +1084,9 @@ namespace Tiedye.Z80Core
         public int LastExecPtr = 0;
 
         public bool TraceLastExec = false;
-        
+
+        public bool BreakEnable = true;
+
         public void Step()
         {
             unchecked
@@ -1158,6 +1160,11 @@ namespace Tiedye.Z80Core
                 }
                 AssertM1();
                 temp = RAM_pp(ref PC);
+                if (Break && BreakEnable)
+                {
+                    PC--;
+                    return;
+                }
                 ReleaseM1();
                 if (ForceReset)
                 {

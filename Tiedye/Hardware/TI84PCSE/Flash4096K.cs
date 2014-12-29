@@ -12,6 +12,7 @@ namespace Tiedye.Hardware
         {
             SizeMask = 0x3FFFFF;
             Data = new byte[4194304];
+            BootSector = 0x3FC000;
         }
 
         public override void Reset()

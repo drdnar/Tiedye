@@ -28,14 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.execBpUpDown = new System.Windows.Forms.NumericUpDown();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.readBpUpDown = new System.Windows.Forms.NumericUpDown();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.writeBpUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -50,34 +42,34 @@
             this.intBpCheckBox = new System.Windows.Forms.CheckBox();
             this.masterTabControl = new System.Windows.Forms.TabControl();
             this.memoryTabPage = new System.Windows.Forms.TabPage();
-            this.ioTabPage = new System.Windows.Forms.TabPage();
-            this.otherTabPage = new System.Windows.Forms.TabPage();
-            this.execGroupBox = new System.Windows.Forms.GroupBox();
-            this.masterTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.execTextBox = new System.Windows.Forms.TextBox();
-            this.updateButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.addMemBpButton = new System.Windows.Forms.Button();
             this.memBpListBox = new System.Windows.Forms.ListBox();
-            this.isRamCheckBox = new System.Windows.Forms.CheckBox();
             this.memBpActiveCheckBox = new System.Windows.Forms.CheckBox();
-            this.pageUpDown = new System.Windows.Forms.NumericUpDown();
-            this.addressUpDown = new System.Windows.Forms.NumericUpDown();
-            this.memBpTypeComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.memBpTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.addMemBpButton = new System.Windows.Forms.Button();
+            this.isRamCheckBox = new System.Windows.Forms.CheckBox();
+            this.pageUpDown = new System.Windows.Forms.NumericUpDown();
+            this.addressUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.deleteMemBpButton = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.execBpUpDown)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.readBpUpDown)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.writeBpUpDown)).BeginInit();
+            this.ioTabPage = new System.Windows.Forms.TabPage();
+            this.otherTabPage = new System.Windows.Forms.TabPage();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.execGroupBox = new System.Windows.Forms.GroupBox();
+            this.execTextBox = new System.Windows.Forms.TextBox();
+            this.masterTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.writeBpUpDown = new System.Windows.Forms.NumericUpDown();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.readBpUpDown = new System.Windows.Forms.NumericUpDown();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.execBpUpDown = new System.Windows.Forms.NumericUpDown();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -89,148 +81,29 @@
             this.flowLayoutPanel2.SuspendLayout();
             this.masterTabControl.SuspendLayout();
             this.memoryTabPage.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).BeginInit();
             this.otherTabPage.SuspendLayout();
             this.execGroupBox.SuspendLayout();
             this.masterTableLayoutPanel.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.writeBpUpDown)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.readBpUpDown)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.execBpUpDown)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 67);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Memory";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.groupBox3);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox4);
-            this.flowLayoutPanel1.Controls.Add(this.groupBox5);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(326, 48);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.execBpUpDown);
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(75, 40);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Execution";
-            // 
-            // execBpUpDown
-            // 
-            this.execBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.execBpUpDown.Hexadecimal = true;
-            this.execBpUpDown.Location = new System.Drawing.Point(3, 16);
-            this.execBpUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.execBpUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.execBpUpDown.Name = "execBpUpDown";
-            this.execBpUpDown.Size = new System.Drawing.Size(69, 20);
-            this.execBpUpDown.TabIndex = 3;
-            this.execBpUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.execBpUpDown.ValueChanged += new System.EventHandler(this.execBpUpDown_ValueChanged);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.readBpUpDown);
-            this.groupBox4.Location = new System.Drawing.Point(84, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(75, 40);
-            this.groupBox4.TabIndex = 4;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Read";
-            // 
-            // readBpUpDown
-            // 
-            this.readBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.readBpUpDown.Hexadecimal = true;
-            this.readBpUpDown.Location = new System.Drawing.Point(3, 16);
-            this.readBpUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.readBpUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.readBpUpDown.Name = "readBpUpDown";
-            this.readBpUpDown.Size = new System.Drawing.Size(69, 20);
-            this.readBpUpDown.TabIndex = 3;
-            this.readBpUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.readBpUpDown.ValueChanged += new System.EventHandler(this.readBpUpDown_ValueChanged);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.writeBpUpDown);
-            this.groupBox5.Location = new System.Drawing.Point(165, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(75, 40);
-            this.groupBox5.TabIndex = 5;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Write";
-            // 
-            // writeBpUpDown
-            // 
-            this.writeBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.writeBpUpDown.Hexadecimal = true;
-            this.writeBpUpDown.Location = new System.Drawing.Point(3, 16);
-            this.writeBpUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.writeBpUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.writeBpUpDown.Name = "writeBpUpDown";
-            this.writeBpUpDown.Size = new System.Drawing.Size(69, 20);
-            this.writeBpUpDown.TabIndex = 3;
-            this.writeBpUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.writeBpUpDown.ValueChanged += new System.EventHandler(this.writeBpUpDown_ValueChanged);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.flowLayoutPanel3);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 76);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(332, 67);
             this.groupBox2.TabIndex = 1;
@@ -333,9 +206,9 @@
             // 
             this.oldStuffTableLayoutPanel.ColumnCount = 1;
             this.oldStuffTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox1, 0, 0);
-            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox2, 0, 1);
-            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox6, 0, 2);
+            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox1, 0, 2);
+            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox2, 0, 0);
+            this.oldStuffTableLayoutPanel.Controls.Add(this.groupBox6, 0, 1);
             this.oldStuffTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.oldStuffTableLayoutPanel.Location = new System.Drawing.Point(3, 3);
             this.oldStuffTableLayoutPanel.Name = "oldStuffTableLayoutPanel";
@@ -350,9 +223,9 @@
             // 
             this.groupBox6.Controls.Add(this.flowLayoutPanel2);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(3, 149);
+            this.groupBox6.Location = new System.Drawing.Point(3, 76);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(332, 69);
+            this.groupBox6.Size = new System.Drawing.Size(332, 67);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Other";
@@ -364,7 +237,7 @@
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(326, 50);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(326, 48);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // retBpCheckBox
@@ -412,75 +285,6 @@
             this.memoryTabPage.Text = "Memory";
             this.memoryTabPage.UseVisualStyleBackColor = true;
             // 
-            // ioTabPage
-            // 
-            this.ioTabPage.Location = new System.Drawing.Point(4, 22);
-            this.ioTabPage.Name = "ioTabPage";
-            this.ioTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ioTabPage.Size = new System.Drawing.Size(537, 497);
-            this.ioTabPage.TabIndex = 1;
-            this.ioTabPage.Text = "I/O";
-            this.ioTabPage.UseVisualStyleBackColor = true;
-            // 
-            // otherTabPage
-            // 
-            this.otherTabPage.Controls.Add(this.updateButton);
-            this.otherTabPage.Controls.Add(this.oldStuffTableLayoutPanel);
-            this.otherTabPage.Location = new System.Drawing.Point(4, 22);
-            this.otherTabPage.Name = "otherTabPage";
-            this.otherTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.otherTabPage.Size = new System.Drawing.Size(344, 291);
-            this.otherTabPage.TabIndex = 2;
-            this.otherTabPage.Text = "Other";
-            this.otherTabPage.UseVisualStyleBackColor = true;
-            // 
-            // execGroupBox
-            // 
-            this.execGroupBox.Controls.Add(this.execTextBox);
-            this.execGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.execGroupBox.Location = new System.Drawing.Point(3, 336);
-            this.execGroupBox.Name = "execGroupBox";
-            this.execGroupBox.Size = new System.Drawing.Size(352, 84);
-            this.execGroupBox.TabIndex = 5;
-            this.execGroupBox.TabStop = false;
-            this.execGroupBox.Text = "Execution State on Last Breakpoint";
-            // 
-            // masterTableLayoutPanel
-            // 
-            this.masterTableLayoutPanel.ColumnCount = 1;
-            this.masterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.masterTableLayoutPanel.Controls.Add(this.execGroupBox, 0, 1);
-            this.masterTableLayoutPanel.Controls.Add(this.masterTabControl, 0, 0);
-            this.masterTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.masterTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.masterTableLayoutPanel.Name = "masterTableLayoutPanel";
-            this.masterTableLayoutPanel.RowCount = 2;
-            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.masterTableLayoutPanel.Size = new System.Drawing.Size(358, 423);
-            this.masterTableLayoutPanel.TabIndex = 6;
-            // 
-            // execTextBox
-            // 
-            this.execTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.execTextBox.Font = new System.Drawing.Font("Courier New", 8.25F);
-            this.execTextBox.Location = new System.Drawing.Point(3, 16);
-            this.execTextBox.Multiline = true;
-            this.execTextBox.Name = "execTextBox";
-            this.execTextBox.ReadOnly = true;
-            this.execTextBox.Size = new System.Drawing.Size(346, 65);
-            this.execTextBox.TabIndex = 0;
-            // 
-            // updateButton
-            // 
-            this.updateButton.Location = new System.Drawing.Point(6, 230);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(75, 23);
-            this.updateButton.TabIndex = 4;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -500,16 +304,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 295);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // addMemBpButton
-            // 
-            this.addMemBpButton.Location = new System.Drawing.Point(228, 33);
-            this.addMemBpButton.Name = "addMemBpButton";
-            this.addMemBpButton.Size = new System.Drawing.Size(75, 23);
-            this.addMemBpButton.TabIndex = 1;
-            this.addMemBpButton.Text = "Add New";
-            this.addMemBpButton.UseVisualStyleBackColor = true;
-            this.addMemBpButton.Click += new System.EventHandler(this.addMemBpButton_Click);
-            // 
             // memBpListBox
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.memBpListBox, 2);
@@ -522,17 +316,6 @@
             this.memBpListBox.TabIndex = 2;
             this.memBpListBox.SelectedValueChanged += new System.EventHandler(this.memBpListBox_SelectedValueChanged);
             // 
-            // isRamCheckBox
-            // 
-            this.isRamCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.isRamCheckBox.AutoSize = true;
-            this.isRamCheckBox.Location = new System.Drawing.Point(156, 36);
-            this.isRamCheckBox.Name = "isRamCheckBox";
-            this.isRamCheckBox.Size = new System.Drawing.Size(62, 17);
-            this.isRamCheckBox.TabIndex = 6;
-            this.isRamCheckBox.Text = "In RAM";
-            this.isRamCheckBox.UseVisualStyleBackColor = true;
-            // 
             // memBpActiveCheckBox
             // 
             this.memBpActiveCheckBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -544,47 +327,6 @@
             this.memBpActiveCheckBox.Text = "Selected item is active";
             this.memBpActiveCheckBox.UseVisualStyleBackColor = true;
             this.memBpActiveCheckBox.CheckedChanged += new System.EventHandler(this.memBpActiveCheckBox_CheckedChanged);
-            // 
-            // pageUpDown
-            // 
-            this.pageUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pageUpDown.Hexadecimal = true;
-            this.pageUpDown.Location = new System.Drawing.Point(78, 5);
-            this.pageUpDown.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.pageUpDown.Name = "pageUpDown";
-            this.pageUpDown.Size = new System.Drawing.Size(69, 20);
-            this.pageUpDown.TabIndex = 8;
-            // 
-            // addressUpDown
-            // 
-            this.addressUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.addressUpDown.Hexadecimal = true;
-            this.addressUpDown.Location = new System.Drawing.Point(78, 35);
-            this.addressUpDown.Maximum = new decimal(new int[] {
-            65535,
-            0,
-            0,
-            0});
-            this.addressUpDown.Name = "addressUpDown";
-            this.addressUpDown.Size = new System.Drawing.Size(69, 20);
-            this.addressUpDown.TabIndex = 9;
-            // 
-            // memBpTypeComboBox
-            // 
-            this.memBpTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.memBpTypeComboBox.FormattingEnabled = true;
-            this.memBpTypeComboBox.Items.AddRange(new object[] {
-            "Execution",
-            "Read",
-            "Write"});
-            this.memBpTypeComboBox.Location = new System.Drawing.Point(228, 3);
-            this.memBpTypeComboBox.Name = "memBpTypeComboBox";
-            this.memBpTypeComboBox.Size = new System.Drawing.Size(95, 21);
-            this.memBpTypeComboBox.TabIndex = 10;
             // 
             // groupBox9
             // 
@@ -622,15 +364,15 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 60);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // label1
+            // label3
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Page:";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(24, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Address:";
             // 
             // label2
             // 
@@ -642,15 +384,77 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Type:";
             // 
-            // label3
+            // memBpTypeComboBox
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 38);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Address:";
+            this.memBpTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.memBpTypeComboBox.FormattingEnabled = true;
+            this.memBpTypeComboBox.Items.AddRange(new object[] {
+            "Execution",
+            "Read",
+            "Write"});
+            this.memBpTypeComboBox.Location = new System.Drawing.Point(228, 3);
+            this.memBpTypeComboBox.Name = "memBpTypeComboBox";
+            this.memBpTypeComboBox.Size = new System.Drawing.Size(95, 21);
+            this.memBpTypeComboBox.TabIndex = 10;
+            // 
+            // addMemBpButton
+            // 
+            this.addMemBpButton.Location = new System.Drawing.Point(228, 33);
+            this.addMemBpButton.Name = "addMemBpButton";
+            this.addMemBpButton.Size = new System.Drawing.Size(75, 23);
+            this.addMemBpButton.TabIndex = 1;
+            this.addMemBpButton.Text = "Add New";
+            this.addMemBpButton.UseVisualStyleBackColor = true;
+            this.addMemBpButton.Click += new System.EventHandler(this.addMemBpButton_Click);
+            // 
+            // isRamCheckBox
+            // 
+            this.isRamCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.isRamCheckBox.AutoSize = true;
+            this.isRamCheckBox.Location = new System.Drawing.Point(156, 36);
+            this.isRamCheckBox.Name = "isRamCheckBox";
+            this.isRamCheckBox.Size = new System.Drawing.Size(62, 17);
+            this.isRamCheckBox.TabIndex = 6;
+            this.isRamCheckBox.Text = "In RAM";
+            this.isRamCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // pageUpDown
+            // 
+            this.pageUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pageUpDown.Hexadecimal = true;
+            this.pageUpDown.Location = new System.Drawing.Point(78, 5);
+            this.pageUpDown.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.pageUpDown.Name = "pageUpDown";
+            this.pageUpDown.Size = new System.Drawing.Size(69, 20);
+            this.pageUpDown.TabIndex = 8;
+            // 
+            // addressUpDown
+            // 
+            this.addressUpDown.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.addressUpDown.Hexadecimal = true;
+            this.addressUpDown.Location = new System.Drawing.Point(78, 35);
+            this.addressUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.addressUpDown.Name = "addressUpDown";
+            this.addressUpDown.Size = new System.Drawing.Size(69, 20);
+            this.addressUpDown.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Page:";
             // 
             // deleteMemBpButton
             // 
@@ -662,6 +466,203 @@
             this.deleteMemBpButton.Text = "Delete";
             this.deleteMemBpButton.UseVisualStyleBackColor = true;
             this.deleteMemBpButton.Click += new System.EventHandler(this.deleteMemBpButton_Click);
+            // 
+            // ioTabPage
+            // 
+            this.ioTabPage.Location = new System.Drawing.Point(4, 22);
+            this.ioTabPage.Name = "ioTabPage";
+            this.ioTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ioTabPage.Size = new System.Drawing.Size(344, 301);
+            this.ioTabPage.TabIndex = 1;
+            this.ioTabPage.Text = "I/O";
+            this.ioTabPage.UseVisualStyleBackColor = true;
+            // 
+            // otherTabPage
+            // 
+            this.otherTabPage.Controls.Add(this.updateButton);
+            this.otherTabPage.Controls.Add(this.oldStuffTableLayoutPanel);
+            this.otherTabPage.Location = new System.Drawing.Point(4, 22);
+            this.otherTabPage.Name = "otherTabPage";
+            this.otherTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.otherTabPage.Size = new System.Drawing.Size(344, 301);
+            this.otherTabPage.TabIndex = 2;
+            this.otherTabPage.Text = "Other";
+            this.otherTabPage.UseVisualStyleBackColor = true;
+            // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(6, 230);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 4;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // execGroupBox
+            // 
+            this.execGroupBox.Controls.Add(this.execTextBox);
+            this.execGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.execGroupBox.Location = new System.Drawing.Point(3, 336);
+            this.execGroupBox.Name = "execGroupBox";
+            this.execGroupBox.Size = new System.Drawing.Size(352, 84);
+            this.execGroupBox.TabIndex = 5;
+            this.execGroupBox.TabStop = false;
+            this.execGroupBox.Text = "Execution State on Last Breakpoint";
+            // 
+            // execTextBox
+            // 
+            this.execTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.execTextBox.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.execTextBox.Location = new System.Drawing.Point(3, 16);
+            this.execTextBox.Multiline = true;
+            this.execTextBox.Name = "execTextBox";
+            this.execTextBox.ReadOnly = true;
+            this.execTextBox.Size = new System.Drawing.Size(346, 65);
+            this.execTextBox.TabIndex = 0;
+            // 
+            // masterTableLayoutPanel
+            // 
+            this.masterTableLayoutPanel.ColumnCount = 1;
+            this.masterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.masterTableLayoutPanel.Controls.Add(this.execGroupBox, 0, 1);
+            this.masterTableLayoutPanel.Controls.Add(this.masterTabControl, 0, 0);
+            this.masterTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.masterTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.masterTableLayoutPanel.Name = "masterTableLayoutPanel";
+            this.masterTableLayoutPanel.RowCount = 2;
+            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.masterTableLayoutPanel.Size = new System.Drawing.Size(358, 423);
+            this.masterTableLayoutPanel.TabIndex = 6;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.groupBox3);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox4);
+            this.flowLayoutPanel1.Controls.Add(this.groupBox5);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(326, 50);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.writeBpUpDown);
+            this.groupBox5.Location = new System.Drawing.Point(165, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(75, 40);
+            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Write";
+            // 
+            // writeBpUpDown
+            // 
+            this.writeBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.writeBpUpDown.Hexadecimal = true;
+            this.writeBpUpDown.Location = new System.Drawing.Point(3, 16);
+            this.writeBpUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.writeBpUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.writeBpUpDown.Name = "writeBpUpDown";
+            this.writeBpUpDown.Size = new System.Drawing.Size(69, 20);
+            this.writeBpUpDown.TabIndex = 3;
+            this.writeBpUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.writeBpUpDown.ValueChanged += new System.EventHandler(this.writeBpUpDown_ValueChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.readBpUpDown);
+            this.groupBox4.Location = new System.Drawing.Point(84, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(75, 40);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Read";
+            // 
+            // readBpUpDown
+            // 
+            this.readBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.readBpUpDown.Hexadecimal = true;
+            this.readBpUpDown.Location = new System.Drawing.Point(3, 16);
+            this.readBpUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.readBpUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.readBpUpDown.Name = "readBpUpDown";
+            this.readBpUpDown.Size = new System.Drawing.Size(69, 20);
+            this.readBpUpDown.TabIndex = 3;
+            this.readBpUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.readBpUpDown.ValueChanged += new System.EventHandler(this.readBpUpDown_ValueChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.execBpUpDown);
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(75, 40);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Execution";
+            // 
+            // execBpUpDown
+            // 
+            this.execBpUpDown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.execBpUpDown.Hexadecimal = true;
+            this.execBpUpDown.Location = new System.Drawing.Point(3, 16);
+            this.execBpUpDown.Maximum = new decimal(new int[] {
+            65535,
+            0,
+            0,
+            0});
+            this.execBpUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.execBpUpDown.Name = "execBpUpDown";
+            this.execBpUpDown.Size = new System.Drawing.Size(69, 20);
+            this.execBpUpDown.TabIndex = 3;
+            this.execBpUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            -2147483648});
+            this.execBpUpDown.ValueChanged += new System.EventHandler(this.execBpUpDown_ValueChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 149);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(332, 69);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Memory";
+            this.groupBox1.Visible = false;
             // 
             // Breakpoints
             // 
@@ -675,14 +676,6 @@
             this.ShowIcon = false;
             this.Text = "Breakpoints";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Breakpoints_FormClosed);
-            this.groupBox1.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.execBpUpDown)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.readBpUpDown)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.writeBpUpDown)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
             this.flowLayoutPanel3.PerformLayout();
@@ -696,32 +689,32 @@
             this.flowLayoutPanel2.PerformLayout();
             this.masterTabControl.ResumeLayout(false);
             this.memoryTabPage.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).EndInit();
             this.otherTabPage.ResumeLayout(false);
             this.execGroupBox.ResumeLayout(false);
             this.execGroupBox.PerformLayout();
             this.masterTableLayoutPanel.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pageUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addressUpDown)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.writeBpUpDown)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.readBpUpDown)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.execBpUpDown)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.NumericUpDown execBpUpDown;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.NumericUpDown readBpUpDown;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.NumericUpDown writeBpUpDown;
         private System.Windows.Forms.TableLayoutPanel oldStuffTableLayoutPanel;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -755,5 +748,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button deleteMemBpButton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.NumericUpDown execBpUpDown;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.NumericUpDown readBpUpDown;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.NumericUpDown writeBpUpDown;
     }
 }

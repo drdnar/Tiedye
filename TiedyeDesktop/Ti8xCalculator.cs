@@ -141,6 +141,7 @@ namespace TiedyeDesktop
                 return;
             ContinueExecution = true;
             executionThread = new Thread(new ThreadStart(DoEmulation));
+            executionThread.Name = "Emulation thread";
             executionThread.Start();
             Master.playToolStripMenuItem.Text = "&Pause";
         }

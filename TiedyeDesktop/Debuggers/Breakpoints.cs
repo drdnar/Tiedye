@@ -31,9 +31,9 @@ namespace TiedyeDesktop
             Cpu = Master.Calculator.Cpu;
             InitializeComponent();
             Master.UpdateData += Calculator_ExecutionFinished;
-            execBpUpDown.Value = Cpu.BpExecution;
-            readBpUpDown.Value = Cpu.BpMemoryRead;
-            writeBpUpDown.Value = Cpu.BpMemoryWrite;
+            //execBpUpDown.Value = Cpu.BpExecution;
+            //readBpUpDown.Value = Cpu.BpMemoryRead;
+            //writeBpUpDown.Value = Cpu.BpMemoryWrite;
             inBpUpDown.Value = Cpu.BpIoRead;
             outBpUpDown.Value = Cpu.BpIoWrite;
             anyIoCheckBox.Checked = Cpu.BpAnyIo;
@@ -81,17 +81,17 @@ namespace TiedyeDesktop
 
         private void execBpUpDown_ValueChanged(object sender, EventArgs e)
         {
-            Cpu.BpExecution = (int)execBpUpDown.Value;
+            //Cpu.BpExecution = (int)execBpUpDown.Value;
         }
 
         private void readBpUpDown_ValueChanged(object sender, EventArgs e)
         {
-            Cpu.BpMemoryRead = (int)readBpUpDown.Value;
+            //Cpu.BpMemoryRead = (int)readBpUpDown.Value;
         }
 
         private void writeBpUpDown_ValueChanged(object sender, EventArgs e)
         {
-            Cpu.BpMemoryWrite = (int)writeBpUpDown.Value;
+            //Cpu.BpMemoryWrite = (int)writeBpUpDown.Value;
         }
 
         private void anyIoCheckBox_CheckedChanged(object sender, EventArgs e)

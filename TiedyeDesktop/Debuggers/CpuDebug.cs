@@ -312,7 +312,9 @@ namespace TiedyeDesktop
 
         private void stepOnceButton_Click(object sender, EventArgs e)
         {
+            Cpu.BreakEnable = false;
             Master.Calculator.Step();
+            Cpu.BreakEnable = true;
             Master.UpdateEverything();
         }
 

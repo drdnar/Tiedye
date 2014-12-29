@@ -10,6 +10,8 @@ namespace Tiedye.Hardware
     {        
         public byte[] Data;
 
+        public int BootSector;
+
         public override byte ReadByte(object sender, int address)
         {
             // TODO: Optimize this

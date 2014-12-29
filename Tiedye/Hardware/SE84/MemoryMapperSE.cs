@@ -355,10 +355,17 @@ namespace Tiedye.Hardware
             switch (address & 0xC000)
             {
                 case 0x0000:
+                    /*
                     if (BootMode)
                         return Flash.ReadByte(sender, address | 0xFFC000);
                     else
-                        return Flash.ReadByte(sender, address);
+                        return Flash.ReadByte(sender, address);*/
+                    isRam = false;
+                    if (BootMode)
+                        linearAddress = address | Flash.BootSector;
+                    else
+                        linearAddress = address;
+                    break;
                 case 0x4000:
                     BootMode = false;
                     linearAddress = (address & 0x3FFF) | bank4000;
@@ -387,6 +394,16 @@ namespace Tiedye.Hardware
                     isRam = BankC000IsRam;
                     break;
             }
+            Breakpoint bp = new Breakpoint()
+                { Address = (ushort)(linearAddress & 0x3FFF),
+                    IsRam = isRam,
+                    Page = linearAddress >> 14,
+                    Type = Cpu.M1 ? MemoryBreakpointType.Execution : MemoryBreakpointType.Read
+                };
+            if (Cpu.M1 && IsExecutionBreakpoint(bp))
+                Cpu.BreakExecution();
+            else if (IsReadBreakpoint(bp))
+                Cpu.BreakExecution();
             if (isRam)
             {
                 // Check execution permissions: address must be within allowed limits, masked by RAM chip size
@@ -398,6 +415,7 @@ namespace Tiedye.Hardware
             else
             {
                 // Check execution permissions: address must be within allowed limits
+                
                 if (Cpu.M1 && sender is Z80Cpu)
                     if ((linearAddress & flashTypeMask) >= flashLowerLimit && (linearAddress & flashTypeMask) < flashUpperLimit)
                         // . . . unless it's on a privileged page, in which case, execution is always allowed
@@ -453,6 +471,15 @@ namespace Tiedye.Hardware
                     isRam = BankC000IsRam;
                     break;
             }
+            Breakpoint bp = new Breakpoint()
+            {
+                Address = (ushort)(linearAddress & 0x3FFF),
+                IsRam = isRam,
+                Page = linearAddress >> 14,
+                Type = MemoryBreakpointType.Write
+            };
+            if (IsWriteBreakpoint(bp))
+                Cpu.BreakExecution();
             if (isRam)
                 Ram.WriteByte(sender, linearAddress & 0x3FFFF, value);
             else
