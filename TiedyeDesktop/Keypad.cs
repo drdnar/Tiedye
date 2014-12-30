@@ -161,14 +161,14 @@ namespace TiedyeDesktop
                 case Keys.F5:
                 case Keys.F10:
                 case Keys.F12:
-                case Keys.LShiftKey:
+                /*case Keys.LShiftKey:
                 case Keys.RShiftKey:
                 case Keys.Shift:
                 case Keys.ShiftKey:
                 case Keys.Control:
                 case Keys.ControlKey:
                 case Keys.LControlKey:
-                case Keys.RControlKey:
+                case Keys.RControlKey:*/
                     return true;
             }
             return base.IsInputKey(keyData);
@@ -430,6 +430,10 @@ namespace TiedyeDesktop
 
         const int VK_SHIFT = 0x10;
         const int VK_CONTROL = 0x11;
+        /// <summary>
+        /// Alt key
+        /// </summary>
+        const int VK_MENU = 0x12;
 
         /// <summary>
         /// List of scan codes for standard 104-key keyboard US English keyboard
