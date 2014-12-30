@@ -52,7 +52,7 @@ namespace TiedyeDesktop
             if (oldFreq != OldFreq)
             {
                 OldFreq = oldFreq;
-                frequencyLabel.Text = OldFreq.ToString();
+                frequencyLabel.Text = Math.Round(OldFreq / 1000000, 3).ToString() + " MHz";
             }
             execTimeLabel.Text = Math.Round(Master.AverageDeltaT * 1000, 3) + " ms (relative to " + Math.Round(Master.ExecutionQuantum * 1000, 0) + " ms nominal)" + ((int)(Master.ExecutionSpeed * 100) != 100 ? " (scaled with speed)" : "");
             Calculator.InterruptId oldInts = Calculator.Interrupts;
