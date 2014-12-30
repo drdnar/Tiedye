@@ -134,6 +134,12 @@
     <Compile Include="Debuggers\SchedulerDebug.Designer.cs">
       <DependentUpon>SchedulerDebug.cs</DependentUpon>
     </Compile>
+    <Compile Include="Debuggers\SystemStatusDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debuggers\SystemStatusDebug.Designer.cs">
+      <DependentUpon>SystemStatusDebug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ti8xCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Debuggers\MemoryEditorPanel.resx">
       <DependentUpon>MemoryEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debuggers\SystemStatusDebug.resx">
+      <DependentUpon>SystemStatusDebug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Debuggers\TimersDebug.resx">
       <DependentUpon>TimersDebug.cs</DependentUpon>

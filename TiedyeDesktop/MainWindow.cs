@@ -182,5 +182,18 @@ namespace TiedyeDesktop
             }
             SelectedCalculator.IoLogDebug.Focus();
         }
+
+        private void systemStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SelectedCalculator == null)
+                return;
+            if (SelectedCalculator.SystemStatusDebug == null)
+            {
+                SelectedCalculator.SystemStatusDebug = new SystemStatusDebug(SelectedCalculator);
+                SelectedCalculator.SystemStatusDebug.MdiParent = this;
+                SelectedCalculator.SystemStatusDebug.Show();
+            }
+            SelectedCalculator.SystemStatusDebug.Focus();
+        }
     }
 }

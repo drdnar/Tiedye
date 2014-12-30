@@ -161,6 +161,8 @@ namespace TiedyeDesktop
 
         public double ExecutionQuantum = 0.05;
 
+        public double ExecutionSpeed = 1.0;
+
         public double AverageDeltaT = 0.01;
 
         protected void DoEmulation()
@@ -169,13 +171,14 @@ namespace TiedyeDesktop
             System.Diagnostics.Stopwatch timer = System.Diagnostics.Stopwatch.StartNew();
             System.TimeSpan lastTime;
             System.TimeSpan delta;
-            System.TimeSpan execQuantumSpan = new System.TimeSpan(0, 0, 0, (int)ExecutionQuantum, (int)(ExecutionQuantum * 1000));
+            double actualQuantum = ExecutionQuantum * ExecutionSpeed;
+            System.TimeSpan execQuantumSpan = new System.TimeSpan(0, 0, 0, (int)actualQuantum, (int)(actualQuantum * 1000));
             double deltaT;
             double alpha = 0.333;
             while (ContinueExecution)
             {
                 lastTime = timer.Elapsed;
-                Calculator.ExecuteFor(ExecutionQuantum);//0.005);//
+                Calculator.ExecuteFor(actualQuantum);//0.005);//
                 if (Calculator.Cpu.Break)
                 {
                     Pause();
@@ -183,9 +186,12 @@ namespace TiedyeDesktop
                 }
                 delta = (timer.Elapsed - lastTime);
                 deltaT = delta.TotalSeconds;
-                AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds + (1.0 - alpha) * AverageDeltaT;
-                if (deltaT < ExecutionQuantum)
-                    Thread.Sleep(execQuantumSpan - delta);
+                AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds * ExecutionSpeed + (1.0 - alpha) * AverageDeltaT;
+                if (deltaT < actualQuantum)
+                {
+                    double x = ExecutionQuantum / ExecutionSpeed;
+                    Thread.Sleep(new System.TimeSpan(0, 0, 0, (int)x, (int)(x * 1000)) - delta);
+                }
             }
             executing = false;
         }
@@ -436,6 +442,28 @@ namespace TiedyeDesktop
             ioLogDebug.FormClosed -= ioLogDebug_FormClosed;
             ioLogDebug = null;
         }
+
+        SystemStatusDebug systemStatusDebug;
+        public SystemStatusDebug SystemStatusDebug
+        {
+            get
+            {
+                return systemStatusDebug;
+            }
+            set
+            {
+                systemStatusDebug = value;
+                if (value != null)
+                    systemStatusDebug.FormClosed += systemStatusDebug_FormClosed;
+            }
+        }
+
+        void systemStatusDebug_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            systemStatusDebug.FormClosed -= systemStatusDebug_FormClosed;
+            systemStatusDebug = null;
+        }
+
         #endregion
 
     }

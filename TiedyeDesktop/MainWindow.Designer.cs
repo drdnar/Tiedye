@@ -40,8 +40,9 @@
             this.lCDDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keyboardDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timersDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iOLogDebugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.masterMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,7 +84,8 @@
             this.lCDDebugToolStripMenuItem,
             this.keyboardDebugToolStripMenuItem,
             this.timersDebugToolStripMenuItem,
-            this.iOLogDebugToolStripMenuItem});
+            this.iOLogDebugToolStripMenuItem,
+            this.systemStatusToolStripMenuItem});
             this.calculatorToolStripMenuItem.Name = "calculatorToolStripMenuItem";
             this.calculatorToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.calculatorToolStripMenuItem.Text = "&Calculator";
@@ -144,6 +146,13 @@
             this.timersDebugToolStripMenuItem.Text = "&Timers Debug";
             this.timersDebugToolStripMenuItem.Click += new System.EventHandler(this.timersDebugToolStripMenuItem_Click);
             // 
+            // iOLogDebugToolStripMenuItem
+            // 
+            this.iOLogDebugToolStripMenuItem.Name = "iOLogDebugToolStripMenuItem";
+            this.iOLogDebugToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.iOLogDebugToolStripMenuItem.Text = "&I/O Log Debug";
+            this.iOLogDebugToolStripMenuItem.Click += new System.EventHandler(this.iOLogDebugToolStripMenuItem_Click);
+            // 
             // playToolStripMenuItem
             // 
             this.playToolStripMenuItem.Name = "playToolStripMenuItem";
@@ -151,12 +160,12 @@
             this.playToolStripMenuItem.Text = "&Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
-            // iOLogDebugToolStripMenuItem
+            // systemStatusToolStripMenuItem
             // 
-            this.iOLogDebugToolStripMenuItem.Name = "iOLogDebugToolStripMenuItem";
-            this.iOLogDebugToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.iOLogDebugToolStripMenuItem.Text = "&I/O Log Debug";
-            this.iOLogDebugToolStripMenuItem.Click += new System.EventHandler(this.iOLogDebugToolStripMenuItem_Click);
+            this.systemStatusToolStripMenuItem.Name = "systemStatusToolStripMenuItem";
+            this.systemStatusToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.systemStatusToolStripMenuItem.Text = "S&ystem Status";
+            this.systemStatusToolStripMenuItem.Click += new System.EventHandler(this.systemStatusToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
@@ -191,6 +200,7 @@
         private System.Windows.Forms.ToolStripMenuItem executionHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem timersDebugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iOLogDebugToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemStatusToolStripMenuItem;
     }
 }
 
