@@ -18,7 +18,7 @@ namespace TiedyeDesktop
         public MemoryEditor()
         {
             InitializeComponent();
-            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.UserPaint | ControlStyles.Selectable, true);
             
             exportDialogGroupBox.Left = this.Width / 2 - exportDialogGroupBox.Width / 2;
             exportDialogGroupBox.Top = this.Height / 2 - exportDialogGroupBox.Height / 2;

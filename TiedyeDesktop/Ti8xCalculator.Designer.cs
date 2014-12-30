@@ -72,6 +72,7 @@
             this.keyLogTextBox.Name = "keyLogTextBox";
             this.keyLogTextBox.Size = new System.Drawing.Size(241, 627);
             this.keyLogTextBox.TabIndex = 2;
+            this.keyLogTextBox.Visible = false;
             // 
             // Ti8xCalculator
             // 

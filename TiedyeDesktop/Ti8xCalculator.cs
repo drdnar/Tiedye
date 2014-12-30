@@ -101,18 +101,24 @@ namespace TiedyeDesktop
 
         private void keypad_KeyPressed(object sender, Keypad.KeyLocation e)
         {
-            if (e.On)
-                Calculator.Keypad.OnKey = true;
+            if (e.KeyCode == Tiedye.Hardware.Keypad.KeyScanCode.None)
+                if (e.On)
+                    Calculator.Keypad.OnKey = true;
+                else
+                    Calculator.Keypad.SetKey(e.Group, e.Key);
             else
-                Calculator.Keypad.SetKey(e.Group, e.Key);
+                Calculator.Keypad.SetKey(e.KeyCode);
         }
 
         private void keypad_KeyReleased(object sender, Keypad.KeyLocation e)
         {
-            if (e.On)
-                Calculator.Keypad.OnKey = false;
+            if (e.KeyCode == Tiedye.Hardware.Keypad.KeyScanCode.None)
+                if (e.On)
+                    Calculator.Keypad.OnKey = false;
+                else
+                    Calculator.Keypad.ResetKey(e.Group, e.Key);
             else
-                Calculator.Keypad.ResetKey(e.Group, e.Key);
+                Calculator.Keypad.ResetKey(e.KeyCode);
         }
 
         public bool Paused
@@ -203,7 +209,7 @@ namespace TiedyeDesktop
 
         public void UpdateScreen()
         {
-            keyLogTextBox.Text = keypad.KeyLog;
+            //keyLogTextBox.Text = keypad.KeyLog;
             if (Calculator is Ti84PlusCSe)
             {
                 ColorLcd lcd = (Calculator as Ti84PlusCSe).Lcd;
