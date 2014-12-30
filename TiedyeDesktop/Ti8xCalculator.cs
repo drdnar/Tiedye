@@ -186,7 +186,7 @@ namespace TiedyeDesktop
                 }
                 delta = (timer.Elapsed - lastTime);
                 deltaT = delta.TotalSeconds;
-                AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds * ExecutionSpeed + (1.0 - alpha) * AverageDeltaT;
+                AverageDeltaT = alpha * (execQuantumSpan - delta).TotalSeconds + (1.0 - alpha) * AverageDeltaT;
                 if (deltaT < actualQuantum)
                 {
                     double x = ExecutionQuantum / ExecutionSpeed;
