@@ -171,7 +171,7 @@ namespace TiedyeDesktop
             System.TimeSpan delta;
             System.TimeSpan execQuantumSpan = new System.TimeSpan(0, 0, 0, (int)ExecutionQuantum, (int)(ExecutionQuantum * 1000));
             double deltaT;
-            double alpha = 0.1;
+            double alpha = 0.333;
             while (ContinueExecution)
             {
                 lastTime = timer.Elapsed;

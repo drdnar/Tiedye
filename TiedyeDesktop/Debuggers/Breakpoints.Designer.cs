@@ -410,7 +410,7 @@
             this.memoryTabPage.Location = new System.Drawing.Point(4, 22);
             this.memoryTabPage.Name = "memoryTabPage";
             this.memoryTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.memoryTabPage.Size = new System.Drawing.Size(144, 301);
+            this.memoryTabPage.Size = new System.Drawing.Size(344, 301);
             this.memoryTabPage.TabIndex = 0;
             this.memoryTabPage.Text = "Memory";
             this.memoryTabPage.UseVisualStyleBackColor = true;
@@ -431,7 +431,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(138, 295);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 295);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // memBpListBox
@@ -442,7 +442,7 @@
             this.memBpListBox.Location = new System.Drawing.Point(3, 3);
             this.memBpListBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.memBpListBox.Name = "memBpListBox";
-            this.memBpListBox.Size = new System.Drawing.Size(132, 177);
+            this.memBpListBox.Size = new System.Drawing.Size(332, 177);
             this.memBpListBox.TabIndex = 2;
             this.memBpListBox.SelectedValueChanged += new System.EventHandler(this.memBpListBox_SelectedValueChanged);
             // 
@@ -452,7 +452,7 @@
             this.memBpActiveCheckBox.AutoSize = true;
             this.memBpActiveCheckBox.Location = new System.Drawing.Point(3, 186);
             this.memBpActiveCheckBox.Name = "memBpActiveCheckBox";
-            this.memBpActiveCheckBox.Size = new System.Drawing.Size(63, 17);
+            this.memBpActiveCheckBox.Size = new System.Drawing.Size(132, 17);
             this.memBpActiveCheckBox.TabIndex = 7;
             this.memBpActiveCheckBox.Text = "Selected item is active";
             this.memBpActiveCheckBox.UseVisualStyleBackColor = true;
@@ -465,7 +465,7 @@
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox9.Location = new System.Drawing.Point(3, 213);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(132, 79);
+            this.groupBox9.Size = new System.Drawing.Size(332, 79);
             this.groupBox9.TabIndex = 11;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Create Breakpoint";
@@ -491,7 +491,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(126, 60);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(326, 60);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label3
@@ -524,14 +524,14 @@
             "Write"});
             this.memBpTypeComboBox.Location = new System.Drawing.Point(228, 3);
             this.memBpTypeComboBox.Name = "memBpTypeComboBox";
-            this.memBpTypeComboBox.Size = new System.Drawing.Size(1, 21);
+            this.memBpTypeComboBox.Size = new System.Drawing.Size(95, 21);
             this.memBpTypeComboBox.TabIndex = 10;
             // 
             // addMemBpButton
             // 
             this.addMemBpButton.Location = new System.Drawing.Point(228, 33);
             this.addMemBpButton.Name = "addMemBpButton";
-            this.addMemBpButton.Size = new System.Drawing.Size(1, 23);
+            this.addMemBpButton.Size = new System.Drawing.Size(75, 23);
             this.addMemBpButton.TabIndex = 1;
             this.addMemBpButton.Text = "Add New";
             this.addMemBpButton.UseVisualStyleBackColor = true;
@@ -589,9 +589,9 @@
             // deleteMemBpButton
             // 
             this.deleteMemBpButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.deleteMemBpButton.Location = new System.Drawing.Point(72, 183);
+            this.deleteMemBpButton.Location = new System.Drawing.Point(260, 183);
             this.deleteMemBpButton.Name = "deleteMemBpButton";
-            this.deleteMemBpButton.Size = new System.Drawing.Size(63, 23);
+            this.deleteMemBpButton.Size = new System.Drawing.Size(75, 23);
             this.deleteMemBpButton.TabIndex = 12;
             this.deleteMemBpButton.Text = "Delete";
             this.deleteMemBpButton.UseVisualStyleBackColor = true;
