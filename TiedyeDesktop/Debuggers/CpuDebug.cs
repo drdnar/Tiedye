@@ -28,6 +28,11 @@ namespace TiedyeDesktop
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)
         {
+            if (Master.Executing)
+                return;
+            RefreshingData = true;
+            disasmAddrUpDown.Value = Cpu.PC;
+            RefreshingData = false;
             RefreshRegisters();
         }
 
@@ -37,7 +42,6 @@ namespace TiedyeDesktop
         {
             if (RefreshingData)
                 return;
-            RefreshingData = true;
             aUpDown.Value = Cpu.A;
             bUpDown.Value = Cpu.B;
             cUpDown.Value = Cpu.C;
@@ -69,38 +73,61 @@ namespace TiedyeDesktop
             haltBox.Checked = Cpu.Halt;
             resetCheckBox.Checked = Cpu.ForceReset;
             RefreshDisassembly();
+            RefreshStack();
             RefreshingData = false;
         }
 
+        StringBuilder stackStrBuilder = new StringBuilder();
+        private void RefreshStack()
+        {
+            unchecked
+            {
+                int addr = Cpu.SP;
+                int count = 0;
+                stackStrBuilder.Clear();
+                while (count++ < 32 && addr < 0x10000)
+                {
+                    stackStrBuilder.Append(addr.ToString("X4"));
+                    stackStrBuilder.Append(": ");
+                    stackStrBuilder.Append(Cpu.MemoryRead(this, (ushort)(addr + 1)).ToString("X2"));
+                    stackStrBuilder.Append(Cpu.MemoryRead(this, (ushort)(addr)).ToString("X2"));
+                    stackStrBuilder.AppendLine();
+                    addr += 2;
+                }
+                stackTextBox.Text = stackStrBuilder.ToString();
+            }
+        }
+
+        StringBuilder disasmStrBuilder = new StringBuilder();
         private void RefreshDisassembly()
         {
             unchecked
             {
                 Z80Disassembler.DisassembledInstruction disasm;
                 byte[] instr = new byte[4];
-                StringBuilder str = new StringBuilder();
-                int baseAddress = Cpu.PC;
+                disasmStrBuilder.Clear();
+                int baseAddress = (int)disasmAddrUpDown.Value;
                 for (int i = 0; i < 64; i += disasm.Length)
                 {
                     for (int j = 0; j < 4; j++)
                     {
                         instr[j] = Cpu.MemoryRead(this, (ushort)(baseAddress + i + j));
                     }
-                    str.Append(((ushort)(baseAddress + i)).ToString("X4"));
-                    str.Append(": ");
+                    disasmStrBuilder.Append(((ushort)(baseAddress + i)).ToString("X4"));
+                    disasmStrBuilder.Append(": ");
                     disasm = Z80Disassembler.DisassembleInstruction(instr, (ushort)(baseAddress + i));
                     for (int j = 0; j < 4; j++)
                     {
                         if (j < disasm.Length)
-                            str.Append(instr[j].ToString("X2"));
+                            disasmStrBuilder.Append(instr[j].ToString("X2"));
                         else
-                            str.Append("  ");
+                            disasmStrBuilder.Append("  ");
                     }
-                    str.Append(" ");
-                    str.Append(disasm.Disassembly);
-                    str.AppendLine();
+                    disasmStrBuilder.Append(" ");
+                    disasmStrBuilder.Append(disasm.Disassembly);
+                    disasmStrBuilder.AppendLine();
                 }
-                disassemblyTextBox.Text = str.ToString();
+                disassemblyTextBox.Text = disasmStrBuilder.ToString();
             }
         }
 
@@ -368,6 +395,13 @@ namespace TiedyeDesktop
             if (RefreshingData)
                 return;
             Cpu.IM = (ushort)imUpDown.Value;
+        }
+
+        private void disasmAddrUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (RefreshingData)
+                return;
+            RefreshDisassembly();
         }
 
     }
