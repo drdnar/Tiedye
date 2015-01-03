@@ -30,6 +30,8 @@ namespace TiedyeDesktop
 
         void Calculator_ExecutionFinished(object sender, EventArgs e)
         {
+            if (Master.Executing)
+                return;
             RefreshData();
         }
 

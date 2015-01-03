@@ -153,6 +153,14 @@ namespace TiedyeDesktop
         }
 
         protected bool executing;
+        public bool Executing
+        {
+            get
+            {
+                return executing;
+            }
+        }
+
         public bool ContinueExecution = false;
 
         public bool Throttle = true;
@@ -194,6 +202,7 @@ namespace TiedyeDesktop
                 }
             }
             executing = false;
+            Calculator.Step(0);
         }
 
         private void cpuTimer_Tick(object sender, EventArgs e)

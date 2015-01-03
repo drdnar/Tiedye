@@ -197,17 +197,20 @@ namespace Tiedye.Hardware
         }
         public void Step(long count)
         {
-            Cpu.BreakEnable = false;
-            doStep();
-            Cpu.BreakEnable = true;
-            count--;
-            while (count --> 0) // "while count goes toward zero"
+            if (count != 0)
             {
+                Cpu.BreakEnable = false;
                 doStep();
-                if (Cpu.Break)
-                    break;
-                if (Cpu.Halt)
-                    DoHalt();
+                Cpu.BreakEnable = true;
+                count--;
+                while (count --> 0) // "while count goes toward zero"
+                {
+                    doStep();
+                    if (Cpu.Break)
+                        break;
+                    if (Cpu.Halt)
+                        DoHalt();
+                }
             }
             if (ExecutionFinished != null)
                 ExecutionFinished(this, null);
