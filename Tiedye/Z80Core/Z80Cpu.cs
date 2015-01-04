@@ -772,7 +772,8 @@ namespace Tiedye.Z80Core
         public bool BpAnyIo = false;
         public bool BpRet = false;
         public bool BpInterrupt = false;
-        
+        public bool BpReti = false;
+
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public void BreakExecution()
         {
@@ -1085,6 +1086,12 @@ namespace Tiedye.Z80Core
 
         public bool TraceLastExec = false;
 
+        public bool LogBCalls = false;
+        public const int BCallLogSize = 4096;
+        public const int BCallLogMask = 0xFFF;
+        public int BCallLogPtr = 0;
+        public readonly ushort[,] BCallLogData = new ushort[BCallLogSize, 10];
+        
         public bool BreakEnable = true;
 
         public void Step()
@@ -1097,8 +1104,7 @@ namespace Tiedye.Z80Core
                 {
                     if (BpInterrupt)
                         BreakExecution();
-                    IFF2 = IFF1;
-                    IFF1 = false;
+                    IFF = 0;
                     interrupt = 0;
                     halt = false;
                     if (IM == 0)
@@ -2669,6 +2675,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(7);
                         break;
                     case 0xCF:			/* RST 8 */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = 8;
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 8;
                         Clock.IncTime(11);
                         break;
@@ -2730,6 +2749,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(7);
                         break;
                     case 0xD7:			/* RST 10H */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = 16;
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 0x10;
                         Clock.IncTime(11);
                         break;
@@ -3476,6 +3508,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(4);
                         break;
                     case 0xDF:			/* RST 18H */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = 0x18;
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 0x18;
                         Clock.IncTime(11);
                         break;
@@ -3527,6 +3572,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(7);
                         break;
                     case 0xE7:			/* RST 20H */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = 0x20;
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 0x20;
                         Clock.IncTime(11);
                         break;
@@ -3679,7 +3737,7 @@ namespace Tiedye.Z80Core
                                 IFF |= (ushort)(IFF >> 1);
                                 POP(ref PC);
                                 Clock.IncTime(14);
-                                if (BpRet)
+                                if (BpReti)
                                     BreakExecution();
                                 break;
                             case 0x4F:			/* LD R,A */
@@ -4057,7 +4115,7 @@ namespace Tiedye.Z80Core
                                     op = --BC != 0;
                                     sum = acu - temp;
                                 } while (op && sum != 0);*/
-                                acu = A;
+                                /*acu = A;
                                 temp = GetBYTE_pp(ref HL);
                                 op = --BC != 0 ? 1 : 0;
                                 sum = acu - temp;
@@ -4072,14 +4130,44 @@ namespace Tiedye.Z80Core
                                 if (op != 0 && sum != 0)
                                 {
                                     PC -= 2;
-                                    AF |= FLAG_P;
+                                    //AF |= FLAG_P;
                                     Clock.IncTime(21);
                                 }
                                 else
                                 {
-                                    AF &= (ushort)(~FLAG_P);
+                                    //AF &= (ushort)(~FLAG_P);
                                     Clock.IncTime(16);
                                 }
+                                if (BC != 0)
+                                    AF |= FLAG_P;
+                                else
+                                    AF &= (ushort)(~FLAG_P);*/
+                                acu = hreg(AF);
+                                temp = GetBYTE_pp(ref HL);
+                                sum = acu - temp;
+                                cbits = acu ^ temp ^ sum;
+                                //AF = (AF & ~0xfe) | (sum & 0x80) | (!(sum & 0xff) << 6) |
+                                //  sum & 0xff != 0
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
+                                    (((sum - ((cbits & 16) >> 4)) & 2) << 4) | (cbits & 16) |
+                                    ((sum - ((cbits >> 4) & 1)) & 8) |
+                                    ((--BC & 0xffff) != 0 ? 1 : 0) << 2 | 2
+                                    );
+                                if ((sum & 15) == 8 && (cbits & 16) != 0)
+                                    AF &= (ushort)(~8);
+                                if (BC != 0 && sum != 0)
+                                {
+                                    PC -= 2;
+                                    Clock.IncTime(21);
+                                }
+                                else
+                                {
+                                    Clock.IncTime(16);
+                                }
+                                if (BC != 0)
+                                    AF |= FLAG_P;
+                                else
+                                    AF &= (ushort)(~FLAG_P);
                                 break;
                             case 0xB2:			/* INIR */
                                 /*temp = hreg(BC);
@@ -4167,7 +4255,7 @@ namespace Tiedye.Z80Core
                                     op << 2 | 2;
                                 if ((sum & 15) == 8 && (cbits & 16) != 0)
                                     AF &= ~8;*/
-                                acu = A;
+                                /*acu = A;
                                 temp = GetBYTE_mm(ref HL);
                                 op = --BC != 0 ? 1 : 0;
                                 sum = acu - temp;
@@ -4182,14 +4270,43 @@ namespace Tiedye.Z80Core
                                 if (op != 0 && sum != 0)
                                 {
                                     PC -= 2;
-                                    AF |= FLAG_P;
+                                    //AF |= FLAG_P;
                                     Clock.IncTime(21);
                                 }
                                 else
                                 {
-                                    AF &= (ushort)(~FLAG_P);
+                                    //AF &= (ushort)(~FLAG_P);
                                     Clock.IncTime(16);
                                 }
+                                if (BC != 0)
+                                    AF |= FLAG_P;
+                                else
+                                    AF &= (ushort)(~FLAG_P);*/
+                                acu = hreg(AF);
+                                temp = GetBYTE_mm(ref HL);
+                                sum = acu - temp;
+                                cbits = acu ^ temp ^ sum;
+                                //AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | (!(sum & 0xff) << 6) |
+                                AF = (ushort)((AF & ~0xfe) | (sum & 0x80) | ((!((sum & 0xff) != 0) ? 1 : 0) << 6) |
+                                    (((sum - ((cbits & 16) >> 4)) & 2) << 4) | (cbits & 16) |
+                                    ((sum - ((cbits >> 4) & 1)) & 8) |
+                                    ((--BC & 0xffff) != 0 ? 1 : 0) << 2 | 2);
+                                if ((sum & 15) == 8 && (cbits & 16) != 0)
+                                    AF &= (ushort)(~8);
+                                Clock.IncTime(16);
+                                if (BC != 0 && sum != 0)
+                                {
+                                    PC -= 2;
+                                    Clock.IncTime(21);
+                                }
+                                else
+                                {
+                                    Clock.IncTime(16);
+                                }
+                                if (BC != 0)
+                                    AF |= FLAG_P;
+                                else
+                                    AF &= (ushort)(~FLAG_P);
                                 break;
                             case 0xBA:			/* INDR */
                                 /*temp = hreg(BC);
@@ -4243,6 +4360,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(7);
                         break;
                     case 0xEF:			/* RST 28H */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = (ushort)(MemoryRead(null, (ushort)(PC + 0)) | (MemoryRead(null, (ushort)(PC + 1)) << 8));
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 0x28;
                         Clock.IncTime(11);
                         break;
@@ -4292,6 +4422,19 @@ namespace Tiedye.Z80Core
                         Clock.IncTime(7);
                         break;
                     case 0xF7:			/* RST 30H */
+                        if (LogBCalls)
+                        {
+                            BCallLogData[BCallLogPtr, 0] = PC;
+                            BCallLogData[BCallLogPtr, 1] = 0x30;
+                            BCallLogData[BCallLogPtr, 2] = AF;
+                            BCallLogData[BCallLogPtr, 3] = BC;
+                            BCallLogData[BCallLogPtr, 4] = DE;
+                            BCallLogData[BCallLogPtr, 5] = HL;
+                            BCallLogData[BCallLogPtr, 6] = IX;
+                            BCallLogData[BCallLogPtr, 7] = IY;
+                            BCallLogData[BCallLogPtr, 8] = SP;
+                            BCallLogPtr = (BCallLogPtr + 1) & BCallLogMask;
+                        }
                         PUSH(PC); PC = 0x30;
                         Clock.IncTime(11);
                         break;
