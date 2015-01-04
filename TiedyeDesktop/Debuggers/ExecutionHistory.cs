@@ -1,4 +1,107 @@
-﻿using System;
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,19 +140,64 @@ namespace TiedyeDesktop
 
         public void RefreshData()
         {
+            traceEnableCheckBox.Checked = Cpu.TraceLastExec;
+            bcallLogCheckBox.Checked = Cpu.LogBCalls;
+            if (showExecRadioButton.Checked)
+            {
+                instrCountUpDown.Value = instrShowCount;
+                RefreshExecHistroy();
+            }
+            else
+            {
+                instrCountUpDown.Value = bcallShowCount;
+                RefreshBCallHistory();
+            }
+
+        }
+
+        int instrShowCount = 64;
+        int bcallShowCount = 64;
+
+        void RefreshBCallHistory()
+        {
             unchecked
             {
-                traceEnableCheckBox.Checked = Cpu.TraceLastExec;
+                if (!Cpu.LogBCalls)
+                    return;
+                historyStrBuilder.Clear();
+                historyStrBuilder.AppendLine("PC   BCal AF   BC   DE   HL   IX   IY   SP");
+                //int baseAddress = Cpu.PC;
+                int pos = (Cpu.BCallLogPtr - 1) & Z80Cpu.BCallLogMask;
+                for (int i = 0; i < bcallShowCount; i++)
+                {
+                    
+                    for (int k = 0; k < 9; k++)
+                    {
+                        historyStrBuilder.Append(Cpu.BCallLogData[pos, k].ToString("X4"));
+                        historyStrBuilder.Append(" ");
+                    }
+                    historyStrBuilder.AppendLine();
+                    pos = (pos - 1) & Z80Cpu.BCallLogMask;
+                }
+                disassemblyTextBox.Text = historyStrBuilder.ToString();
+            }
+        }
+
+        StringBuilder historyStrBuilder = new StringBuilder();
+
+        void RefreshExecHistroy()
+        {
+            unchecked
+            {
                 if (!Cpu.TraceLastExec)
                     return;
                 Z80Disassembler.DisassembledInstruction disasm;
                 byte[] instr = new byte[4];
-                StringBuilder str = new StringBuilder();
-                str.AppendLine("                               SP   AF   BC   DE   HL   AF'  BC'  DE'  HL'  IX   IY   IR   IFF");
+                historyStrBuilder.Clear();
+                historyStrBuilder.AppendLine("                               SP   AF   BC   DE   HL   AF'  BC'  DE'  HL'  IX   IY   IR   IFF");
                 //int baseAddress = Cpu.PC;
                 int pos = (Cpu.LastExecPtr - 1) & Z80Cpu.LastExecMask;
-                int asdf = (int)instrCountUpDown.Value;
-                for (int i = 0; i < asdf; i++)
+                for (int i = 0; i < instrShowCount; i++)
                 {
                     /*for (int j = 0; j < 4; j++)
                     {
@@ -61,29 +209,29 @@ namespace TiedyeDesktop
                     instr[3] = (byte)(Cpu.LastExecData[pos, 1] >> 8);
                     ushort PC = Cpu.LastExecData[pos, 2];
                     //str.Append(Cpu.LastExecAddress[pos].ToString("X4"));
-                    str.Append(PC.ToString("X4"));
-                    str.Append(": ");
+                    historyStrBuilder.Append(PC.ToString("X4"));
+                    historyStrBuilder.Append(": ");
                     disasm = Z80Disassembler.DisassembleInstruction(instr, PC);
                     for (int j = 0; j < 4; j++)
                     {
                         if (j < disasm.Length)
-                            str.Append(instr[j].ToString("X2"));
+                            historyStrBuilder.Append(instr[j].ToString("X2"));
                         else
-                            str.Append("  ");
+                            historyStrBuilder.Append("  ");
                     }
-                    str.Append(" ");
-                    str.Append(disasm.Disassembly);
+                    historyStrBuilder.Append(" ");
+                    historyStrBuilder.Append(disasm.Disassembly);
                     for (int k = disasm.Disassembly.Length; k < 16; k++)
-                        str.Append(" ");
-                    for (int k = 3; k < 16; k++ )
+                        historyStrBuilder.Append(" ");
+                    for (int k = 3; k < 16; k++)
                     {
-                        str.Append(Cpu.LastExecData[pos, k].ToString("X4"));
-                        str.Append(" ");
+                        historyStrBuilder.Append(Cpu.LastExecData[pos, k].ToString("X4"));
+                        historyStrBuilder.Append(" ");
                     }
-                    str.AppendLine();
+                    historyStrBuilder.AppendLine();
                     pos = (pos - 1) & Z80Cpu.LastExecMask;
                 }
-                disassemblyTextBox.Text = str.ToString();
+                disassemblyTextBox.Text = historyStrBuilder.ToString();
             }
         }
 
@@ -94,7 +242,37 @@ namespace TiedyeDesktop
 
         private void instrCountUpDown_ValueChanged(object sender, EventArgs e)
         {
-            RefreshData();
+            if (showExecRadioButton.Checked)
+            {
+                instrShowCount = (int)instrCountUpDown.Value;
+                RefreshExecHistroy();
+            }
+            else
+            {
+                bcallShowCount = (int)instrCountUpDown.Value;
+                RefreshBCallHistory();
+            }
+        }
+
+        private void bcallLogCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Cpu.LogBCalls = bcallLogCheckBox.Checked;
+        }
+
+        private void showExecRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showExecRadioButton.Checked)
+            {
+                instrCountUpDown.Maximum = Z80Cpu.LastExecSize;
+                instrCountUpDown.Value = instrShowCount;
+                RefreshExecHistroy();
+            }
+            else
+            {
+                instrCountUpDown.Maximum = Z80Cpu.BCallLogSize;
+                instrCountUpDown.Value = bcallShowCount;
+                RefreshBCallHistory();
+            }
         }
     }
 }
