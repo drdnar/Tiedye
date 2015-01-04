@@ -36,6 +36,7 @@
             this.outBpUpDown = new System.Windows.Forms.NumericUpDown();
             this.anyIoCheckBox = new System.Windows.Forms.CheckBox();
             this.oldStuffTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.updateButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -66,10 +67,10 @@
             this.deleteMemBpButton = new System.Windows.Forms.Button();
             this.ioTabPage = new System.Windows.Forms.TabPage();
             this.otherTabPage = new System.Windows.Forms.TabPage();
-            this.updateButton = new System.Windows.Forms.Button();
             this.execGroupBox = new System.Windows.Forms.GroupBox();
             this.execTextBox = new System.Windows.Forms.TextBox();
             this.masterTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.retiBpCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -221,6 +222,16 @@
             this.oldStuffTableLayoutPanel.Size = new System.Drawing.Size(338, 221);
             this.oldStuffTableLayoutPanel.TabIndex = 3;
             // 
+            // updateButton
+            // 
+            this.updateButton.Location = new System.Drawing.Point(3, 76);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(75, 23);
+            this.updateButton.TabIndex = 4;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
@@ -363,6 +374,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.retBpCheckBox);
+            this.flowLayoutPanel2.Controls.Add(this.retiBpCheckBox);
             this.flowLayoutPanel2.Controls.Add(this.intBpCheckBox);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 16);
@@ -384,7 +396,7 @@
             // intBpCheckBox
             // 
             this.intBpCheckBox.AutoSize = true;
-            this.intBpCheckBox.Location = new System.Drawing.Point(57, 3);
+            this.intBpCheckBox.Location = new System.Drawing.Point(114, 3);
             this.intBpCheckBox.Name = "intBpCheckBox";
             this.intBpCheckBox.Size = new System.Drawing.Size(65, 17);
             this.intBpCheckBox.TabIndex = 1;
@@ -619,16 +631,6 @@
             this.otherTabPage.Text = "Other";
             this.otherTabPage.UseVisualStyleBackColor = true;
             // 
-            // updateButton
-            // 
-            this.updateButton.Location = new System.Drawing.Point(3, 76);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(75, 23);
-            this.updateButton.TabIndex = 4;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = true;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
             // execGroupBox
             // 
             this.execGroupBox.Controls.Add(this.execTextBox);
@@ -665,6 +667,17 @@
             this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.masterTableLayoutPanel.Size = new System.Drawing.Size(358, 423);
             this.masterTableLayoutPanel.TabIndex = 6;
+            // 
+            // retiBpCheckBox
+            // 
+            this.retiBpCheckBox.AutoSize = true;
+            this.retiBpCheckBox.Location = new System.Drawing.Point(57, 3);
+            this.retiBpCheckBox.Name = "retiBpCheckBox";
+            this.retiBpCheckBox.Size = new System.Drawing.Size(51, 17);
+            this.retiBpCheckBox.TabIndex = 2;
+            this.retiBpCheckBox.Text = "RETI";
+            this.retiBpCheckBox.UseVisualStyleBackColor = true;
+            this.retiBpCheckBox.CheckedChanged += new System.EventHandler(this.retiBpCheckBox_CheckedChanged);
             // 
             // Breakpoints
             // 
@@ -759,5 +772,6 @@
         private System.Windows.Forms.NumericUpDown readBpUpDown;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.NumericUpDown writeBpUpDown;
+        private System.Windows.Forms.CheckBox retiBpCheckBox;
     }
 }

@@ -38,6 +38,7 @@ namespace TiedyeDesktop
             outBpUpDown.Value = Cpu.BpIoWrite;
             anyIoCheckBox.Checked = Cpu.BpAnyIo;
             retBpCheckBox.Checked = Cpu.BpRet;
+            retiBpCheckBox.Checked = Cpu.BpReti;
             intBpCheckBox.Checked = Cpu.BpInterrupt;
             Calculator_ExecutionFinished(this, null);
             RefreshMemBpList();
@@ -185,6 +186,11 @@ namespace TiedyeDesktop
                 else
                     Mapper.DeactivateBreakpoint(bp);
             }
+        }
+
+        private void retiBpCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Cpu.BpReti = retiBpCheckBox.Checked;
         }
 
 
