@@ -402,7 +402,7 @@ namespace Tiedye.Hardware
                 };
             if (Cpu.M1 && IsExecutionBreakpoint(bp))
                 Cpu.BreakExecution();
-            else if (IsReadBreakpoint(bp))
+            else if (haveReadBps && IsReadBreakpoint(bp))
                 Cpu.BreakExecution();
             if (isRam)
             {
@@ -478,7 +478,7 @@ namespace Tiedye.Hardware
                 Page = linearAddress >> 14,
                 Type = MemoryBreakpointType.Write
             };
-            if (IsWriteBreakpoint(bp))
+            if (haveWriteBps && IsWriteBreakpoint(bp))
                 Cpu.BreakExecution();
             if (isRam)
                 Ram.WriteByte(sender, linearAddress & 0x3FFFF, value);

@@ -145,14 +145,17 @@ namespace Tiedye.Hardware
             switch (bp.Type)
             {
                 case MemoryBreakpointType.Execution:
+                    haveExecBps = true;
                     if (!ExecBps.ContainsKey(bp))
                         ExecBps.Add(bp, isActive);
                     break;
                 case MemoryBreakpointType.Read:
+                    haveReadBps = true;
                     if (!ReadBps.ContainsKey(bp))
                         ReadBps.Add(bp, isActive);
                     break;
                 case MemoryBreakpointType.Write:
+                    haveWriteBps = true;
                     if (!WriteBps.ContainsKey(bp))
                         WriteBps.Add(bp, isActive);
                     break;
@@ -166,14 +169,20 @@ namespace Tiedye.Hardware
                 case MemoryBreakpointType.Execution:
                     //if (ExecBps.ContainsKey(bp))
                     ExecBps.Remove(bp);
+                    if (ExecBps.Count == 0)
+                        haveExecBps = false;
                     break;
                 case MemoryBreakpointType.Read:
                     //if (ReadBps.ContainsKey(bp))
                     ReadBps.Remove(bp);
+                    if (ReadBps.Count == 0)
+                        haveReadBps = false;
                     break;
                 case MemoryBreakpointType.Write:
                     //if (WriteBps.ContainsKey(bp))
                     WriteBps.Remove(bp);
+                    if (WriteBps.Count == 0)
+                        haveWriteBps = false;
                     break;
             }
         }
@@ -259,10 +268,13 @@ namespace Tiedye.Hardware
             return items;
         }
 
+        protected bool haveExecBps = false;
         Dictionary<Breakpoint, bool> ExecBps = new Dictionary<Breakpoint, bool>();
 
+        protected bool haveReadBps = false;
         Dictionary<Breakpoint, bool> ReadBps = new Dictionary<Breakpoint, bool>();
 
+        protected bool haveWriteBps = false;
         Dictionary<Breakpoint, bool> WriteBps = new Dictionary<Breakpoint, bool>();
 
     }
