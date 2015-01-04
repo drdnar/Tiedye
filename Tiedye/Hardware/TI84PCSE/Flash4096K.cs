@@ -25,11 +25,30 @@ namespace Tiedye.Hardware
             return base.ReadByte(sender, address);
         }
 
-        public override void WriteByte(object sender, int address, byte value)
+        public override int GetSectorStart(int address)
         {
-            Data[address] = value;
+            if (address < 0x3F0000)
+                return address & 0xFF0000;
+            else if (address < 0x3F8000)
+                return 0x3F0000;
+            else if (address < 0x3FA000)
+                return 0x3F8000;
+            else if (address < 0x3FC000)
+                return 0x3FA000;
+            else
+                return 0x3FC000;
         }
 
-        
+        public override int GetSectorLength(int address)
+        {
+            if (address < 0x3F0000)
+                return 0x10000;
+            else if (address < 0x3F8000)
+                return 0x8000;
+            else if (address < 0x3FC000)
+                return 0x2000;
+            else
+                return 0x4000;
+        }
     }
 }

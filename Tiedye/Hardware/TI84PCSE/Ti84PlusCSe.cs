@@ -314,6 +314,7 @@ namespace Tiedye.Hardware
                 case 0x14: // Flash write enable
                     // TODO: Implement protection
                     Mapper.FlashWriteEnable = (value & 1) != 0; // I dunno.
+                    Flash.WriteEnable = Mapper.FlashWriteEnable;
                     break;
                 case 0x15: // Gate array ID
                     // Do nothing.

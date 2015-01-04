@@ -700,7 +700,7 @@ namespace Tiedye.Z80Core
         private void ReleaseM1()
         {
             m1 = false;
-            MemoryRead(this, IR);
+            //MemoryRead(this, IR);
             // Oddly enough, the Z80 itself actually implements IR as a 16-bit
             // register. The circuit that increments R uses the same 16-bit
             // incrementer as the one that increments PC. I isn't incremented
