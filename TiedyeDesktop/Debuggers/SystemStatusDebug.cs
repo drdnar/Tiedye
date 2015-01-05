@@ -61,12 +61,17 @@ namespace TiedyeDesktop
                 OldInts = oldInts;
                 intsLabel.Text = OldInts.ToString();
             }
-            
+            busyTimeLabel.Text = Master.BusyTime.ToString();
         }
 
         private void speedNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             Master.ExecutionSpeed = (double)speedNumericUpDown.Value;
+        }
+
+        private void resetBusyTimeButton_Click(object sender, EventArgs e)
+        {
+            Master.BusyTime = 0;
         }
     }
 }

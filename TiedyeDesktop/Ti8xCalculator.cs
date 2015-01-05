@@ -173,6 +173,8 @@ namespace TiedyeDesktop
 
         public double AverageDeltaT = 0.01;
 
+        public double BusyTime = 0;
+
         protected void DoEmulation()
         {
             executing = true;
@@ -200,6 +202,11 @@ namespace TiedyeDesktop
                     double x = ExecutionQuantum / ExecutionSpeed;
                     Thread.Sleep(new System.TimeSpan(0, 0, 0, (int)x, (int)(x * 1000)) - delta);
                 }
+                if ((Calculator.Ram.Data[0x4b38] & 1) != 0)
+                    if (BusyTime == 0)
+                        BusyTime = deltaT;
+                    else
+                        BusyTime += deltaT;
             }
             executing = false;
             Calculator.Step(0);

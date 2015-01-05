@@ -22,7 +22,7 @@ namespace Tiedye.Hardware
             }
         }
 
-        public ColorLcd Lcd = new ColorLcd();
+        public ColorLcd Lcd;
 
         public Ti84PlusCSe()
         {
@@ -44,6 +44,7 @@ namespace Tiedye.Hardware
             CrystalTimer3 = new CrystalTimer(Crystal, Scheduler, 3);
             Apd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer1, this, 1.0 / 512);
             PApd = new ApdTimerSe(Scheduler, InterruptId.ApdTimer2, this, 1.0 / 1024);
+            Lcd = new ColorLcd(this);
         }
 
         public override void Reset()

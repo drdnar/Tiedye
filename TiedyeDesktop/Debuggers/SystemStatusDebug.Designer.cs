@@ -29,23 +29,28 @@
         private void InitializeComponent()
         {
             this.masterTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.execTimeLabel = new System.Windows.Forms.Label();
+            this.frequencyLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.frequencyLabel = new System.Windows.Forms.Label();
-            this.execTimeLabel = new System.Windows.Forms.Label();
             this.intsLabel = new System.Windows.Forms.Label();
             this.speedNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.busyTimeLabel = new System.Windows.Forms.Label();
+            this.resetBusyTimeButton = new System.Windows.Forms.Button();
             this.masterTableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.speedNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // masterTableLayoutPanel
             // 
-            this.masterTableLayoutPanel.ColumnCount = 2;
+            this.masterTableLayoutPanel.ColumnCount = 3;
             this.masterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.masterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.masterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.masterTableLayoutPanel.Controls.Add(this.label5, 0, 4);
             this.masterTableLayoutPanel.Controls.Add(this.execTimeLabel, 1, 1);
             this.masterTableLayoutPanel.Controls.Add(this.frequencyLabel, 1, 0);
             this.masterTableLayoutPanel.Controls.Add(this.label1, 0, 0);
@@ -54,17 +59,40 @@
             this.masterTableLayoutPanel.Controls.Add(this.label4, 0, 2);
             this.masterTableLayoutPanel.Controls.Add(this.intsLabel, 1, 3);
             this.masterTableLayoutPanel.Controls.Add(this.speedNumericUpDown, 1, 2);
+            this.masterTableLayoutPanel.Controls.Add(this.busyTimeLabel, 1, 4);
+            this.masterTableLayoutPanel.Controls.Add(this.resetBusyTimeButton, 2, 4);
             this.masterTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.masterTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.masterTableLayoutPanel.Name = "masterTableLayoutPanel";
-            this.masterTableLayoutPanel.RowCount = 5;
+            this.masterTableLayoutPanel.RowCount = 6;
             this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
             this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.masterTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.masterTableLayoutPanel.Size = new System.Drawing.Size(284, 261);
             this.masterTableLayoutPanel.TabIndex = 0;
+            // 
+            // execTimeLabel
+            // 
+            this.execTimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.execTimeLabel.AutoSize = true;
+            this.execTimeLabel.Location = new System.Drawing.Point(83, 19);
+            this.execTimeLabel.Name = "execTimeLabel";
+            this.execTimeLabel.Size = new System.Drawing.Size(10, 13);
+            this.execTimeLabel.TabIndex = 5;
+            this.execTimeLabel.Text = "-";
+            // 
+            // frequencyLabel
+            // 
+            this.frequencyLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.frequencyLabel.AutoSize = true;
+            this.frequencyLabel.Location = new System.Drawing.Point(83, 2);
+            this.frequencyLabel.Name = "frequencyLabel";
+            this.frequencyLabel.Size = new System.Drawing.Size(10, 13);
+            this.frequencyLabel.TabIndex = 4;
+            this.frequencyLabel.Text = "-";
             // 
             // label1
             // 
@@ -106,26 +134,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Time scale:";
             // 
-            // frequencyLabel
-            // 
-            this.frequencyLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.frequencyLabel.AutoSize = true;
-            this.frequencyLabel.Location = new System.Drawing.Point(83, 2);
-            this.frequencyLabel.Name = "frequencyLabel";
-            this.frequencyLabel.Size = new System.Drawing.Size(10, 13);
-            this.frequencyLabel.TabIndex = 4;
-            this.frequencyLabel.Text = "-";
-            // 
-            // execTimeLabel
-            // 
-            this.execTimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.execTimeLabel.AutoSize = true;
-            this.execTimeLabel.Location = new System.Drawing.Point(83, 19);
-            this.execTimeLabel.Name = "execTimeLabel";
-            this.execTimeLabel.Size = new System.Drawing.Size(10, 13);
-            this.execTimeLabel.TabIndex = 5;
-            this.execTimeLabel.Text = "-";
-            // 
             // intsLabel
             // 
             this.intsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -154,6 +162,36 @@
             this.speedNumericUpDown.Size = new System.Drawing.Size(66, 20);
             this.speedNumericUpDown.TabIndex = 7;
             this.speedNumericUpDown.ValueChanged += new System.EventHandler(this.speedNumericUpDown_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Busy time:";
+            // 
+            // busyTimeLabel
+            // 
+            this.busyTimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.busyTimeLabel.AutoSize = true;
+            this.busyTimeLabel.Location = new System.Drawing.Point(83, 83);
+            this.busyTimeLabel.Name = "busyTimeLabel";
+            this.busyTimeLabel.Size = new System.Drawing.Size(10, 13);
+            this.busyTimeLabel.TabIndex = 11;
+            this.busyTimeLabel.Text = "-";
+            // 
+            // resetBusyTimeButton
+            // 
+            this.resetBusyTimeButton.Location = new System.Drawing.Point(207, 79);
+            this.resetBusyTimeButton.Name = "resetBusyTimeButton";
+            this.resetBusyTimeButton.Size = new System.Drawing.Size(74, 22);
+            this.resetBusyTimeButton.TabIndex = 12;
+            this.resetBusyTimeButton.Text = "Reset";
+            this.resetBusyTimeButton.UseVisualStyleBackColor = true;
+            this.resetBusyTimeButton.Click += new System.EventHandler(this.resetBusyTimeButton_Click);
             // 
             // SystemStatusDebug
             // 
@@ -184,5 +222,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label intsLabel;
         private System.Windows.Forms.NumericUpDown speedNumericUpDown;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label busyTimeLabel;
+        private System.Windows.Forms.Button resetBusyTimeButton;
     }
 }

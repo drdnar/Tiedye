@@ -6,8 +6,41 @@ using System.Threading.Tasks;
 
 namespace Tiedye.Hardware
 {
+    /// <summary>
+    /// Color LCD class. This class doesn't support any wacky tricks.
+    /// </summary>
     public class ColorLcd : Lcd
     {
+
+        protected Ti84PlusCSe Master;
+        protected Scheduler Scheduler;
+        protected Scheduler.WallTimeEvent NextIncrement;
+
+
+        public ColorLcd(Ti84PlusCSe master)
+        {
+            Master = master;
+            Scheduler = Master.Scheduler;
+            NextIncrement = new Scheduler.WallTimeEvent();
+            NextIncrement.Tag = "Dummy LCD wait state thingy";
+            NextIncrement.Handler = new EventHandler<Scheduler.WallTimeEvent>(DoTick);
+            Scheduler.EnqueueRelativeEvent(NextIncrement, 1.0 / 32768);
+        }
+
+        bool fakeBusy = false;
+
+        private void DoTick(object sender, Scheduler.WallTimeEvent e)
+        {
+            fakeBusy = false;
+        }
+
+        protected void BeBusy()
+        {
+            fakeBusy = true;
+            Scheduler.EnqueueRelativeEvent(NextIncrement, 0.0000005);
+        }
+
+
         public override int Height
         {
             get
@@ -119,8 +152,14 @@ namespace Tiedye.Hardware
             WritingData = false;
         }
 
+        // This code is for testing performance of hardware scheduling with
+        // the B&W LCD driver. But I'm not implementing the B&W LCD at the
+        // moment, so I'm faking the performance test with this.
+
+
         public byte ReadData()
         {
+            BeBusy();
             if (WritingData)
             {
                 PanicMode = true;
@@ -201,6 +240,7 @@ namespace Tiedye.Hardware
         
         public void WriteData(byte value)
         {
+            BeBusy();
             if (WaitingForByte && !WritingData)
             {
                 PanicMode = true;
