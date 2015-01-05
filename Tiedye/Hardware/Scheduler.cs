@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Tiedye.Z80Core;
 
 namespace Tiedye.Hardware
-{
+{ 
     public class Scheduler
     {
         public string GetDebugInformation()
